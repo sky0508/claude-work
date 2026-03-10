@@ -1,0 +1,71 @@
+{
+  "token": "jva_secret_token_2026",
+  "sheets": {
+    "students": {
+      "url": "https://script.google.com/macros/s/AKfycbwLq6Z6YyFWxffbXPYUtHKQohLa8j0UEbMxN_b7VHUfqopBwmWwKCxZA-H1pE2rQazs/exec",
+      "description": "学生登録・応募データ（Resume含む）",
+      "format": "csv",
+      "valid_from_row": 74,
+      "note": "74行目以降がplatform/formアップデート後の有効データ"
+    },
+    "startups": {
+      "url": "https://script.google.com/macros/s/AKfycbzR8L_XcaaXCgfDaKq66d1QlYjjPfv0WAQ89ScW54Z41q1dvT-ga-asekZJ5dViVdsn/exec",
+      "description": "掲載企業・ポジション一覧",
+      "format": "csv",
+      "structure": {
+        "legacy_section": {
+          "note": "プラットフォーム更新前の既存企業。更新時に情報を記入してもらったもの",
+          "header_row_index": 2,
+          "data_row_index_start": 3,
+          "data_row_index_end": 10,
+          "key_cols": {
+            "0": "Timestamp",
+            "1": "First Name",
+            "2": "Last Name",
+            "3": "Email",
+            "4": "Company Name",
+            "5": "Active? (Yes=継続 / No=停止)",
+            "6": "About Company",
+            "7+": "Job Cards (6列ごとに繰り返し: Role / Title / Image / Domain / Eligibility / Next?)"
+          },
+          "active_filter": "col[5]に'continue'が含まれる行のみ有効"
+        },
+        "new_section": {
+          "note": "新プラットフォーム稼働後の新規申請企業。ここにどんどん溜まっていく",
+          "header_row_index": 19,
+          "data_row_index_start": 20,
+          "key_cols": {
+            "0": "Timestamp",
+            "1": "First Name",
+            "2": "Last Name",
+            "3": "Email",
+            "4": "LinkedIn",
+            "5": "Company Name",
+            "6": "Company Logo",
+            "7": "Company Website",
+            "8": "Office Location",
+            "9": "Industry",
+            "10": "About Company",
+            "11+": "Job Cards"
+          }
+        }
+      }
+    },
+    "kpi": {
+      "url": "https://script.google.com/macros/s/AKfycbxcAN8DAcCWgWg0xzCuuKCYmmt9z0kYblazLygxjYmmJN7tbD9FrJChNSLK5vCLQU0ILA/exec",
+      "description": "KPI数値管理（読み書き両対応）",
+      "format": "json_post",
+      "note": "GET→00_Settingsのみ返す。シート別取得・書き込みはPOST必須。POSTは302リダイレクト→Locationヘッダー先のURLをGETして結果取得。",
+      "sheets": {
+        "WeeklyKPI": "週次KPI記録（recordKPIアクションで追記）",
+        "01_Weekly_Flow_Log": "週次フロー実績ログ",
+        "02_Weekly_Conversion": "週次コンバージョン率",
+        "03_Monthly_Summary": "月次サマリー",
+        "04_Conversion_Model": "コンバージョンモデル",
+        "05_Simulation": "シミュレーション",
+        "06_Actoin Planner": "アクションプランナー"
+      },
+      "post_actions": ["listSheets", "appendRow", "updateCell", "updateRange", "recordKPI"]
+    }
+  }
+}

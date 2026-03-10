@@ -11,8 +11,11 @@
 5. **↓ ここから JVA 固有 ↓**
 6. `pm/projects/ib-overall.md` — IB全体進捗
 7. `secretary/sessions/` — JVAセッションログ
+8. `config/kpi-settings.md` — KPI目標値（Settings）
+9. `kpi/current.md` — KPI実績・コンバージョン・月次サマリー（参照用）
+10. `kpi/README.md` — KPIの確認・修正・運用手順
 
-> 参照後、挨拶より先に「前回のJVA最優先タスクはXXXでしたが、そこから始めますか？」と提示する。
+> 参照後、挨拶より先に「前回のJVA最優先タスクはXXXでしたが、そこから始めますか？」と提示する。KPIの数字を話題にするときは `config/kpi-settings.md` と `kpi/current.md` を参照する。
 
 ---
 
@@ -38,6 +41,11 @@
 ```
 .company_jva/
 ├── CLAUDE.md
+├── config/             # 接続先・設定（sheets.json, kpi-settings.md など）
+├── kpi/                # KPI管理（目標・実績・Weekly Flow Log）
+│   ├── README.md       # 確認・修正・運用手順
+│   ├── current.md      # 実績サマリー・コンバージョン・月次
+│   └── weekly-flow-log.md  # 週次実績入力
 ├── secretary/          # 秘書室（JVA業務の窓口）
 │   ├── inbox/
 │   ├── todos/
@@ -116,5 +124,6 @@
 - 2名体制。学生・企業双方とのコミュニケーションが発生
 - PDCAサイクルを回すことが課題
 - 「どれに集中すべきか」の優先順位付けが重要
+- **KPI**: 目標は `config/kpi-settings.md`、実績は `kpi/current.md`・`kpi/weekly-flow-log.md`。ストラテジー・振り返り時に参照。詳細は `kpi/README.md`
 - 詳細分析: `research/topics/matching-bottleneck-analysis.md`
 - 学生ペルソナ: `research/topics/student-persona.md`
