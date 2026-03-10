@@ -1,0 +1,16 @@
+# セキュリティ: 個人情報・機密データ
+*.csv
+*.xlsx
+*.xls
+secrets.md
+credentials.md
+*.key
+*.pem
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# 一時ファイル
+*.tmp
+*.log
