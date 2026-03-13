@@ -1,0 +1,106 @@
+{
+  "author": "JVA",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "JVA IB Weekly Review",
+      "subtitle": "Week 08 — Mar 3–9, 2026",
+      "catchphrase": "Japan's Venture Academy · Internship Board"
+    },
+    {
+      "type": "content",
+      "sectionName": "KPI Snapshot",
+      "title": "This Week's Numbers (W08)",
+      "layout": "kpi-three-col",
+      "content": {
+        "items": [
+          { "value": "+10", "label": "LINE New Students\n(Target: 16.7 / week)" },
+          { "value": "+2", "label": "Applications\n(Target: 8.3 / week)" },
+          { "value": "0", "label": "Matches\n(Target: 5 / month) ⚠️" }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "KPI Snapshot",
+      "title": "KPI vs. Monthly Target (March MTD)",
+      "layout": "comparison-table",
+      "content": {
+        "beforeTitle": "Monthly Target",
+        "afterTitle": "MTD Actual",
+        "rows": [
+          { "category": "LINE New Students", "before": "16.7 / week", "after": "12 (72%)" },
+          { "category": "Applications", "before": "8.3 / week", "after": "2 (24%)" },
+          { "category": "Matches", "before": "5 / month", "after": "0 (0%)  [MISS]" },
+          { "category": "Job Cards", "before": "10 / month", "after": "~16  [OK]" }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "Funnel",
+      "title": "Application Funnel — Cumulative (as of W09)",
+      "layout": "step-flow",
+      "content": {
+        "steps": [
+          {
+            "label": "LINE Registration",
+            "description": "57 active students\n(excl. 7 JBA members)"
+          },
+          {
+            "label": "Application",
+            "description": "23 total applications\nConversion: 39.0%",
+            "duration": "39.0%"
+          },
+          {
+            "label": "Interview",
+            "description": "Pending — no match yet\nBlocked at this stage"
+          },
+          {
+            "label": "Match",
+            "description": "0 matches\nConversion: 0% ← Critical",
+            "duration": "0%"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "Focus",
+      "title": "This Week's Focus KPI: Match",
+      "layout": "text-data-emphasis",
+      "content": {
+        "narrative": "23 applications have been submitted — the pipeline is filled.\n\nThe bottleneck is not awareness or applications. It is the handoff between application and company interview.\n\nKey insight: Most applicants went to Jurin AI (attractive brand), but Jurin AI requires Business Japanese + 35h/week — almost no one qualifies.\n\nHigh-fit candidates (Jeongmin, Martin) are available now.",
+        "bigNumber": "0",
+        "bigNumberLabel": "Matches so far"
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "Action Plan",
+      "title": "W08–W09 Action Items",
+      "layout": "numbered-feature-cards",
+      "content": {
+        "items": [
+          {
+            "title": "Screen & Recommend",
+            "description": "Screen Jeongmin & Martin → identify best-fit companies → send recommendations.\n\nGoal: trigger first interview → first Match.\n\nOwner: HR + Sales\nDeadline: Mar 14"
+          },
+          {
+            "title": "Confirm Job Card",
+            "description": "Verify the manually added Job Card entry (company name + contact info) in the KPI sheet.\n\nGoal: unblock company pipeline.\n\nOwner: Sales\nDeadline: Mar 13"
+          },
+          {
+            "title": "Set Follow-up SLA",
+            "description": "Define company follow-up cadence:\n• 48h reply SLA\n• 5-business-day reminder\n\nGoal: reduce stalled applications.\n\nOwner: PM + Sales\nDeadline: Mar 15"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ending",
+      "message": "Let's get our first Match this week.",
+      "contact": "JVA Internship Board — W08 Review"
+    }
+  ]
+}
