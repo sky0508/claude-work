@@ -1,0 +1,47 @@
+{
+  "domain": "mentoring",
+  "candidate_label": "メンティー",
+  "opportunity_label": "メンター",
+  "scoring_axes": [
+    {
+      "id": "domain_match",
+      "label": "専門領域一致",
+      "weight": 40,
+      "type": "tag_overlap",
+      "candidate_field": "learning_goals",
+      "opportunity_field": "expertise_areas"
+    },
+    {
+      "id": "career_stage",
+      "label": "キャリアステージ適合",
+      "weight": 25,
+      "type": "enum_match",
+      "candidate_field": "career_stage",
+      "opportunity_field": "target_mentee_stage",
+      "order": ["student", "early", "mid", "senior"],
+      "direction": "any"
+    },
+    {
+      "id": "language",
+      "label": "言語対応",
+      "weight": 20,
+      "type": "tag_overlap",
+      "candidate_field": "preferred_languages",
+      "opportunity_field": "available_languages"
+    },
+    {
+      "id": "style_match",
+      "label": "スタイル適合",
+      "weight": 15,
+      "type": "tag_overlap",
+      "candidate_field": "preferred_mentoring_style",
+      "opportunity_field": "mentoring_style"
+    }
+  ],
+  "score_thresholds": {
+    "excellent": 75,
+    "good": 55,
+    "possible": 35
+  },
+  "flag_rules": []
+}

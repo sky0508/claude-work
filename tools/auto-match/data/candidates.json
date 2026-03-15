@@ -1,0 +1,62 @@
+[
+  {
+    "id": "c1",
+    "name": "Nam Pham",
+    "university": "The University of Tokyo",
+    "major": "Computer Science",
+    "english_level": "business",
+    "japanese_level": "basic",
+    "skills": ["Python", "React", "LLM", "AI", "RAG"],
+    "available_hours": 20,
+    "experience_level": "some",
+    "interested_domains": ["AI", "Tech", "SaaS"]
+  },
+  {
+    "id": "c2",
+    "name": "Janine Vistro",
+    "university": "Waseda University (MBA)",
+    "major": "Business Administration",
+    "english_level": "native",
+    "japanese_level": "conversational",
+    "skills": ["Project Management", "Market Research", "Consulting", "Strategy"],
+    "available_hours": 25,
+    "experience_level": "professional",
+    "interested_domains": ["Business", "Operations", "Sales"]
+  },
+  {
+    "id": "c3",
+    "name": "Pavit Kaur",
+    "university": "Tokyo Institute of Technology",
+    "major": "Engineering",
+    "english_level": "business",
+    "japanese_level": "basic",
+    "skills": ["LLM", "MySQL", "Chatbot", "API Development"],
+    "available_hours": 20,
+    "experience_level": "some",
+    "interested_domains": ["AI", "Tech"]
+  },
+  {
+    "id": "c4",
+    "name": "Maria Santos",
+    "university": "Sophia University",
+    "major": "International Business",
+    "english_level": "native",
+    "japanese_level": "basic",
+    "skills": ["Marketing", "SNS", "Canva", "Content Creation"],
+    "available_hours": 15,
+    "experience_level": "no_exp",
+    "interested_domains": ["Marketing", "Business", "Creative"]
+  },
+  {
+    "id": "c5",
+    "name": "Ahmed Hassan",
+    "university": "Keio University",
+    "major": "Global Studies",
+    "english_level": "native",
+    "japanese_level": "basic",
+    "skills": ["Sales", "Communication", "Research"],
+    "available_hours": 15,
+    "experience_level": "no_exp",
+    "interested_domains": ["Sales", "Business", "HR"]
+  }
+]

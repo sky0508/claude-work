@@ -1,0 +1,145 @@
+{
+  "author": "JVA",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "IB Weekly Review",
+      "subtitle": "W08 Retrospective + W09 Plan — March 13, 2026",
+      "catchphrase": "We Know Why. Let's Fix It."
+    },
+    {
+      "type": "content",
+      "sectionName": "W08 Retrospective",
+      "title": "W08: How Did We Do?",
+      "layout": "kpi-three-col",
+      "content": {
+        "items": [
+          { "value": "57→59", "label": "LINE Registrations", "sub": "+10 in W08 / +2 in W09 so far ⚠️" },
+          { "value": "2", "label": "New Applications (W08)", "sub": "Cumulative: 23 total" },
+          { "value": "0", "label": "Matches", "sub": "10 weeks in — still zero 🔴" }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "Root Cause",
+      "title": "Why Is Match Still Zero?",
+      "layout": "convergence",
+      "content": {
+        "target": { "label": "0 Matches" },
+        "items": [
+          { "label": "Location mismatch: students abroad apply to Tokyo in-person roles" },
+          { "label": "Skill mismatch: student profile doesn't meet company requirements" },
+          { "label": "Company response: slow or no reply after applications received" },
+          { "label": "Application concentration: students flood Jurin AI — requirements out of reach" }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "Root Cause",
+      "title": "Where Are Current Applications?",
+      "layout": "step-flow",
+      "content": {
+        "steps": [
+          {
+            "label": "Applied",
+            "description": "23 total applications received"
+          },
+          {
+            "label": "CV Sent",
+            "description": "Forwarded to companies via automated email"
+          },
+          {
+            "label": "Under Review",
+            "description": "Mostly resolved — rejected or in interview stage"
+          },
+          {
+            "label": "Match",
+            "description": "0 confirmed matches. Next match requires new applications."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "W09 Fixes",
+      "title": "Fix #1 — Add Confirmation Before Apply",
+      "layout": "before-after-split",
+      "content": {
+        "before": {
+          "label": "Current Flow (No Filter)",
+          "points": [
+            "Student sees job posting",
+            "Clicks Apply immediately",
+            "Submits form regardless of eligibility",
+            "→ Location & skill mismatches slip through"
+          ]
+        },
+        "after": {
+          "label": "Proposed Flow (With Confirmation)",
+          "points": [
+            "Student sees job posting",
+            "Q1: Based in Tokyo or able to commute?",
+            "Q2: Valid work authorization in Japan?",
+            "→ Only eligible students proceed to apply"
+          ]
+        }
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "W09 Fixes",
+      "title": "Fix #2 — Company SLA Guideline",
+      "layout": "numbered-feature-cards",
+      "content": {
+        "items": [
+          {
+            "title": "Reply within 4 business days",
+            "description": "All companies must acknowledge applications within 4 business days. This is a condition of listing on IB."
+          },
+          {
+            "title": "IB sends a reminder",
+            "description": "If no reply after 4 business days, IB follows up directly with the company contact."
+          },
+          {
+            "title": "Suspend listing if unresponsive",
+            "description": "Repeated non-response leads to temporary suspension of the job listing — to protect student trust."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "sectionName": "Decisions",
+      "title": "W09 Decisions — Who Does What",
+      "layout": "comparison-table",
+      "content": {
+        "beforeTitle": "Action",
+        "afterTitle": "Owner + Deadline",
+        "rows": [
+          {
+            "category": "Apply Confirmation Step",
+            "before": "Design 2-question pre-check (Tokyo location + work auth)",
+            "after": "Owner: TBD / By: Mar 17"
+          },
+          {
+            "category": "Company SLA Guideline",
+            "before": "Write onboarding policy: 4-business-day reply rule + suspension",
+            "after": "Owner: TBD / By: Mar 17"
+          },
+          {
+            "category": "Screen Jeongmin & Martin",
+            "before": "Confirm best-fit companies and send recommendation",
+            "after": "Owner: TBD / By: Mar 14"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ending",
+      "message": "Let's Build the System.",
+      "contact": "IB Weekly — W08 Retro / W09 Plan | March 13, 2026"
+    }
+  ]
+}

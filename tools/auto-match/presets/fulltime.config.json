@@ -1,0 +1,67 @@
+{
+  "domain": "fulltime",
+  "candidate_label": "求職者",
+  "opportunity_label": "求人",
+  "scoring_axes": [
+    {
+      "id": "skills",
+      "label": "スキルマッチ",
+      "weight": 40,
+      "type": "skill_overlap",
+      "candidate_field": "skills",
+      "opportunity_field": "required_skills",
+      "bonus_field": "bonus_skills",
+      "bonus_weight": 0.5
+    },
+    {
+      "id": "experience_years",
+      "label": "経験年数",
+      "weight": 25,
+      "type": "range_fit",
+      "candidate_field": "years_of_experience",
+      "opportunity_field": "required_years_min",
+      "direction": "gte"
+    },
+    {
+      "id": "english",
+      "label": "英語力",
+      "weight": 15,
+      "type": "level_match",
+      "candidate_field": "english_level",
+      "opportunity_field": "required_english",
+      "levels": ["none", "basic", "conversational", "business", "native"],
+      "partial_credit": true
+    },
+    {
+      "id": "work_style",
+      "label": "ワークスタイル",
+      "weight": 10,
+      "type": "enum_match",
+      "candidate_field": "preferred_work_style",
+      "opportunity_field": "work_style",
+      "order": ["onsite", "hybrid", "remote"],
+      "direction": "any"
+    },
+    {
+      "id": "domain_interest",
+      "label": "ドメイン一致",
+      "weight": 10,
+      "type": "tag_overlap",
+      "candidate_field": "interested_domains",
+      "opportunity_field": "domain_tags"
+    }
+  ],
+  "score_thresholds": {
+    "excellent": 80,
+    "good": 60,
+    "possible": 40
+  },
+  "flag_rules": [
+    {
+      "id": "experience_gap",
+      "label": "経験年数が不足している",
+      "condition": "candidate_field('years_of_experience') < opportunity_field('required_years_min')",
+      "severity": "warning"
+    }
+  ]
+}

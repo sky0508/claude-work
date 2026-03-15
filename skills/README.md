@@ -14,6 +14,7 @@
 | `/weekly_review` | `weekly_review/SKILL.md` | 週次レビュー自動生成 | 定期実行 |
 | `/morning` | `morning/SKILL.md` | 朝のブリーフィング・今日の優先確認 | 定期実行 |
 | `/ohayo` | `ohayo/SKILL.md` | 朝の挨拶検知 → カレンダー取得 + タスク進捗 → 今日の提案 | 自動トリガー |
+| `/manus-outline` | `manus-outline/SKILL.md` | KPI・進捗・戦略を参照してManusスライドアウトラインを生成 | JVAスライド作成 |
 
 > プラグイン系（/company など）は `~/.claude/plugins/` で管理される。
 

@@ -4,6 +4,8 @@
 *.xls
 secrets.md
 credentials.md
+credentials.json
+token.json
 *.key
 *.pem
 
@@ -14,3 +16,9 @@ credentials.md
 # 一時ファイル
 *.tmp
 *.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

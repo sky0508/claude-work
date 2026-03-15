@@ -304,6 +304,10 @@ JSONを書く前に必ずこのフィールド名を使う:
 | `comparison-table` | `rows[].category` / `rows[].before` / `rows[].after` / `beforeTitle` / `afterTitle` |
 | `numbered-feature-cards` | `items[].title` / `items[].description` |
 | `kpi-logic-tree` | `root.label` / `branches[].label` / `branches[].children[].label` |
+| `timeline` | `items[].date` / `items[].title` / `items[].description` ※`events[]`は非推奨 |
+| `schedule-list` | `items[].time` / `items[].title` / `items[].description`（最大7行、英語ヘッダー自動） |
+| `three-step-column` | `steps[].title` / `steps[].description`（最大4列、縦方向はセーフエリア全体に自動分布）|
+| `business-concept` | `left.label` / `left.description` / `right.label` / `right.description` / `center.label` / `center.description`（`a`/`b`も可） |
 
 ---
 

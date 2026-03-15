@@ -1,0 +1,75 @@
+{
+  "domain": "internship",
+  "candidate_label": "学生",
+  "opportunity_label": "インターンポジション",
+  "scoring_axes": [
+    {
+      "id": "english",
+      "label": "英語力",
+      "weight": 30,
+      "type": "level_match",
+      "candidate_field": "english_level",
+      "opportunity_field": "required_english",
+      "levels": ["none", "basic", "conversational", "business", "native"],
+      "partial_credit": true
+    },
+    {
+      "id": "japanese",
+      "label": "日本語力",
+      "weight": 15,
+      "type": "level_match",
+      "candidate_field": "japanese_level",
+      "opportunity_field": "required_japanese",
+      "levels": ["none", "basic", "conversational", "business", "native"],
+      "partial_credit": true
+    },
+    {
+      "id": "skills",
+      "label": "スキルマッチ",
+      "weight": 25,
+      "type": "skill_overlap",
+      "candidate_field": "skills",
+      "opportunity_field": "required_skills",
+      "bonus_field": "bonus_skills",
+      "bonus_weight": 0.5
+    },
+    {
+      "id": "hours",
+      "label": "稼働時間",
+      "weight": 15,
+      "type": "range_fit",
+      "candidate_field": "available_hours",
+      "opportunity_field": "required_hours_min",
+      "direction": "gte"
+    },
+    {
+      "id": "experience",
+      "label": "経験レベル",
+      "weight": 15,
+      "type": "enum_match",
+      "candidate_field": "experience_level",
+      "opportunity_field": "required_experience",
+      "order": ["no_exp", "some", "professional"],
+      "direction": "gte"
+    }
+  ],
+  "score_thresholds": {
+    "excellent": 80,
+    "good": 60,
+    "possible": 40
+  },
+  "flag_rules": [
+    {
+      "id": "language_blocker",
+      "label": "言語要件を満たしていない",
+      "condition": "axis_score('english') == 0 && opportunity_field('required_english') != 'none'",
+      "severity": "critical"
+    },
+    {
+      "id": "hours_overload",
+      "label": "稼働時間が候補者の上限を超えている",
+      "condition": "opportunity_field('required_hours_min') > candidate_field('available_hours') * 1.2",
+      "severity": "warning"
+    }
+  ]
+}

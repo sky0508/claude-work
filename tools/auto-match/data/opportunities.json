@@ -1,0 +1,62 @@
+[
+  {
+    "id": "o1",
+    "company": "Jurin AI",
+    "title": "AI Engineering Intern",
+    "required_english": "business",
+    "required_japanese": "none",
+    "required_skills": ["Python", "LLM", "AI"],
+    "bonus_skills": ["RAG", "React", "API Development"],
+    "required_hours_min": 20,
+    "experience_level": "some",
+    "domain_tags": ["AI", "Tech", "SaaS"]
+  },
+  {
+    "id": "o2",
+    "company": "Jurin AI",
+    "title": "Marketing Intern",
+    "required_english": "native",
+    "required_japanese": "none",
+    "required_skills": ["Marketing", "Content Creation", "SNS"],
+    "bonus_skills": ["Canva", "Strategy"],
+    "required_hours_min": 35,
+    "experience_level": "some",
+    "domain_tags": ["Marketing", "AI"]
+  },
+  {
+    "id": "o3",
+    "company": "BLUED Inc.",
+    "title": "Business Development Intern",
+    "required_english": "business",
+    "required_japanese": "none",
+    "required_skills": [],
+    "bonus_skills": ["Sales", "Communication", "Research"],
+    "required_hours_min": 15,
+    "experience_level": "no_exp",
+    "domain_tags": ["Business", "Sales", "HR"]
+  },
+  {
+    "id": "o4",
+    "company": "GlobalDeal",
+    "title": "Sales & Operations Intern",
+    "required_english": "business",
+    "required_japanese": "none",
+    "required_skills": ["Communication"],
+    "bonus_skills": ["Sales", "Project Management", "Strategy"],
+    "required_hours_min": 15,
+    "experience_level": "no_exp",
+    "domain_tags": ["Sales", "Operations", "Business"]
+  },
+  {
+    "id": "o5",
+    "company": "I&N Recruitment",
+    "title": "HR & Recruitment Intern",
+    "required_english": "business",
+    "required_japanese": "none",
+    "required_skills": ["Communication"],
+    "bonus_skills": ["Market Research", "Consulting"],
+    "required_hours_min": 15,
+    "experience_level": "no_exp",
+    "domain_tags": ["HR", "Business", "Sales"]
+  }
+]
