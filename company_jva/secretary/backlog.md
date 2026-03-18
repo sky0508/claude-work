@@ -25,7 +25,7 @@
 
 - [ ] トライアルメンバー向けオンボーディングスライド仕上げ・共有 | スライド生成済み: `strategy/slides/JVA-IB-Trial-Member-Onboarding-0319.pptx` | 残: 内容確認・共有
 - [ ] ウィークリーレポート作成 → Discordに送付 | 対象: W09（3/10〜3/16）| Discord用フォーマットのテンプレ作成含む
-- [ ] 数値一元管理システム構築 | KPIデータをGoogle SheetsまたはNotionで一元管理できる仕組み | 方針: 後で相談
+- [ ] Notion KPI DB構築（Notion AIで実行）| 方針確定済み: Settings DB + Weekly Flow Log DB + Dashboard の3点セット | プロンプト作成済み（2026-03-18）→ Notion AIに貼るだけ | 参照: company_jva/dep_IB/kpi/
 - [ ] 1通目メッセージ ブラッシュアップ | ドラフト保存済: `dep_IB/sales/1st-message-draft.md` | 残作業: スケジューリングリンク追加・文章磨き・EN版作成
 
 ```
