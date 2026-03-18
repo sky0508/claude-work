@@ -35,8 +35,28 @@
 ## MCPツール・環境構築ナレッジ（2026-03-10 追記）
 
 - Google Calendar MCP: `@cocal/google-calendar-mcp` + `GOOGLE_OAUTH_CREDENTIALS` env var
-- Notion MCP: `https://mcp.notion.com/mcp` (HTTP) または `@notionhq/notion-mcp-server`
+- Notion MCP: `@notionhq/notion-mcp-server`（stdio）+ 内部インテグレーショントークン が安定。HTTP OAuth方式（mcp.notion.com/mcp）はClaude Codeで認証フローが機能しなかった
+- Notion API直接操作: curl で可。Python urlliは SSL証明書エラーになる（macOS Python 3.13環境）→ curl を使う
 - MCPはuser scopeで登録すると全プロジェクトで使える（`--scope user`）
+- Notion APIでDBアクセスするには、インテグレーション作成後にNotionページ側で「コネクトを追加」してページを共有する必要あり
+
+### MCP再認証手順（2026-03-18 追記）
+
+**Google Calendar（`invalid_grant` エラー時）:**
+```bash
+GOOGLE_OAUTH_CREDENTIALS="/Users/sorasasaki/.config/google-calendar-mcp/credentials.json" \
+  node ~/.npm/_npx/.../google-calendar-mcp/build/auth-server.js
+# ブラウザが開くので許可 → tokens.json が更新される
+```
+**Gmail（`No access, refresh token` エラー時）:**
+```bash
+node ~/.npm/_npx/952459504b2da320/node_modules/@gongrzhe/server-gmail-autoauth-mcp/dist/index.js auth
+# ブラウザで許可 → ~/.gmail-mcp/credentials.json 作成 → Claude Code 再起動必要
+```
+**Gmail OAuthクライアント削除（`deleted_client`）時:**
+1. Google Cloud Console → プロジェクト `gen-lang-client-0808463171` → 新OAuthクライアントID作成
+2. リダイレクトURI: `http://localhost:3000/oauth2callback`
+3. JSONを `~/.gmail-mcp/gcp-oauth.keys.json` に上書き → 上記の手順を実行
 
 ## 今後やってほしいこと（優先順・更新）
 
@@ -71,6 +91,10 @@
 | 2026-03-13 | 反復は気にしない | 完成度が上がるなら反復回数は問わない。品質優先でOK |
 | 2026-03-13 #2 | 対話スタイルが良い | スライド前に目的・構成を対話で深めてからアウトラインにするフローが好評。「まずやってみせて」より「一緒に考えてから作る」が刺さるタスク種別がある |
 | 2026-03-13 #3 | フィードバックを即スキルに反映してほしい | フィードバック→修正のサイクルは良いが、修正内容をスキル自体にも反映し「次回から同じことが起きない」形にしてほしい。プレファレンスを学習・蓄積するイメージ |
+| 2026-03-16 | ちょうどよかった | 外部向けドキュメント（文面・スライド構成）をゼロから対話で作る流れが好評。ルール設計の選択肢提示→決定→即反映のサイクルも機能した |
+| 2026-03-16 #2 | 構造提案スタイルOK | フォルダ・部門設計はAIが構造から提案してOK。「なぜこの構造か」の説明は不要でよかった |
+| 2026-03-17 | DB設計スタイルOK | データ整理・DB設計系も「構造提案→即作成（確認なし）」でOK |
+| 2026-03-13 #4 | ちょうどよかった | 個人的な悩み（選択麻痺ループ）に向き合う対話スタイル。壁打ち→構造化→具体的な1アクションまで落とす流れが機能した |
 
 ## ビジュアル系作業のワークフロー好み（2026-03-12）
 
@@ -100,6 +124,23 @@
 - 毎セッション冒頭に `~/.company_personal/context/` を必ず参照する
 - 前回セッションの続きから始める（挨拶よりも「前回の続き」を優先）
 - 「何から始めますか？」よりも「前回の最優先タスクはXXXでしたが、そこから始めますか？」と聞く
+
+### 2026-03-18 追記：Notion MCP API制限
+
+- `mcp__notion__API-create-a-data-source`（DBの新規作成）は「invalid_request_url」400エラーで動作しない
+- Notion MCPで使えるのは `post-page`（ページ作成）と `patch-block-children`（コンテンツ追記）のみ
+- Notionデータベースの作成はNotionネイティブ側で手動作成 or ページを後からDB変換するのが現実的
+
+### 2026-03-16 追記：定例MTG準備の自動化スタイル
+
+Partnership MTGなど定例MTGの準備は以下のフローで進める：
+
+1. **コンテキスト収集（自動）**: 前回のMTGノート・今週の関連ログ・dep_partnership内の変化を自動で読む
+2. **ヒアリング**: 「今週何を話したいか」「今の課題感は？」を先に聞く
+3. **アジェンダ共同作成**: ヒアリング内容 ＋ 収集したコンテキストを合わせてアジェンダを一緒に作る
+4. 完成したら prep ファイルを `mtg/notes/` に保存
+
+→ 「今日のPartnership MTGの準備しよっか」という発言がトリガー。
 
 ### 2026-03-13 追記（秘書トリガー確定）
 
