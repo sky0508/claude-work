@@ -7,7 +7,7 @@
 
 ## Q1: 緊急 × 重要
 
-- [ ] Trial member Welcome MTGアウトライン ブラッシュアップ | 期限: 明日（3/18）17:00まで | ドラフト: `dep_IB/hr/onboarding/2026-03-19_welcome-mtg-outline.md` | 残: 6ヶ月KPI数字入れ・スライド要否確認
+- [x] Trial member Welcome MTGアウトライン ブラッシュアップ | 完了: 2026-03-19 → `dep_IB/hr/onboarding/2026-03-19_welcome-mtg-outline.md` 確定版（英語スライド構成・ミッション・ターゲット・6ヶ月目標すべて確定）
 - [ ] IB自動化エージェント実装（GAS拡張 Step1）| 期限: 今日〜今週 | 設計済み: Option C ハイブリッド
 - [ ] 習慣管理機能 設計・実装（毎朝9時チェック）| 期限: 今日
 - [ ] WhatsApp Bot 基盤構築（モバイル対応）| 期限: 今日〜今週
@@ -23,7 +23,8 @@
 
 ## Q2: 非緊急 × 重要
 
-- [ ] トライアルメンバー向けオンボーディングスライド仕上げ・共有 | スライド生成済み: `strategy/slides/JVA-IB-Trial-Member-Onboarding-0319.pptx` | 残: 内容確認・共有
+- [ ] JVA Discord Agent System 設計・実装（IB Agent / Partnership Agent / Marketing Agent）| AI-First内部ツール | Notion Ideathonページ作成済み | 次ステップ: IB Agentのspec詳細化 → Pythonプロトタイプ実装
+- [ ] トライアルメンバー向けオンボーディングスライド Manus生成 & 共有 | アウトライン確定: `dep_IB/hr/onboarding/2026-03-19_welcome-mtg-outline.md` | 残: Manusにアウトライン渡してスライド生成 → 当日共有
 - [ ] ウィークリーレポート作成 → Discordに送付 | 対象: W09（3/10〜3/16）| Discord用フォーマットのテンプレ作成含む
 - [ ] Work Log DB 作成（Notion上で手動）| 設計確定: 1 Project = 1エントリ / フィールド: タイトル/Project relation/現在の状態/次のアクション/最終更新日 | Phase 2の前提
 - [ ] Resource DB 手動作成（Notion上）| Phase 1 残タスク | フィールド設計済み: 移行プランページ参照
@@ -42,7 +43,7 @@
 - [ ] 企業ガイドライン（SLAポリシー）→ Notionにアップ | ドラフト作成中
 - [ ] 学生自動メール送信の代替手段検討（GAS CV添付問題）| 候補: Notion自動化・Make/Zapier
 - [ ] 掲載企業への選考状況フォロー（I&N・GlobalDeal等）| 定期: 毎週
-- [ ] LinkedIn投稿 | 定期: 週1回以上 | LINE登録の主要ドライバー
+- [ ] LinkedIn投稿 | 定期: 週1回以上 | LINE登録の主要ドライバー | **コンテンツバンク作成済み（2026-03-20）**: Notion「LinkedIn Content」ページに5パターン（Spotlight/PainPoint/PlatformIntro/SocialProof/ThoughtLeadership）保存済み → まず🅐Spotlight+🅑PainPoint を投稿
 - [x] Google Sheets アウトリーチトラッカー新規作成 | 完了: 2026-03-16 → 30社登録・Message Templatesシート追加・outreach-tracker.md作成・承認3社反映済み
 - [ ] LINE追加時に学生属性アンケート追加 | 目的: 企業営業時に「登録学生の属性データ」として活用 | 方法: LINE追加後の自動返信 or Googleフォーム誘導など検討
 

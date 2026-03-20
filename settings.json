@@ -1,8 +1,22 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/sorasasaki/claude-workspace && git status --porcelain 2>/dev/null | grep -qE 'CLAUDE\\.md|MEMORY\\.md|settings\\.json|skills/' && git add -A && git diff --cached --quiet || (git commit -m \"auto: sync config [$(date '+%Y-%m-%d %H:%M')]\" -q && git push origin main -q) || true"
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
     "secretary@cc-secretary": true,
-    "company@cc-company": true
+    "company@cc-company": true,
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "cc-secretary": {
@@ -21,18 +35,5 @@
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754087472616
-  },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cd /Users/sorasasaki/claude-workspace && git status --porcelain 2>/dev/null | grep -qE 'CLAUDE\\.md|MEMORY\\.md|settings\\.json|skills/' && git add -A && git diff --cached --quiet || (git commit -m \"auto: sync config [$(date '+%Y-%m-%d %H:%M')]\" -q && git push origin main -q) || true"
-          }
-        ]
-      }
-    ]
   }
 }
