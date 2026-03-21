@@ -1,0 +1,77 @@
+<h2>企業詳細の表示方法</h2>
+<p class="subtitle">テーブルの企業名をクリックしたとき、詳細をどう表示しますか？</p>
+
+<div class="cards">
+  <div class="card" data-choice="fullpage" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8f9fa;border-radius:6px;padding:12px;font-size:10px;">
+        <div style="background:white;border-radius:4px;padding:10px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          <div style="font-size:13px;font-weight:bold;margin-bottom:8px;">ArkEdge Space</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+            <div><span style="color:#6c757d;">ステータス:</span> Step1送付済</div>
+            <div><span style="color:#6c757d;">メール:</span> tanaka@arkex.jp</div>
+            <div><span style="color:#6c757d;">LinkedIn:</span> /company/arkex</div>
+            <div><span style="color:#6c757d;">電話:</span> 03-xxxx-xxxx</div>
+          </div>
+          <div style="background:#f8f9fa;border-radius:3px;padding:8px;margin-top:6px;">
+            <div style="font-weight:bold;margin-bottom:4px;color:#495057;">コンタクト履歴</div>
+            <div style="color:#6c757d;">3/18 LinkedIn DM送信</div>
+            <div style="color:#6c757d;">3/20 フォロワップ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A) 専用ページ</h3>
+      <p>クリックで別ページに遷移。広いスペースで詳細・履歴・メモをフル表示。戻るボタンでリストに戻る。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="drawer" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;background:#f8f9fa;border-radius:6px;padding:12px;gap:8px;font-size:10px;">
+        <div style="flex:1.5;background:white;border-radius:4px;padding:6px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          <div style="font-weight:bold;color:#6c757d;margin-bottom:4px;">企業リスト</div>
+          <div style="background:#e3f2fd;padding:3px 5px;border-radius:3px;margin-bottom:3px;">▶ ArkEdge Space</div>
+          <div style="padding:3px 5px;margin-bottom:3px;">enechain</div>
+          <div style="padding:3px 5px;">Loglass</div>
+        </div>
+        <div style="flex:2;background:white;border-radius:4px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);border-left:3px solid #007bff;">
+          <div style="font-size:11px;font-weight:bold;margin-bottom:6px;">ArkEdge Space <span style="float:right;color:#aaa;">✕</span></div>
+          <div style="color:#6c757d;margin-bottom:3px;">ステータス: Step1送付済</div>
+          <div style="color:#6c757d;margin-bottom:3px;">担当: 田中 taro@ark.jp</div>
+          <div style="background:#f8f9fa;border-radius:3px;padding:5px;margin-top:6px;font-size:9px;">📋 履歴タイムライン...</div>
+          <div style="margin-top:6px;display:flex;gap:4px;">
+            <div style="background:#007bff;color:white;border-radius:3px;padding:2px 6px;font-size:9px;">メール送信</div>
+            <div style="background:#0a66c2;color:white;border-radius:3px;padding:2px 6px;font-size:9px;">LinkedIn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B) サイドドロワー（推奨）</h3>
+      <p>右からスライドインする引き出し。リストを見ながら詳細確認できる。アウトリーチボタンも配置可能。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="modal" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="position:relative;background:#f8f9fa;border-radius:6px;padding:12px;font-size:10px;">
+        <div style="opacity:0.3;font-size:9px;margin-bottom:4px;">（背景：企業リスト）</div>
+        <div style="background:white;border-radius:6px;padding:10px;box-shadow:0 4px 16px rgba(0,0,0,0.2);border:1px solid #dee2e6;">
+          <div style="font-size:11px;font-weight:bold;margin-bottom:6px;">ArkEdge Space <span style="float:right;color:#aaa;">✕</span></div>
+          <div style="color:#6c757d;margin-bottom:3px;">ステータス: Step1送付済</div>
+          <div style="color:#6c757d;margin-bottom:3px;">メール: tanaka@ark.jp</div>
+          <div style="display:flex;gap:4px;margin-top:8px;">
+            <div style="background:#007bff;color:white;border-radius:3px;padding:2px 6px;font-size:9px;">メール送信</div>
+            <div style="background:#6c757d;color:white;border-radius:3px;padding:2px 6px;font-size:9px;">閉じる</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C) モーダルポップアップ</h3>
+      <p>オーバーレイで表示。シンプルで実装が楽。ただし背景が見えなくなる。</p>
+    </div>
+  </div>
+</div>

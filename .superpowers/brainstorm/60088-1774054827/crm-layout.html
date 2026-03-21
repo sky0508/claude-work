@@ -1,0 +1,76 @@
+<h2>CRMのメインレイアウト</h2>
+<p class="subtitle">企業リストをどのように表示しますか？</p>
+
+<div class="cards">
+  <div class="card" data-choice="kanban" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;gap:8px;padding:12px;background:#f8f9fa;border-radius:6px;">
+        <div style="flex:1;background:#e9ecef;border-radius:4px;padding:8px;min-height:80px;">
+          <div style="font-size:10px;font-weight:bold;color:#6c757d;margin-bottom:6px;">未着手</div>
+          <div style="background:white;border-radius:3px;padding:5px;margin-bottom:4px;font-size:10px;box-shadow:0 1px 2px rgba(0,0,0,0.1);">ArkEdge Space</div>
+          <div style="background:white;border-radius:3px;padding:5px;font-size:10px;box-shadow:0 1px 2px rgba(0,0,0,0.1);">enechain</div>
+        </div>
+        <div style="flex:1;background:#e9ecef;border-radius:4px;padding:8px;min-height:80px;">
+          <div style="font-size:10px;font-weight:bold;color:#6c757d;margin-bottom:6px;">Step1送付済</div>
+          <div style="background:white;border-radius:3px;padding:5px;margin-bottom:4px;font-size:10px;box-shadow:0 1px 2px rgba(0,0,0,0.1);">Loglass</div>
+        </div>
+        <div style="flex:1;background:#e9ecef;border-radius:4px;padding:8px;min-height:80px;">
+          <div style="font-size:10px;font-weight:bold;color:#6c757d;margin-bottom:6px;">承認済</div>
+          <div style="background:white;border-radius:3px;padding:5px;margin-bottom:4px;font-size:10px;box-shadow:0 1px 2px rgba(0,0,0,0.1);">Jurin AI</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A) カンバンボード</h3>
+      <p>ステータスごとにカラム分け。パイプライン全体が一目でわかる。ドラッグ&ドロップで移動可能。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="table" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8f9fa;border-radius:6px;padding:12px;">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4px;font-size:10px;">
+          <div style="font-weight:bold;color:#6c757d;padding:4px;border-bottom:1px solid #dee2e6;">会社名</div>
+          <div style="font-weight:bold;color:#6c757d;padding:4px;border-bottom:1px solid #dee2e6;">ステータス</div>
+          <div style="font-weight:bold;color:#6c757d;padding:4px;border-bottom:1px solid #dee2e6;">担当者</div>
+          <div style="font-weight:bold;color:#6c757d;padding:4px;border-bottom:1px solid #dee2e6;">最終連絡</div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;">ArkEdge Space</div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;"><span style="background:#fff3cd;border-radius:3px;padding:1px 5px;">Step1</span></div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;">田中</div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;">3/18</div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;">enechain</div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;"><span style="background:#d4edda;border-radius:3px;padding:1px 5px;">承認済</span></div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;">山田</div>
+          <div style="padding:4px;border-bottom:1px solid #dee2e6;">3/20</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B) テーブル（スプレッドシート型）</h3>
+      <p>全企業を一覧表示。ソート・フィルター・検索が強力。データ量が多いときに向く。</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="split" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="display:flex;gap:8px;background:#f8f9fa;border-radius:6px;padding:12px;">
+        <div style="flex:1;background:white;border-radius:4px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          <div style="font-size:10px;font-weight:bold;color:#6c757d;margin-bottom:6px;">企業リスト</div>
+          <div style="background:#e3f2fd;border-radius:3px;padding:5px;margin-bottom:4px;font-size:10px;">▶ ArkEdge Space</div>
+          <div style="padding:5px;margin-bottom:4px;font-size:10px;">enechain</div>
+          <div style="padding:5px;font-size:10px;">Loglass</div>
+        </div>
+        <div style="flex:2;background:white;border-radius:4px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          <div style="font-size:11px;font-weight:bold;margin-bottom:6px;">ArkEdge Space</div>
+          <div style="font-size:10px;color:#6c757d;margin-bottom:4px;">ステータス: Step1送付済</div>
+          <div style="font-size:10px;color:#6c757d;margin-bottom:4px;">担当: 田中 | 最終連絡: 3/18</div>
+          <div style="background:#f8f9fa;border-radius:3px;padding:6px;font-size:10px;margin-top:8px;">コンタクト履歴...</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C) スプリット（左リスト＋右詳細）</h3>
+      <p>左に企業リスト、右に詳細。メールアプリのようなUI。1社ずつ確認するのに向く。</p>
+    </div>
+  </div>
+</div>

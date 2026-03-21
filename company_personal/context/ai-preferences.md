@@ -32,6 +32,13 @@
 - Client SecretなどのAPIキー類をチャットログに直接出力しない（ファイル経由を推奨）
 - セットアップ済みの環境で「はじめまして」から始めない
 
+## Claude Code プラグイン・スキル環境（2026-03-20 追記）
+
+- **Superpowers プラグイン**: `claude plugin install superpowers` でインストール済み（scope: user）
+  - 搭載スキル: `/brainstorming`（ソクラテス式設計深掘り）、`/execute-plan`、TDD強制、Systematic Debug、Code Review、Skill Authoring
+  - 作者: Jesse Vincent / Anthropic認証済み
+- Claude Code ビルトイン Subagents: `Explore`（コード探索）、`Plan`（設計立案）、`general-purpose`、`claude-code-guide`、`statusline-setup`
+
 ## MCPツール・環境構築ナレッジ（2026-03-10 追記）
 
 - Google Calendar MCP: `@cocal/google-calendar-mcp` + `GOOGLE_OAUTH_CREDENTIALS` env var
