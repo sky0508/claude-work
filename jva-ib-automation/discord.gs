@@ -44,11 +44,11 @@ function notifyDiscord(message) {
 function notifySuccess(params) {
   var now = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd HH:mm');
   var message =
-    '✅ **応募メール送信完了**\n' +
-    '企業: ' + params.companyName + '\n' +
-    'ポジション: ' + params.position + '\n' +
-    '学生: ' + params.studentName + '（' + params.university + '）\n' +
-    '送信時刻: ' + now;
+    '✅ **Application Email Sent**\n' +
+    'Company: ' + params.companyName + '\n' +
+    'Position: ' + params.position + '\n' +
+    'Student: ' + params.studentName + ' (' + params.university + ')\n' +
+    'Sent at: ' + now;
   notifyDiscord(message);
 }
 
@@ -62,13 +62,13 @@ function notifyError(errorType, detail, context) {
   context = context || {};
   var now = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd HH:mm');
   var message =
-    '🚨 **応募自動化エラー**\n' +
-    'エラー種別: ' + errorType + '\n' +
-    '詳細: ' + detail + '\n' +
-    (context.companyName ? '企業: ' + context.companyName + '\n' : '') +
-    (context.position ? 'ポジション: ' + context.position + '\n' : '') +
-    (context.studentName ? '学生: ' + context.studentName + '\n' : '') +
-    '発生時刻: ' + now;
+    '🚨 **Automation Error**\n' +
+    'Error: ' + errorType + '\n' +
+    'Detail: ' + detail + '\n' +
+    (context.companyName ? 'Company: ' + context.companyName + '\n' : '') +
+    (context.position ? 'Position: ' + context.position + '\n' : '') +
+    (context.studentName ? 'Student: ' + context.studentName + '\n' : '') +
+    'Occurred at: ' + now;
   notifyDiscord(message);
 }
 
@@ -80,10 +80,10 @@ function notifyDuplicate(context) {
   context = context || {};
   var now = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd HH:mm');
   var message =
-    '⚠️ **重複送信を検知しスキップしました**\n' +
-    (context.companyName ? '企業: ' + context.companyName + '\n' : '') +
-    (context.position ? 'ポジション: ' + context.position + '\n' : '') +
-    (context.studentName ? '学生: ' + context.studentName + '\n' : '') +
-    '検知時刻: ' + now;
+    '⚠️ **Duplicate submission detected — skipped**\n' +
+    (context.companyName ? 'Company: ' + context.companyName + '\n' : '') +
+    (context.position ? 'Position: ' + context.position + '\n' : '') +
+    (context.studentName ? 'Student: ' + context.studentName + '\n' : '') +
+    'Detected at: ' + now;
   notifyDiscord(message);
 }
