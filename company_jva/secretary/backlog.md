@@ -8,7 +8,8 @@
 ## Q1: 緊急 × 重要
 
 - [x] Trial member Welcome MTGアウトライン ブラッシュアップ | 完了: 2026-03-19 → `dep_IB/hr/onboarding/2026-03-19_welcome-mtg-outline.md` 確定版（英語スライド構成・ミッション・ターゲット・6ヶ月目標すべて確定）
-- [ ] IB自動化エージェント実装（GAS拡張 Step1）| 期限: 今日〜今週 | 設計済み: Option C ハイブリッド
+- [x] IB自動化エージェント実装（GAS拡張 Step1）| 完了: 2026-03-23 | JVAアカウントで本番フォーム作成・トリガー設定・E2Eテスト完了。送信元: japansventureacademy@gmail.com、CV添付、Discord英語通知すべて動作確認済み
+- [ ] 応募自動化メール文章ブラッシュアップ | 次回セッション最優先 | 現状: email.gs のテンプレをポリッシュする
 - [ ] 習慣管理機能 設計・実装（毎朝9時チェック）| 期限: 今日
 - [ ] WhatsApp Bot 基盤構築（モバイル対応）| 期限: 今日〜今週
 
@@ -22,6 +23,8 @@
 ---
 
 ## Q2: 非緊急 × 重要
+
+- [ ] JVA CRM Vercel デプロイ完了 | 状態: ビルド成功・GitHub push済み・Vercel連携で404エラー残 | 次: Vercel環境変数設定 + CLI or ダッシュボードから再デプロイ | repo: sky0508/JVA_CRM
 
 - [ ] JVA Discord Agent System 設計・実装（IB Agent / Partnership Agent / Marketing Agent）| AI-First内部ツール | Notion Ideathonページ作成済み | 次ステップ: IB Agentのspec詳細化 → Pythonプロトタイプ実装
 - [ ] トライアルメンバー向けオンボーディングスライド Manus生成 & 共有 | アウトライン確定: `dep_IB/hr/onboarding/2026-03-19_welcome-mtg-outline.md` | 残: Manusにアウトライン渡してスライド生成 → 当日共有
@@ -77,6 +80,7 @@
 - [x] 企業オンボーディングテンプレ作成 | 完了: 2026-03-13 → `sales/onboarding-template.md`
 - [x] 応募前スクリーニング設計ブリーフ | 完了: 2026-03-13 → `output/apply-confirmation-design.md`
 - [x] Manus用ブランドガイド・スライドスキル整備 | 完了: 2026-03-13 → `output/manus/`
+- [x] JVA CRM 実装（Phase 1-3）| 完了: 2026-03-21 | Next.js+Supabase構築・30社インポート・MCP6ツール・CRUD API・UI全コンポーネント・SendGrid設定・GitHub push | repo: sky0508/JVA_CRM | 残: Vercelデプロイ
 - [x] Jeongmin/Martin 企業推薦送付 | 完了: 2026-03-13
 - [x] トライアルメンバー向け Responsibilities 作成・共有 | 完了: 2026-03-13
 - [x] 新メンバー向けビジョン共有スライド作成（IB説明・ビジョン・Responsibilities統合）| 完了: 2026-03-15
