@@ -20,11 +20,13 @@ function lookupCompanyEmail(companyName) {
   var sheet = masterSS.getSheets()[0]; // 最初のシートを使用
   var data = sheet.getDataRange().getValues();
 
-  // 1行目はヘッダー行をスキップ（あれば）
-  for (var i = 0; i < data.length; i++) {
-    var rowCompany = String(data[i][0]).trim();
+  // 1行目はヘッダー行をスキップ
+  // 列構成: A=タイムスタンプ, B=First Name, C=Last Name, D=Email address,
+  //         E=LinkedIn Account, F=Company Name, G=Company Logo, ...
+  for (var i = 1; i < data.length; i++) {
+    var rowCompany = String(data[i][5]).trim(); // F列: Company Name
     if (rowCompany === companyName.trim()) {
-      var email = String(data[i][1]).trim();
+      var email = String(data[i][3]).trim();    // D列: Email address
       return email || null;
     }
   }
