@@ -75,3 +75,63 @@ function getFormValue(namedValues, key) {
   if (!arr || arr.length === 0) return '';
   return String(arr[0]).trim();
 }
+
+/**
+ * マスターシートの会社名リストをフォームのプルダウン選択肢に同期する
+ * スクリプトプロパティ:
+ *   COMPANY_MASTER_SHEET_ID - マスタースプレッドシートのID
+ *   STUDENT_FORM_ID         - 学生応募フォームのID
+ */
+function syncFormCompanyChoices() {
+  var props = PropertiesService.getScriptProperties();
+  var masterId = props.getProperty('COMPANY_MASTER_SHEET_ID');
+  var formId = props.getProperty('STUDENT_FORM_ID');
+
+  if (!masterId) {
+    throw new Error('COMPANY_MASTER_SHEET_ID がスクリプトプロパティに設定されていません');
+  }
+  if (!formId) {
+    throw new Error('STUDENT_FORM_ID がスクリプトプロパティに設定されていません');
+  }
+
+  // マスターシートからF列（Company Name）を取得
+  var masterSS = SpreadsheetApp.openById(masterId);
+  var sheet = masterSS.getSheets()[0];
+  var data = sheet.getDataRange().getValues();
+
+  var companies = [];
+  for (var i = 1; i < data.length; i++) { // 1行目はヘッダースキップ
+    var name = String(data[i][5]).trim(); // F列: Company Name
+    if (name && name !== '') {
+      companies.push(name);
+    }
+  }
+
+  // 重複排除・ソート
+  companies = companies.filter(function(v, i, a) { return a.indexOf(v) === i; });
+  companies.sort();
+
+  if (companies.length === 0) {
+    Logger.log('会社名が0件のため同期をスキップしました');
+    return;
+  }
+
+  // フォームの "Company Name" 質問を探して選択肢を更新
+  var form = FormApp.openById(formId);
+  var items = form.getItems();
+  var targetItem = null;
+
+  for (var j = 0; j < items.length; j++) {
+    if (items[j].getTitle() === 'Company Name') {
+      targetItem = items[j];
+      break;
+    }
+  }
+
+  if (!targetItem) {
+    throw new Error('フォームに "Company Name" という質問が見つかりません。質問タイトルを確認してください。');
+  }
+
+  targetItem.asListItem().setChoiceValues(companies);
+  Logger.log('同期完了: ' + companies.length + '社の選択肢を更新しました');
+}

@@ -9,14 +9,18 @@
  * 「e.namedValues」のキーはフォームの質問文そのものです。
  */
 var FIELD_NAMES = {
-  company:    '応募先会社名',       // プルダウン選択の質問文
-  position:   '応募ポジション',
-  name:       '氏名',
-  university: '大学名・学年',
-  skills:     'スキルセット',
-  linkedin:   'LinkedIn URL',
-  cvUrl:      'CV（Google Drive URL）',
-  clUrl:      'カバーレター（Google Drive URL）'
+  company:    'Company Name',
+  position:   'Position Title',
+  firstName:  'First Name',
+  lastName:   'Last Name',
+  nationality: 'Nationality',
+  university: 'University',
+  email:      'Email address',
+  lineUser:   'LINE User Name',
+  linkedin:   'LinkedIn Account',
+  cvFile:     'Please upload your latest resume',
+  major:      'What is your major? (e.g., Economics, Computer Science, Business)',
+  clFile:     ''  // カバーレター別項目なし
 };
 
 /**
@@ -41,12 +45,17 @@ function onFormSubmit(e) {
 
     var companyName  = getFormValue(namedValues, FIELD_NAMES.company);
     var position     = getFormValue(namedValues, FIELD_NAMES.position);
-    var studentName  = getFormValue(namedValues, FIELD_NAMES.name);
+    var firstName    = getFormValue(namedValues, FIELD_NAMES.firstName);
+    var lastName     = getFormValue(namedValues, FIELD_NAMES.lastName);
+    var studentName  = (firstName + ' ' + lastName).trim();
+    var nationality  = getFormValue(namedValues, FIELD_NAMES.nationality);
     var university   = getFormValue(namedValues, FIELD_NAMES.university);
-    var skills       = getFormValue(namedValues, FIELD_NAMES.skills);
+    var studentEmail = getFormValue(namedValues, FIELD_NAMES.email);
+    var lineUser     = getFormValue(namedValues, FIELD_NAMES.lineUser);
     var linkedin     = getFormValue(namedValues, FIELD_NAMES.linkedin);
-    var cvUrl        = getFormValue(namedValues, FIELD_NAMES.cvUrl);
-    var clUrl        = getFormValue(namedValues, FIELD_NAMES.clUrl);
+    var cvFile       = getFormValue(namedValues, FIELD_NAMES.cvFile);
+    var major        = getFormValue(namedValues, FIELD_NAMES.major);
+    var clFile       = getFormValue(namedValues, FIELD_NAMES.clFile);
 
     context = {
       companyName: companyName,
@@ -76,27 +85,21 @@ function onFormSubmit(e) {
       return;
     }
 
-    // ── 4. Drive ファイルアクセス確認（事前チェック）────────
-    // ファイル取得エラーは sendApplicationEmail 内で発生するが、
-    // URL が空の場合は事前に警告のみ（送信は継続）
-    if (!cvUrl) {
-      Logger.log('警告: CV URL が未入力です（学生: ' + studentName + '）');
-    }
-    if (!clUrl) {
-      Logger.log('警告: カバーレター URL が未入力です（学生: ' + studentName + '）');
+    // ── 4. ファイル確認 ──────────────────────────────────
+    if (!cvFile) {
+      Logger.log('警告: CV ファイルが未添付です（学生: ' + studentName + '）');
     }
 
     // ── 5. メール送信 ────────────────────────────────────
     sendApplicationEmail({
-      companyEmail: companyEmail,
-      companyName:  companyName,
-      position:     position,
-      studentName:  studentName,
-      university:   university,
-      skills:       skills,
-      linkedin:     linkedin,
-      cvUrl:        cvUrl,
-      clUrl:        clUrl
+      companyEmail:  companyEmail,
+      companyName:   companyName,
+      position:      position,
+      studentName:   studentName,
+      university:    university,
+      major:         major,
+      cvFile:        cvFile,
+      clFile:        clFile
     });
 
     // ── 6. 成功処理 ──────────────────────────────────────
