@@ -10,6 +10,12 @@ OUTPUT_DIR="$PROJECT_DIR/db/runs"
 
 mkdir -p "$OUTPUT_DIR"
 
+ENV_FILE="$PROJECT_DIR/.env"
+if [ -f "$ENV_FILE" ]; then
+  # shellcheck disable=SC1090
+  set -a; source "$ENV_FILE"; set +a
+fi
+
 usage() {
   cat <<EOF
 Usage: $0 <agent-name> <pokemon-name> [prompt-override]
@@ -79,8 +85,8 @@ ${SKILL_CONTENT}
 fi
 
 CLAUDE_EXIT=0
-claude -p "$FULL_PROMPT" \
-  --max-turns 10 \
+env -u CLAUDECODE claude -p "$FULL_PROMPT" \
+  --max-turns 20 \
   --output-format json \
   --dangerously-skip-permissions \
   > "$OUTPUT_FILE" 2> "$ERROR_FILE" || CLAUDE_EXIT=$?
@@ -102,8 +108,8 @@ if [ $CLAUDE_EXIT -ne 0 ]; then
   "$NOTIFY_SCRIPT" \
     --pokemon "$POKEMON_NAME" \
     --status "failed" \
-    --title "${POKEMON_NAME} 実行失敗" \
-    --body "Run #${RUN_ID}\nError: ${ERROR_MSG}" 2>/dev/null || true
+    --title "🔥 ${POKEMON_NAME} がたおれた..." \
+    --body "うわっ、なんかエラーが出ちゃった😢\nRun #${RUN_ID}\n\n\`\`\`\n${ERROR_MSG}\n\`\`\`" 2>/dev/null || true
 
   exit 1
 fi
@@ -174,20 +180,20 @@ except:
     print(0)
 " 2>/dev/null || echo "0")
 
-  DISCORD_BODY="Run #${RUN_ID}\n\n${LEADS_COUNT}社のリードを発見しました。\nSheets: ${SHEETS_RESULT:-スキップ}"
+  DISCORD_BODY="${LEADS_COUNT}社のリストをゲットしたよ!! 🎉\nRun #${RUN_ID}\n\nSheetsに書き込んだからチェックしてね👀\n${SHEETS_RESULT:-（Sheetsはスキップ）}"
   "$NOTIFY_SCRIPT" \
     --pokemon "$POKEMON_NAME" \
     --status "success" \
-    --title "${POKEMON_NAME} タスク完了" \
+    --title "🐒 ${POKEMON_NAME} がリードをゲット!!" \
     --body "$DISCORD_BODY" 2>/dev/null || true
 
   echo "[run-agent] SUCCESS run #${RUN_ID}"
 else
-  DISCORD_BODY="Run #${RUN_ID} rejected by hook.\n\n${HOOK_MSG:0:500}"
+  DISCORD_BODY="うーん、品質チェックで引っかかっちゃった🙈\nRun #${RUN_ID}\n\n${HOOK_MSG:0:500}"
   "$NOTIFY_SCRIPT" \
     --pokemon "$POKEMON_NAME" \
     --status "hook_rejected" \
-    --title "${POKEMON_NAME} Hook拒否" \
+    --title "🙈 ${POKEMON_NAME} のデータがNGだった..." \
     --body "$DISCORD_BODY" 2>/dev/null || true
 
   echo "[run-agent] HOOK_REJECTED run #${RUN_ID}"

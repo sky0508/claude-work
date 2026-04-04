@@ -49,7 +49,28 @@ Core VP: Cost-efficient access to motivated international students
 
 1. **企業HP** → 事業内容、チームサイズ、採用ページの有無
 2. **PR TIMES / TechCrunch Japan** → 資金調達ニュース、成長指標
-3. **LinkedIn** → Web検索で `site:linkedin.com/company [企業名]` を使い企業ページを発見。従業員数・HR担当者を確認。担当者は `site:linkedin.com "[企業名]" "Head of HR" OR "Talent" OR "Recruiting"` で検索。
+3. **LinkedIn 担当者検索（個人プロフィール必須）**
+
+   `contact.linkedin` には必ず `linkedin.com/in/...` の個人URLを入れること。
+   `linkedin.com/company/...` は**絶対に使わない**。
+
+   以下の順で検索する：
+
+   **Step A — HR担当者を探す（最優先）**
+   - `site:linkedin.com/in "[企業名]" "HR" OR "Talent" OR "Recruiting" OR "People"`
+   - `site:linkedin.com/in "[英語企業名]" "Head of HR" OR "Chief People Officer" OR "Talent Acquisition"`
+
+   **Step B — CEO/Founderにフォールバック**（Step Aで見つからない場合のみ）
+   - `site:linkedin.com/in "[企業名]" "CEO" OR "Founder" OR "Co-Founder"`
+   - 資金調達ニュース（PR TIMES / TechCrunch）の記事内に LinkedInリンクが掲載されていることも多い
+
+   **Step C — 企業サイトのAbout/Teamページを確認**
+   - 企業HPの `/team`, `/about`, `/company` ページに担当者のLinkedInリンクが載っていることがある
+   - 名前だけ分かった場合は `site:linkedin.com/in "[氏名]" "[企業名]"` で検索
+
+   **見つからなかった場合**
+   - `contact.linkedin` は `""` のまま（企業ページURLを絶対に入れない）
+   - 名前だけ分かれば `contact.name` に記入してOK
 4. **Crunchbase** → ファンディングラウンド、投資家情報
 
 ### Step 3: フィルタリング

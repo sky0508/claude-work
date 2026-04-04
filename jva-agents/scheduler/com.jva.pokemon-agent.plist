@@ -9,8 +9,7 @@
     <array>
         <string>/Users/sorasasaki/claude-workspace/jva-agents/scripts/run-agent.sh</string>
         <string>lead-search</string>
-        <!-- Pokemon name: replace with chosen name -->
-        <string>リード検索ポケモン</string>
+        <string>ヒコザル</string>
     </array>
 
     <key>WorkingDirectory</key>

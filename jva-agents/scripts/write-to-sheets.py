@@ -15,6 +15,7 @@ import json
 import os
 import re
 from pathlib import Path
+from urllib.parse import urlparse
 
 CREDENTIALS_FILE = Path.home() / ".config" / "gsheets-mcp" / "credentials.json"
 TOKEN_FILE = Path.home() / ".config" / "gsheets-mcp" / "token.json"
@@ -101,26 +102,53 @@ def get_or_create_sheet(gc, spreadsheet_id):
     except gspread.WorksheetNotFound:
         worksheet = spreadsheet.add_worksheet(title=SHEET_TAB, rows=1000, cols=len(HEADERS))
 
-    # ヘッダーがなければ追加
+    # ヘッダーがなければ1行目に挿入
     existing = worksheet.get_all_values()
     if not existing:
         worksheet.append_row(HEADERS, value_input_option="RAW")
+    elif existing[0] != HEADERS:
+        worksheet.insert_row(HEADERS, index=1, value_input_option="RAW")
 
     return worksheet
 
 
-def get_existing_companies(worksheet):
-    """既存の company_name 一覧を取得（重複チェック用）"""
+def _normalize(s):
+    """名寄せ用の正規化（記号・スペース除去・小文字化）"""
+    return re.sub(r'[\s\W]', '', s).lower()
+
+
+def _domain(url):
+    try:
+        return urlparse(url).netloc.replace("www.", "")
+    except Exception:
+        return ""
+
+
+def get_existing_keys(worksheet):
+    """既存行から重複検知用キーセットを返す（社名JA/EN正規化 + URLドメイン）"""
     all_values = worksheet.get_all_values()
     if len(all_values) <= 1:
-        return set()
+        return set(), set()
 
+    header = all_values[0]
     try:
-        header = all_values[0]
-        col_idx = header.index("company_name")
-        return {row[col_idx] for row in all_values[1:] if len(row) > col_idx and row[col_idx]}
+        idx_ja  = header.index("company_name")
+        idx_en  = header.index("company_name_en")
+        idx_url = header.index("url")
     except ValueError:
-        return set()
+        return set(), set()
+
+    names, domains = set(), set()
+    for row in all_values[1:]:
+        def cell(i):
+            return row[i] if len(row) > i else ""
+        ja  = _normalize(cell(idx_ja))
+        en  = _normalize(cell(idx_en))
+        dom = _domain(cell(idx_url))
+        if ja:  names.add(ja)
+        if en:  names.add(en)
+        if dom: domains.add(dom)
+    return names, domains
 
 
 def lead_to_row(lead, run_date):
@@ -165,7 +193,7 @@ def main():
     creds = authenticate()
     gc = gspread.authorize(creds)
     worksheet = get_or_create_sheet(gc, spreadsheet_id)
-    existing = get_existing_companies(worksheet)
+    existing_names, existing_domains = get_existing_keys(worksheet)
 
     # run_date を出力ファイル名から推定
     fname = os.path.basename(output_file)
@@ -175,12 +203,20 @@ def main():
     rows_written = 0
     skipped = 0
     for lead in leads:
-        company = lead.get("company_name", "")
-        if company in existing:
+        name_ja  = _normalize(lead.get("company_name", ""))
+        name_en  = _normalize(lead.get("company_name_en", ""))
+        dom      = _domain(lead.get("url", ""))
+
+        if (name_ja and name_ja in existing_names) or \
+           (name_en and name_en in existing_names) or \
+           (dom and dom in existing_domains):
             skipped += 1
             continue
+
         worksheet.append_row(lead_to_row(lead, run_date), value_input_option="USER_ENTERED")
-        existing.add(company)
+        if name_ja: existing_names.add(name_ja)
+        if name_en: existing_names.add(name_en)
+        if dom:     existing_domains.add(dom)
         rows_written += 1
 
     msg = f"SHEETS: {rows_written}行追記"
