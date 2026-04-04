@@ -46,11 +46,29 @@ CREATE TABLE dialogue_logs (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+CREATE TABLE outreach_logs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  run_id INTEGER REFERENCES agent_runs(id),
+  company_name TEXT NOT NULL,
+  channel TEXT NOT NULL,
+  recipient_name TEXT,
+  linkedin_url TEXT,
+  email TEXT,
+  message_body TEXT,
+  gmail_draft_id TEXT,
+  status TEXT DEFAULT 'drafted' CHECK(status IN ('drafted','sent','skipped')),
+  skip_reason TEXT,
+  drafted_at TEXT NOT NULL DEFAULT (datetime('now')),
+  sent_at TEXT
+);
+
 CREATE INDEX idx_agent_runs_agent ON agent_runs(agent_name);
 CREATE INDEX idx_agent_runs_status ON agent_runs(status);
 CREATE INDEX idx_agent_runs_started ON agent_runs(started_at);
 CREATE INDEX idx_dialogue_logs_agent ON dialogue_logs(agent_name);
+CREATE INDEX idx_outreach_logs_company ON outreach_logs(company_name);
+CREATE INDEX idx_outreach_logs_run ON outreach_logs(run_id);
 SQL
 
 echo "[init-db] Database initialized at $DB_PATH"
-echo "[init-db] Tables: agent_runs, agent_costs, dialogue_logs"
+echo "[init-db] Tables: agent_runs, agent_costs, dialogue_logs, outreach_logs"

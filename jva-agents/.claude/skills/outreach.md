@@ -1,18 +1,18 @@
 # アウトリーチスキル
 
 ## 目的
-ヒコザルが生成したリードリストの各企業に対して、パーソナライズされたアウトリーチメッセージを下書きし、
-Google Sheets "Outreach" タブに書き込む。
+ヒコザルが生成したリードリストの各企業に対して、JVA公式テンプレートをベースにした
+パーソナライズされたアウトリーチメッセージを下書きし、JSON形式で出力する。
+
+---
 
 ## 実行手順
 
 ### Step 1: 最新リードデータの取得
 
-SQLiteから最新の成功したlead-search実行を取得する:
-
 ```bash
 sqlite3 db/jva-agents.db "
-  SELECT id, started_at, output_summary
+  SELECT id, started_at
   FROM agent_runs
   WHERE agent_name='lead-search' AND status='success'
   ORDER BY started_at DESC
@@ -20,93 +20,138 @@ sqlite3 db/jva-agents.db "
 "
 ```
 
-取得した `id`（run_id）を使って対応するJSONファイルを探す:
+取得した `id`（run_id）に対応するJSONファイルを読み込む:
 
 ```bash
 ls db/runs/lead-search_*_<run_id>.json
 ```
 
-そのファイルを読み込んで `leads` 配列を取得する。
-
-### Step 2: 既アウトリーチ企業の除外
+### Step 2: 既アウトリーチ企業の確認
 
 ```bash
 sqlite3 db/jva-agents.db "
-  SELECT company_name
-  FROM outreach_logs
-  WHERE status != 'skipped';
+  SELECT company_name FROM outreach_logs WHERE status != 'skipped';
 "
 ```
 
-このリストに含まれる企業は今回のアウトリーチから除外する（重複送信防止）。
+このリストに含まれる企業は今回スキップ（`skip_reason: "already_contacted"`）。
 
 ### Step 3: メッセージ生成
 
-各リードに対して以下のロジックでメッセージを作成する:
+各リードを以下のロジックで処理:
 
-#### LinkedIn接続リクエスト（`contact.linkedin` が有効な場合）
+1. `contact.linkedin` に `/in/` 形式のURLがある → **LinkedIn接続リクエスト文**を生成
+2. `contact.email` がある（LinkedInがない場合）→ **メール**を生成
+3. 両方なし → スキップ（`skip_reason: "no_contact_info"`）
 
-- `https://www.linkedin.com/in/...` 形式のURLがある場合のみ
-- 企業ページ (`/company/`) は対象外
-- **300文字以内厳守**
+---
 
-**テンプレート（必ず why_target の内容でカスタマイズ）:**
+## テンプレート
+
+### 【LinkedIn 接続リクエスト — EN】（300文字以内厳守）
+
 ```
-Hi [contact.name first name], [specific insight from why_target].
+Hi [FIRST_NAME]!
 
-At JVA, we connect growth-stage startups with motivated international students from Japan's top universities (Waseda/Keio/UTokyo) — zero recruitment cost, trial format.
+I'm with Japan's Venture Academy, a student startup community in Tokyo. We run a free internship board connecting global startups with top university students in Japan. We'd love to have [COMPANY_NAME] list a role. I've linked our prospectus below. Hope to hear from you!
 
-Worth a quick chat?
-```
-
-#### メール（`contact.email` がある場合 / LinkedInがない場合）
-
-**件名テンプレート:**
-```
-[Company Name] × Global Talent from Japan's Top Universities
+https://tinyurl.com/jvaib2026
 ```
 
-**本文テンプレート（why_target の内容で1段落目をカスタマイズ）:**
+### 【LinkedIn 接続リクエスト — JP】（300文字以内厳守）
+
 ```
-Hi [contact.name],
-
-[Specific observation from why_target — e.g., "Your recent Series A and rapid international expansion" or "Your focus on AI-native hiring tools"] caught my attention.
-
-At JVA, we partner with growth-stage startups like [Company] to provide access to motivated international students from Japan's top universities (Waseda, Keio, UTokyo) — on a trial basis with zero recruitment cost.
-
-Happy to share what this looked like for similar-stage companies. Open to a 15-min call?
-
-Best,
-[Your name]
-JVA
+はじめまして！国内トップ大学のグローバル学生と東京のスタートアップをつなぐ「JVA Internship Board」を運営している佐々木と申します！ただいま先着20社限定で掲載から採用まで完全無料で提供しています。インターン採用でお役に立てるかもと思いご挨拶させていただきました！よろしくお願いいたします。
 ```
 
-#### スキップ条件
-- `contact.linkedin` も `contact.email` も空 → `status: "skipped"`, `skip_reason: "no_contact_info"`
-- 既にアウトリーチ済み → `status: "skipped"`, `skip_reason: "already_contacted"`
+---
 
-### Step 4: 品質チェック（自己検証）
+### 【メール — EN】
 
-出力前に各メッセージを確認:
-- [ ] `[placeholder]` 形式のテキストが残っていないか
-- [ ] LinkedIn文が300文字以内か
-- [ ] `why_target` の具体的な内容がメッセージに反映されているか
-- [ ] 英語で書かれているか
+**件名:**
+```
+Internship Opportunity: [COMPANY_NAME] x JVA Internship Board
+```
 
-### Step 5: JSON出力
+**本文:**
+```
+Hi [FIRST_NAME],
 
-エージェント定義の出力形式に従ってJSONを出力する。
-**JSONのみを出力すること。余計な説明文は不要。**
+My name is Sora Sasaki, and I'm part of the Partnerships Team at Japan's Venture Academy (JVA), a student-run startup community in Tokyo backed by Shibuya Startup Support.
 
-## 出力品質基準
+We run the JVA Internship Board — a free platform connecting global startups in Japan with internationally competitive students from top universities, including UTokyo, Keio, Waseda, and Tokyo Tech. Our students are English-proficient, startup-minded, and actively looking for hands-on experience.
 
-- `message_body` が50文字以上（LinkedIn）または100文字以上（email）
-- `[placeholder]` が残っていない
-- 同一企業への重複アウトリーチなし
-- LinkedInメッセージは300文字以内
+Would [COMPANY_NAME] be open to listing an internship role? It costs nothing to get started, and we handle distribution and application routing on our end.
 
-## 注意事項
+I've attached a short overview below. Please let me know if you'd be interested!
 
-- コンタクト情報が不完全な企業は無理に対応しない（スキップで正解）
-- `why_target` が具体的でない企業はメッセージも具体性が下がる → 可能な限り企業サイトを参照して補完する
-- Sheets への書き込みは run-agent.sh が自動で行うため、エージェントは JSON 出力のみでよい
+Best regards,
+Sora Sasaki
+JVA Internship Board | japansventureacademy@gmail.com
+https://tinyurl.com/jvaib2026
+```
+
+---
+
+### 【メール — JP】
+
+**件名:**
+```
+【インターン掲載のご案内】[COMPANY_NAME] x JVA Internship Board
+```
+
+**本文:**
+```
+[FULL_NAME]様
+
+はじめまして。Japan's Venture Academy（JVA）の佐々木と申します。渋谷区を拠点に活動する学生主導のスタートアップコミュニティで、パートナーシップを担当しております。
+
+現在、東大・慶應・早稲田・東工大などトップ大学に在籍するグローバルな学生と、日本のスタートアップをつなぐ無料のインターンマッチングプラットフォーム「JVA Internship Board」を運営しています。英語対応可能で、実務経験に意欲的な学生が多く登録しています。
+
+もし[COMPANY_NAME]様でインターン生の受け入れにご関心がありましたら、ぜひ一度ポジションを掲載いただけないでしょうか。掲載から採用まで全て無料でこちらでサポートさせていただいております。
+
+よろしくお願いいたします。
+
+佐々木 宙（Sora Sasaki）
+JVA Internship Board | japansventureacademy@gmail.com
+https://tinyurl.com/jvaib2026
+```
+
+---
+
+## プレースホルダー置換ルール
+
+| プレースホルダー | 置換する値 |
+|---|---|
+| `[FIRST_NAME]` | `contact.name` の名前部分（スペース前の部分。不明なら "there" を使う） |
+| `[FULL_NAME]` | `contact.name` 全体 |
+| `[COMPANY_NAME]` | `company_name_en`（なければ `company_name`） |
+
+**重要**: 置換後にプレースホルダーが残っていないことを必ず確認する。
+
+---
+
+## 言語選択ルール
+
+| 条件 | 使用テンプレート |
+|---|---|
+| contact.name が日本語名（漢字含む）| JP |
+| company_name が日本語主体 | JP |
+| 外資・英語名のスタートアップ | EN |
+| 判断できない | EN（デフォルト） |
+
+---
+
+## 品質チェック（出力前に自己確認）
+
+- [ ] `[FIRST_NAME]`、`[COMPANY_NAME]` 等のプレースホルダーが全て置換済みか
+- [ ] LinkedInメッセージが300文字以内か
+- [ ] why_target の内容をメッセージで活かせているか（特にメールの場合）
+- [ ] 企業名・担当者名が正確か
+
+---
+
+## Step 4: JSON出力
+
+エージェント定義の出力形式に従ってJSONのみを出力する。
+Sheetsへの書き込みは run-agent.sh が自動処理するため、エージェントはJSONだけでよい。

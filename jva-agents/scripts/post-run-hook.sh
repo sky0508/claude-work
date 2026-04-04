@@ -64,7 +64,7 @@ if not json_match:
     sys.exit(1)
 
 try:
-    data = json.loads(json_match.group())
+    data = json.loads(json_match.group(), strict=False)
 except json.JSONDecodeError as e:
     print(f"HOOK FAIL: Invalid JSON: {e}")
     sys.exit(1)
@@ -112,9 +112,79 @@ sys.exit(0)
 PYEOF
 }
 
+validate_outreach() {
+  python3 - "$OUTPUT_FILE" <<'PYEOF'
+import json, sys, re
+
+output_file = sys.argv[1]
+with open(output_file) as f:
+    raw_file = f.read()
+
+# claude -p --output-format json ラッパーからテキストを抽出
+try:
+    outer = json.loads(raw_file)
+    if isinstance(outer, list):
+        text = '\n'.join(b.get('text', '') for b in outer if b.get('type') == 'text')
+    elif isinstance(outer, dict) and 'result' in outer:
+        text = outer['result']
+    else:
+        text = raw_file
+except json.JSONDecodeError:
+    text = raw_file
+
+json_match = re.search(r'\{[\s\S]*\}', text)
+if not json_match:
+    print("HOOK FAIL: No JSON object found in output")
+    sys.exit(1)
+
+try:
+    data = json.loads(json_match.group(), strict=False)
+except json.JSONDecodeError as e:
+    print(f"HOOK FAIL: Invalid JSON: {e}")
+    sys.exit(1)
+
+errors = []
+
+if "messages" not in data:
+    errors.append("Missing 'messages' array")
+
+messages = data.get("messages", [])
+if not isinstance(messages, list):
+    errors.append("'messages' is not an array")
+    messages = []
+
+drafted = [m for m in messages if m.get("status") == "drafted"]
+
+for i, msg in enumerate(drafted):
+    if not msg.get("company_name"):
+        errors.append(f"Message [{i}]: missing 'company_name'")
+    if not msg.get("channel"):
+        errors.append(f"Message [{i}]: missing 'channel'")
+    body = msg.get("message_body", "")
+    if not body or len(body) < 50:
+        errors.append(f"Message [{i}]: 'message_body' too short or missing (min 50 chars)")
+    if body and re.search(r'\[.+?\]', body):
+        errors.append(f"Message [{i}]: unfilled placeholder found in message_body")
+    if msg.get("channel") == "linkedin" and body and len(body) > 300:
+        errors.append(f"Message [{i}]: LinkedIn message exceeds 300 chars ({len(body)} chars)")
+
+if errors:
+    print("HOOK FAIL:")
+    for e in errors:
+        print(f"  - {e}")
+    sys.exit(1)
+
+print(f"HOOK PASS: {len(drafted)} messages validated ({len(messages) - len(drafted)} skipped)")
+sys.exit(0)
+PYEOF
+}
+
 case "$AGENT_NAME" in
   lead-search)
     validate_lead_search
+    ;;
+  outreach)
+    validate_outreach
     ;;
   *)
     echo "HOOK PASS: No specific validation for agent '$AGENT_NAME' (passthrough)"

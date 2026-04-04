@@ -4,12 +4,12 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ENV_FILE="$SCRIPT_DIR/../.env"
 
-if [ -f "$ENV_FILE" ]; then
-  # shellcheck disable=SC1090
-  source "$ENV_FILE"
-fi
-
+# 環境変数を先に確認（per-agentのwebhook overrideに対応）
 WEBHOOK_URL="${DISCORD_WEBHOOK_URL:-}"
+if [ -z "$WEBHOOK_URL" ] && [ -f "$ENV_FILE" ]; then
+  source "$ENV_FILE"
+  WEBHOOK_URL="${DISCORD_WEBHOOK_URL:-}"
+fi
 if [ -z "$WEBHOOK_URL" ]; then
   echo "[notify-discord] ERROR: DISCORD_WEBHOOK_URL not set" >&2
   echo "[notify-discord] Set it in $ENV_FILE or as environment variable" >&2

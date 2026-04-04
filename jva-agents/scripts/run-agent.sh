@@ -155,16 +155,40 @@ sqlite3 "$DB_PATH" "
 "
 
 if [ "$HOOK_STATUS" = "success" ]; then
-  # Google Sheets への書き込み
   SHEETS_ID="${GOOGLE_SHEETS_ID:-}"
-  SHEETS_SCRIPT="$SCRIPT_DIR/write-to-sheets.py"
-  if [ -n "$SHEETS_ID" ] && [ -f "$SHEETS_SCRIPT" ]; then
-    SHEETS_RESULT=$(python3 "$SHEETS_SCRIPT" "$OUTPUT_FILE" "$SHEETS_ID" 2>&1) || true
+  SHEETS_RESULT="（Sheetsはスキップ）"
+
+  # エージェント別: per-agent Discord webhook override
+  case "$AGENT_NAME" in
+    outreach)
+      if [ -n "${DISCORD_WEBHOOK_OUTREACH:-}" ]; then
+        export DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_OUTREACH"
+      fi
+      ;;
+  esac
+
+  # エージェント別: Sheets書き込みスクリプト
+  case "$AGENT_NAME" in
+    lead-search)
+      AGENT_SHEETS_SCRIPT="$SCRIPT_DIR/write-to-sheets.py"
+      ;;
+    outreach)
+      AGENT_SHEETS_SCRIPT="$SCRIPT_DIR/write-outreach-to-sheets.py"
+      ;;
+    *)
+      AGENT_SHEETS_SCRIPT=""
+      ;;
+  esac
+
+  if [ -n "${AGENT_SHEETS_SCRIPT:-}" ] && [ -n "$SHEETS_ID" ] && [ -f "$AGENT_SHEETS_SCRIPT" ]; then
+    SHEETS_RESULT=$(python3 "$AGENT_SHEETS_SCRIPT" "$OUTPUT_FILE" "$SHEETS_ID" "$DB_PATH" 2>&1) || true
     echo "[run-agent] Sheets: $SHEETS_RESULT"
   fi
 
-  # leads_found を取得してサマリーに使う
-  LEADS_COUNT=$(python3 -c "
+  # エージェント別: Discord通知メッセージ
+  case "$AGENT_NAME" in
+    lead-search)
+      ITEM_COUNT=$(python3 -c "
 import json, sys, re
 raw = open('$OUTPUT_FILE').read()
 try:
@@ -179,12 +203,34 @@ try:
 except:
     print(0)
 " 2>/dev/null || echo "0")
+      DISCORD_TITLE="🐒 ${POKEMON_NAME} がリードをゲット!!"
+      DISCORD_BODY="${ITEM_COUNT}社のリストをゲットしたよ!! 🎉\nRun #${RUN_ID}\n\nSheetsに書き込んだからチェックしてね👀\n${SHEETS_RESULT}"
+      ;;
+    outreach)
+      ITEM_COUNT=$(python3 -c "
+import json, sys, re
+raw = open('$OUTPUT_FILE').read()
+try:
+    data = json.loads(raw)
+    result = data.get('result', '') if isinstance(data, dict) else ''
+    match = re.search(r'\"outreach_drafted\":\s*(\d+)', result)
+    print(match.group(1) if match else 0)
+except:
+    print(0)
+" 2>/dev/null || echo "0")
+      DISCORD_TITLE="🔥 ${POKEMON_NAME} が下書き完成!!"
+      DISCORD_BODY="${ITEM_COUNT}件のアウトリーチ下書きを作ったよ 🔥\nRun #${RUN_ID}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
+      ;;
+    *)
+      DISCORD_TITLE="✅ ${POKEMON_NAME} タスク完了"
+      DISCORD_BODY="タスク完了！\nRun #${RUN_ID}"
+      ;;
+  esac
 
-  DISCORD_BODY="${LEADS_COUNT}社のリストをゲットしたよ!! 🎉\nRun #${RUN_ID}\n\nSheetsに書き込んだからチェックしてね👀\n${SHEETS_RESULT:-（Sheetsはスキップ）}"
   "$NOTIFY_SCRIPT" \
     --pokemon "$POKEMON_NAME" \
     --status "success" \
-    --title "🐒 ${POKEMON_NAME} がリードをゲット!!" \
+    --title "$DISCORD_TITLE" \
     --body "$DISCORD_BODY" 2>/dev/null || true
 
   echo "[run-agent] SUCCESS run #${RUN_ID}"
