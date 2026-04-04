@@ -38,6 +38,8 @@ sqlite3 db/jva-agents.db "
 
 ### Step 3: メッセージ生成
 
+**リードは必ず `leads` 配列の順番通りに処理する**（上から順番に）。順番を変えない。
+
 各リードを以下のロジックで処理:
 
 1. `contact.linkedin` に `/in/` 形式のURLがある → **LinkedIn接続リクエスト文**を生成
