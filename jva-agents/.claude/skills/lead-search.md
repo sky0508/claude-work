@@ -49,7 +49,7 @@ Core VP: Cost-efficient access to motivated international students
 
 1. **企業HP** → 事業内容、チームサイズ、採用ページの有無
 2. **PR TIMES / TechCrunch Japan** → 資金調達ニュース、成長指標
-3. **LinkedIn** → 企業ページの従業員数、HR担当者
+3. **LinkedIn** → Web検索で `site:linkedin.com/company [企業名]` を使い企業ページを発見。従業員数・HR担当者を確認。担当者は `site:linkedin.com "[企業名]" "Head of HR" OR "Talent" OR "Recruiting"` で検索。
 4. **Crunchbase** → ファンディングラウンド、投資家情報
 
 ### Step 3: フィルタリング
