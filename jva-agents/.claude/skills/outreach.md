@@ -164,8 +164,9 @@ https://tinyurl.com/jvaib2026
 ## 品質チェック（出力前に自己確認）
 
 - [ ] `[FIRST_NAME]`、`[COMPANY_NAME]` 等が全て置換済みか
-- [ ] LinkedInメッセージが300文字以内か
+- [ ] LinkedInメッセージが300文字以内か（`len(message_body) <= 300` を必ず確認）
 - [ ] 行の順番通りに処理されているか（行2→行3→行4…）
+- [ ] 出力JSONの `company_name` フィールドが **Leadsシートの B列（company_name）の値と完全一致**しているか（短縮・変換不可）
 
 ---
 
