@@ -100,12 +100,6 @@ for i, lead in enumerate(leads):
     if conf not in ("high", "medium", "low"):
         errors.append(f"Lead [{i}]: invalid confidence '{conf}'")
 
-    contact = lead.get("contact", {}) or {}
-    linkedin = contact.get("linkedin", "")
-    if linkedin and "linkedin.com/company" in linkedin:
-        errors.append(
-            f"Lead [{i}]: contact.linkedin is a company page (not allowed): {linkedin}"
-        )
 
 if errors:
     print("HOOK FAIL:")

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jva.outreach-agent</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/sorasasaki/claude-workspace/jva-agents/scripts/run-agent.sh</string>
+        <string>outreach</string>
+        <string>ヒトカゲ</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/sorasasaki/claude-workspace/jva-agents</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/sorasasaki/.npm-global/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/sorasasaki</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/sorasasaki/claude-workspace/jva-agents/db/launchd-outreach-stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/sorasasaki/claude-workspace/jva-agents/db/launchd-outreach-stderr.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

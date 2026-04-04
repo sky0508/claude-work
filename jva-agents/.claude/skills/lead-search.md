@@ -69,7 +69,8 @@ Core VP: Cost-efficient access to motivated international students
    - 名前だけ分かった場合は `site:linkedin.com/in "[氏名]" "[企業名]"` で検索
 
    **見つからなかった場合**
-   - `contact.linkedin` は `""` のまま（企業ページURLを絶対に入れない）
+   - 個人プロフィール（`linkedin.com/in/...`）が取れなければ、会社ページURL（`linkedin.com/company/...`）を入れてOK
+   - それも不明なら `""` のまま
    - 名前だけ分かれば `contact.name` に記入してOK
 4. **Crunchbase** → ファンディングラウンド、投資家情報
 
