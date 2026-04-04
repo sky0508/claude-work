@@ -25,7 +25,7 @@ HEADERS = [
     "run_date", "company_name", "company_name_en", "url",
     "industry", "stage", "location", "why_target",
     "contact_name", "contact_title", "contact_linkedin", "contact_email",
-    "source", "confidence"
+    "source", "confidence", "contact_status"
 ]
 
 
@@ -153,6 +153,8 @@ def get_existing_keys(worksheet):
 
 def lead_to_row(lead, run_date):
     contact = lead.get("contact", {}) or {}
+    contact_linkedin = contact.get("linkedin", "")
+    contact_status = "found" if contact_linkedin and "/in/" in contact_linkedin else "pending"
     return [
         run_date,
         lead.get("company_name", ""),
@@ -164,10 +166,11 @@ def lead_to_row(lead, run_date):
         lead.get("why_target", ""),
         contact.get("name", ""),
         contact.get("title", ""),
-        contact.get("linkedin", ""),
+        contact_linkedin,
         contact.get("email", ""),
         lead.get("source", ""),
         lead.get("confidence", ""),
+        contact_status,
     ]
 
 
