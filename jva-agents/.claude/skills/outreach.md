@@ -1,49 +1,64 @@
 # アウトリーチスキル
 
 ## 目的
-ヒコザルが生成したリードリストの各企業に対して、JVA公式テンプレートをベースにした
-パーソナライズされたアウトリーチメッセージを下書きし、JSON形式で出力する。
+Google Sheets の "Leads" タブを直接参照し、`outreach_status = "未完了"` のリードに対して
+JVA公式テンプレートをベースにしたパーソナライズされたアウトリーチメッセージを下書きする。
+
+---
+
+## スプレッドシート情報
+
+- **Spreadsheet ID**: `1zeZq2EmLd86zefxXOsKsrcv5YFfxa7Cs-eb4o2NPRSY`
+- **Leads タブ**: `Leads`（ヘッダー行: 1行目、データ: 2行目以降）
+
+### Leads タブの列構成
+
+| 列 | フィールド名 |
+|---|---|
+| A | run_date |
+| B | company_name |
+| C | company_name_en |
+| D | url |
+| E | industry |
+| F | stage |
+| G | location |
+| H | why_target |
+| I | contact_name |
+| J | contact_title |
+| K | contact_linkedin |
+| L | contact_email |
+| M | source |
+| N | confidence |
+| O | Status |
+| P | contact_status |
+| Q | outreach_status |
 
 ---
 
 ## 実行手順
 
-### Step 1: 最新リードデータの取得
+### Step 1: Leads タブの読み込み
 
-```bash
-sqlite3 db/jva-agents.db "
-  SELECT id, started_at
-  FROM agent_runs
-  WHERE agent_name='lead-search' AND status='success'
-  ORDER BY started_at DESC
-  LIMIT 1;
-"
+Google Sheets MCP を使って Leads タブを読み込む:
+
+```
+mcp__google-sheets__get_sheet_data
+  spreadsheet_id: 1zeZq2EmLd86zefxXOsKsrcv5YFfxa7Cs-eb4o2NPRSY
+  sheet: Leads
 ```
 
-取得した `id`（run_id）に対応するJSONファイルを読み込む:
+### Step 2: 対象リードの抽出
 
-```bash
-ls db/runs/lead-search_*_<run_id>.json
-```
-
-### Step 2: 既アウトリーチ企業の確認
-
-```bash
-sqlite3 db/jva-agents.db "
-  SELECT company_name FROM outreach_logs WHERE status != 'skipped';
-"
-```
-
-このリストに含まれる企業は今回スキップ（`skip_reason: "already_contacted"`）。
+- **必ず行番号の小さい順（上から）に処理する**（行2、行3、行4…の順）
+- `outreach_status`（Q列）が `"未完了"` または空欄の行を対象とする
+- `outreach_status = "完了"` の行はスキップ（既に下書き済み）
 
 ### Step 3: メッセージ生成
 
-**リードは必ず `leads` 配列の順番通りに処理する**（上から順番に）。順番を変えない。
+各対象リードについて以下のロジックで処理:
 
-各リードを以下のロジックで処理:
-
-1. `contact.linkedin` に `/in/` 形式のURLがある → **LinkedIn接続リクエスト文**を生成
-2. `contact.email` がある（LinkedInがない場合）→ **メール**を生成
+1. `contact_linkedin`（K列）に `/in/` 形式のURLがある → **LinkedIn接続リクエスト文**を生成
+2. `contact_email`（L列）がある（かつLinkedInなし）→ **メール**を生成
 3. 両方なし → スキップ（`skip_reason: "no_contact_info"`）
 
 ---
@@ -125,11 +140,11 @@ https://tinyurl.com/jvaib2026
 
 | プレースホルダー | 置換する値 |
 |---|---|
-| `[FIRST_NAME]` | `contact.name` の名前部分（スペース前の部分。不明なら "there" を使う） |
-| `[FULL_NAME]` | `contact.name` 全体 |
+| `[FIRST_NAME]` | `contact_name` の名前部分（スペース前。不明なら "there" を使う） |
+| `[FULL_NAME]` | `contact_name` 全体 |
 | `[COMPANY_NAME]` | `company_name_en`（なければ `company_name`） |
 
-**重要**: 置換後にプレースホルダーが残っていないことを必ず確認する。
+**重要**: 出力前に全プレースホルダーが置換済みか確認すること。
 
 ---
 
@@ -137,27 +152,24 @@ https://tinyurl.com/jvaib2026
 
 **判定の優先順位（上から順に確認）:**
 
-1. **企業のHP言語** — リードの `url` を参照。HPが日本語主体なら JP、英語主体なら EN
-2. **LinkedIn投稿言語** — `contact.linkedin` があれば、そのプロフィールや投稿の言語を参考にする
+1. **企業のHP言語** — `url` を参照。HPが日本語主体なら JP、英語主体なら EN
+2. **LinkedInプロフィール言語** — `contact_linkedin` のプロフィールや投稿の言語
 3. **企業名・担当者名** — 日本語名（漢字含む）なら JP
 
 **判断できない場合（上記で明確に判断できないとき）:**
-→ **EN と JP の両方を作成する**（メールなら件名・本文を2パターン、LinkedInなら2種類の文章を出力）
-
-その場合、出力は `language: "en"` と `language: "jp"` の2件として records に含める。
+→ **EN と JP の両方を作成する**（2件として `messages` に含める）
 
 ---
 
 ## 品質チェック（出力前に自己確認）
 
-- [ ] `[FIRST_NAME]`、`[COMPANY_NAME]` 等のプレースホルダーが全て置換済みか
+- [ ] `[FIRST_NAME]`、`[COMPANY_NAME]` 等が全て置換済みか
 - [ ] LinkedInメッセージが300文字以内か
-- [ ] why_target の内容をメッセージで活かせているか（特にメールの場合）
-- [ ] 企業名・担当者名が正確か
+- [ ] 行の順番通りに処理されているか（行2→行3→行4…）
 
 ---
 
 ## Step 4: JSON出力
 
-エージェント定義の出力形式に従ってJSONのみを出力する。
-Sheetsへの書き込みは run-agent.sh が自動処理するため、エージェントはJSONだけでよい。
+エージェント定義の出力形式に従って**JSONのみ**を出力する。
+Sheetsへの書き込みと `outreach_status` の更新は run-agent.sh が自動処理する。

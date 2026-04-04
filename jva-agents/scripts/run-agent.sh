@@ -207,19 +207,42 @@ except:
       DISCORD_BODY="${ITEM_COUNT}社のリストをゲットしたよ!! 🎉\nRun #${RUN_ID}\n\nSheetsに書き込んだからチェックしてね👀\n${SHEETS_RESULT}"
       ;;
     outreach)
-      ITEM_COUNT=$(python3 -c "
+      OUTREACH_DETAIL=$(python3 -c "
 import json, sys, re
 raw = open('$OUTPUT_FILE').read()
 try:
     data = json.loads(raw)
-    result = data.get('result', '') if isinstance(data, dict) else ''
-    match = re.search(r'\"outreach_drafted\":\s*(\d+)', result)
-    print(match.group(1) if match else 0)
-except:
-    print(0)
-" 2>/dev/null || echo "0")
-      DISCORD_TITLE="🔥 ${POKEMON_NAME} が下書き完成!!"
-      DISCORD_BODY="${ITEM_COUNT}件のアウトリーチ下書きを作ったよ 🔥\nRun #${RUN_ID}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
+    if isinstance(data, list):
+        result = '\n'.join(b.get('text','') for b in data if b.get('type')=='text')
+    elif isinstance(data, dict):
+        result = data.get('result', '')
+    else:
+        result = raw
+    match = re.search(r'\{[\s\S]*\}', result)
+    if not match:
+        print('0件')
+        sys.exit(0)
+    outreach = json.loads(match.group())
+    messages = outreach.get('messages', [])
+    drafted = [m for m in messages if m.get('status') == 'drafted']
+    skipped = [m for m in messages if m.get('status') == 'skipped']
+    lines = []
+    lines.append(f'✅ 下書き完了 {len(drafted)}件:')
+    for m in drafted:
+        lang = m.get('language','').upper()
+        ch = m.get('channel','')
+        lines.append(f'  • {m.get(\"company_name\",\"?\")} — {ch} ({lang})')
+    if skipped:
+        lines.append(f'⏭️ スキップ {len(skipped)}件:')
+        for m in skipped:
+            reason = m.get('skip_reason','')
+            lines.append(f'  • {m.get(\"company_name\",\"?\")} ({reason})')
+    print('\n'.join(lines))
+except Exception as e:
+    print(f'0件 (parse error: {e})')
+" 2>/dev/null || echo "0件")
+      DISCORD_TITLE="🔥 ${POKEMON_NAME} が下書き完成!! (Run #${RUN_ID})"
+      DISCORD_BODY="${OUTREACH_DETAIL}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
       ;;
     *)
       DISCORD_TITLE="✅ ${POKEMON_NAME} タスク完了"

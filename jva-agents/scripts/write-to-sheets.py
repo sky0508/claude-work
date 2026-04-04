@@ -25,7 +25,7 @@ HEADERS = [
     "run_date", "company_name", "company_name_en", "url",
     "industry", "stage", "location", "why_target",
     "contact_name", "contact_title", "contact_linkedin", "contact_email",
-    "source", "confidence", "contact_status"
+    "source", "confidence", "Status ", "contact_status", "outreach_status"
 ]
 
 
@@ -170,7 +170,9 @@ def lead_to_row(lead, run_date):
         contact.get("email", ""),
         lead.get("source", ""),
         lead.get("confidence", ""),
+        "",           # Status (手動管理列)
         contact_status,
+        "未完了",     # outreach_status
     ]
 
 
