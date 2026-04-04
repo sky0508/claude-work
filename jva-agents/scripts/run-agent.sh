@@ -80,8 +80,9 @@ fi
 
 CLAUDE_EXIT=0
 claude -p "$FULL_PROMPT" \
-  --max-turns 3 \
+  --max-turns 10 \
   --output-format json \
+  --dangerously-skip-permissions \
   > "$OUTPUT_FILE" 2> "$ERROR_FILE" || CLAUDE_EXIT=$?
 
 FINISHED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -148,7 +149,32 @@ sqlite3 "$DB_PATH" "
 "
 
 if [ "$HOOK_STATUS" = "success" ]; then
-  DISCORD_BODY="Run #${RUN_ID} completed successfully.\n\n${SUMMARY:0:500}"
+  # Google Sheets への書き込み
+  SHEETS_ID="${GOOGLE_SHEETS_ID:-}"
+  SHEETS_SCRIPT="$SCRIPT_DIR/write-to-sheets.py"
+  if [ -n "$SHEETS_ID" ] && [ -f "$SHEETS_SCRIPT" ]; then
+    SHEETS_RESULT=$(python3 "$SHEETS_SCRIPT" "$OUTPUT_FILE" "$SHEETS_ID" 2>&1) || true
+    echo "[run-agent] Sheets: $SHEETS_RESULT"
+  fi
+
+  # leads_found を取得してサマリーに使う
+  LEADS_COUNT=$(python3 -c "
+import json, sys, re
+raw = open('$OUTPUT_FILE').read()
+try:
+    data = json.loads(raw)
+    result = data.get('result', '') if isinstance(data, dict) else ''
+    match = re.search(r'\"leads_found\":\s*(\d+)', result)
+    if match:
+        print(match.group(1))
+    else:
+        leads = re.findall(r'\"company_name\"', result)
+        print(len(leads))
+except:
+    print(0)
+" 2>/dev/null || echo "0")
+
+  DISCORD_BODY="Run #${RUN_ID}\n\n${LEADS_COUNT}社のリードを発見しました。\nSheets: ${SHEETS_RESULT:-スキップ}"
   "$NOTIFY_SCRIPT" \
     --pokemon "$POKEMON_NAME" \
     --status "success" \
