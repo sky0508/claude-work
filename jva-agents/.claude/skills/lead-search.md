@@ -33,6 +33,14 @@ Core VP: Cost-efficient access to motivated international students
 
 ## 検索手順
 
+### Step 0: LinkedIn API による事前リサーチ
+`scripts/linkedin-search.py` を実行し、候補企業を取得する。
+```bash
+python3 scripts/linkedin-search.py --keywords "Tokyo startup Series A hiring" --limit 5
+```
+出力された leads を Step 3 のフィルタリングにかけ、通過したものをリストに追加する。
+confidence は必ず自分で調査して更新すること（デフォルト `low` のまま出力しない）。
+
 ### Step 1: Web検索によるリサーチ
 以下のクエリパターンでWeb検索を実行する:
 

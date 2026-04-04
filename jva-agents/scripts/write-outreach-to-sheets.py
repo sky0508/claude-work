@@ -140,6 +140,58 @@ def message_to_row(msg, run_date):
     ]
 
 
+def update_leads_outreach_status(gc, spreadsheet_id, messages):
+    """Leads タブの outreach_status 列を更新する（drafted の企業を「完了」に）"""
+    import gspread
+
+    try:
+        spreadsheet = gc.open_by_key(spreadsheet_id)
+        leads_ws = spreadsheet.worksheet("Leads")
+        all_values = leads_ws.get_all_values()
+        if len(all_values) <= 1:
+            return
+
+        header = all_values[0]
+        try:
+            col_company = header.index("company_name")
+            col_company_en = header.index("company_name_en")
+            col_outreach = header.index("outreach_status")
+        except ValueError:
+            return  # ヘッダーが見つからない場合はスキップ
+
+        # drafted 企業名のセット（正規化）
+        drafted_names = set()
+        for msg in messages:
+            if msg.get("status") == "drafted":
+                name = (msg.get("company_name") or "").strip().lower()
+                if name:
+                    drafted_names.add(name)
+
+        if not drafted_names:
+            return
+
+        # 更新対象の行を探してバッチ更新
+        updates = []
+        for row_idx, row in enumerate(all_values[1:], start=2):  # 2行目から
+            name_ja = row[col_company].strip().lower() if len(row) > col_company else ""
+            name_en = row[col_company_en].strip().lower() if len(row) > col_company_en else ""
+            if name_ja in drafted_names or name_en in drafted_names:
+                # outreach_status 列を「完了」に更新
+                col_letter = chr(ord('A') + col_outreach)
+                updates.append({
+                    "range": f"{col_letter}{row_idx}",
+                    "value": "完了"
+                })
+
+        for update in updates:
+            leads_ws.update(update["range"], [[update["value"]]])
+
+        print(f"Leads.outreach_status 更新: {len(updates)}行 → 完了", flush=True)
+
+    except Exception as e:
+        print(f"Leads status update warning: {e}", file=sys.stderr)
+
+
 def write_to_sqlite(db_path, messages, run_id_str):
     """outreach_logs テーブルに記録する"""
     try:
@@ -216,6 +268,9 @@ def main():
         if company:
             existing_companies.add(company)
         rows_written += 1
+
+    # Leads タブの outreach_status を「完了」に更新
+    update_leads_outreach_status(gc, spreadsheet_id, messages)
 
     # SQLite への記録
     if db_path and os.path.exists(db_path):
