@@ -35,6 +35,11 @@
 3. 日本語で応答する
 4. ブランドルール: 企業向けは英語・プロフェッショナル、学生向けは日本語・フレンドリー
 
+## ドキュメント
+- `docs/hearing-summary.md` — ヒアリング内容（ターゲット条件、運用方針、制約等）
+- `docs/implementation-status.md` — 実装ステータスと未完了事項
+- `docs/reference-article-pokemon-agents.md` — Tom氏の参照記事（ポケモンエージェントの元ネタ）
+
 ## ファイル構成
 ```
 jva-agents/
@@ -49,6 +54,6 @@ jva-agents/
     init-db.sh           ← DB初期化
   db/
     jva-agents.db        ← SQLite
+  docs/                  ← ドキュメント（ヒアリング、ステータス、参照記事）
   scheduler/             ← launchd plist
-  _archive/              ← 旧エージェント定義（参照用）
 ```
