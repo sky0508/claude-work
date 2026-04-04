@@ -99,7 +99,7 @@ if [ $CLAUDE_EXIT -ne 0 ]; then
     UPDATE agent_runs
     SET status = 'failed',
         finished_at = '${FINISHED_AT}',
-        error_message = '$(echo "$ERROR_MSG" | sed "s/'/''/g")'
+        error_message = '$(echo "$ERROR_MSG" | LC_ALL=C sed "s/'/''/g")'
     WHERE id = ${RUN_ID};
   "
 
@@ -145,7 +145,7 @@ if [ -x "$HOOK_SCRIPT" ]; then
   }
 fi
 
-SUMMARY=$(echo "$CLAUDE_OUTPUT" | head -c 1000 | sed "s/'/''/g")
+SUMMARY=$(echo "$CLAUDE_OUTPUT" | head -c 1000 | LC_ALL=C sed "s/'/''/g")
 sqlite3 "$DB_PATH" "
   UPDATE agent_runs
   SET status = '${HOOK_STATUS}',
@@ -220,29 +220,31 @@ try:
         result = raw
     match = re.search(r'\{[\s\S]*\}', result)
     if not match:
-        print('0件')
+        print('0件しか書けなかった…')
         sys.exit(0)
     outreach = json.loads(match.group())
     messages = outreach.get('messages', [])
     drafted = [m for m in messages if m.get('status') == 'drafted']
     skipped = [m for m in messages if m.get('status') == 'skipped']
     lines = []
-    lines.append(f'✅ 下書き完了 {len(drafted)}件:')
+    lines.append(f'🔥 下書き完了 {len(drafted)}件:')
     for m in drafted:
         lang = m.get('language','').upper()
         ch = m.get('channel','')
-        lines.append(f'  • {m.get(\"company_name\",\"?\")} — {ch} ({lang})')
+        name = m.get('recipient_name','') or ''
+        first = name.split()[0] if name else '?'
+        lines.append(f'  🌟 {m.get(\"company_name\",\"?\")} — {first}さんへ {ch.upper()} ({lang})')
     if skipped:
-        lines.append(f'⏭️ スキップ {len(skipped)}件:')
+        lines.append(f'💨 スキップ {len(skipped)}件:')
         for m in skipped:
             reason = m.get('skip_reason','')
             lines.append(f'  • {m.get(\"company_name\",\"?\")} ({reason})')
     print('\n'.join(lines))
 except Exception as e:
     print(f'0件 (parse error: {e})')
-" 2>/dev/null || echo "0件")
-      DISCORD_TITLE="🔥 ${POKEMON_NAME} が下書き完成!! (Run #${RUN_ID})"
-      DISCORD_BODY="${OUTREACH_DETAIL}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
+" 2>/dev/null || echo "0件しか書けなかった…")
+      DISCORD_TITLE="🔥 ${POKEMON_NAME}が熱いメッセージを書いたよ！(Run #${RUN_ID})"
+      DISCORD_BODY="しっぽの炎に全力こめて書いたよ🔥✨\n\n${OUTREACH_DETAIL}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
       ;;
     *)
       DISCORD_TITLE="✅ ${POKEMON_NAME} タスク完了"

@@ -70,7 +70,7 @@ mcp__google-sheets__get_sheet_data
 ```
 Hi [FIRST_NAME]!
 
-I'm with Japan's Venture Academy, a student startup community in Tokyo. We run a free internship board connecting global startups with top university students in Japan. We'd love to have [COMPANY_NAME] list a role. I've linked our prospectus below. Hope to hear from you!
+I'm with Japan's Venture Academy, a student startup community in Tokyo. We run a free internship board connecting global startups with top university students in Japan. We'd love to have [COMPANY_NAME] list a role. See our prospectus below!
 
 https://tinyurl.com/jvaib2026
 ```
