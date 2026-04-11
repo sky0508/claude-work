@@ -174,3 +174,21 @@ https://tinyurl.com/jvaib2026
 
 エージェント定義の出力形式に従って**JSONのみ**を出力する。
 Sheetsへの書き込みと `outreach_status` の更新は run-agent.sh が自動処理する。
+
+---
+
+## Step 5（任意）: LinkedIn へ実送信する場合（agent-browser MCP）
+
+**前提**: トレーナーまたは運用ポリシーで自動送信が明示的に許可されているときのみ実施する。LinkedIn の自動化は利用規約上グレーになり得るため、頻度・本数は極小に保つ。
+
+1. `mcp__agent-browser__navigate` — K列の `contact_linkedin`（`/in/` URL）を開く
+2. `mcp__agent-browser__wait` — **2000〜3000ms**
+3. `mcp__agent-browser__snapshot` — メッセージ開始ボタンの `ref`（`@e…`）を特定
+4. `mcp__agent-browser__click` — メッセージ画面を開く
+5. `mcp__agent-browser__wait` — **1000〜2000ms**
+6. `mcp__agent-browser__snapshot` — 入力欄の `ref` を特定
+7. `mcp__agent-browser__fill` — Step 3 で確定した本文（300文字以内の接続リクエスト文など）を入力
+8. `mcp__agent-browser__click` または `mcp__agent-browser__press`（`Enter`）— 送信
+9. 次のリードへ進む前に **さらに 1〜3秒** 空ける
+
+UIが想定と異なる場合は送信を中止し、下書きJSONのみで完了とする。
