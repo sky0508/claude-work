@@ -35,6 +35,39 @@
 3. 日本語で応答する
 4. ブランドルール: 企業向けは英語・プロフェッショナル、学生向けは日本語・フレンドリー
 
+## ポケモンエージェントの起動ルール（重要）
+
+ポケモンを動かすよう指示された場合、**必ず `scripts/run-agent.sh` 経由で起動すること。**
+`.claude/agents/` のサブエージェントを直接呼んではいけない。
+
+理由: run-agent.sh を通すことで SQLite 記録・コスト追跡・品質ゲート・Discord 通知・自律改善ループが全部機能する。直接呼ぶとこれらが全部バイパスされる。
+
+```
+# 正しい起動方法（Shellツールで実行）
+scripts/run-agent.sh <agent-name> <pokemon-name>
+
+# 例
+scripts/run-agent.sh lead-search ヒコザル
+scripts/run-agent.sh outreach ヒトカゲ
+```
+
+### ポケモン名 → agent-name の対応表
+
+| ポケモン名 | agent-name |
+|---|---|
+| ヒコザル | lead-search |
+| ヒトカゲ | outreach |
+
+### トレーナーFBの記録ルール
+
+トレーナー（ユーザー）がポケモンへの改善指示・フィードバックを述べた場合、自動的に以下を実行すること:
+
+```
+scripts/trainer-feedback.sh <agent-name> "<フィードバック内容>"
+```
+
+例: 「ヒコザルのリードがSaaSに偏りすぎ」→ `scripts/trainer-feedback.sh lead-search "リードがSaaSに偏りすぎ。製造業・物流・医療も含めて"`
+
 ## ドキュメント
 - `docs/hearing-summary.md` — ヒアリング内容（ターゲット条件、運用方針、制約等）
 - `docs/implementation-status.md` — 実装ステータスと未完了事項

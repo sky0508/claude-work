@@ -70,8 +70,54 @@ fi
 
 AGENT_CONTENT=$(cat "$AGENT_FILE")
 
+# ループA+B: 過去実行履歴・トレーナーFBをSQLiteから取得してプロンプトに注入
+CONTEXT_BLOCK=""
+
+PAST_RUNS=$(sqlite3 "$DB_PATH" "
+  SELECT datetime(started_at,'localtime') || ' | ' || status || ' | ' || COALESCE(SUBSTR(output_summary,1,200),'（サマリーなし）')
+  FROM agent_runs
+  WHERE agent_name='${AGENT_NAME}' AND status != 'running'
+  ORDER BY started_at DESC LIMIT 5;
+" 2>/dev/null || true)
+
+TRAINER_FEEDBACK=$(sqlite3 "$DB_PATH" "
+  SELECT datetime(created_at,'localtime') || ' | ' || content
+  FROM dialogue_logs
+  WHERE agent_name='${AGENT_NAME}' AND direction='trainer_to_agent'
+  ORDER BY created_at DESC LIMIT 3;
+" 2>/dev/null || true)
+
+if [ -n "$PAST_RUNS" ] || [ -n "$TRAINER_FEEDBACK" ]; then
+  CONTEXT_BLOCK="--- 自律改善コンテキスト ---
+"
+  if [ -n "$PAST_RUNS" ]; then
+    CONTEXT_BLOCK="${CONTEXT_BLOCK}【過去の実行履歴（直近5回）】
+${PAST_RUNS}
+"
+  fi
+  if [ -n "$TRAINER_FEEDBACK" ]; then
+    CONTEXT_BLOCK="${CONTEXT_BLOCK}【トレーナーからのフィードバック（直近3件・最新が上）】
+${TRAINER_FEEDBACK}
+"
+  fi
+  CONTEXT_BLOCK="${CONTEXT_BLOCK}---
+"
+  echo "[run-agent] Context injected:$([ -n "$PAST_RUNS" ] && echo " past_runs(5)")$([ -n "$TRAINER_FEEDBACK" ] && echo " trainer_feedback(3)")"
+fi
+
 if [ -n "$PROMPT_OVERRIDE" ]; then
   FULL_PROMPT="$PROMPT_OVERRIDE"
+elif [ -n "$CONTEXT_BLOCK" ]; then
+  FULL_PROMPT="あなたは ${POKEMON_NAME} です。以下のエージェント定義とスキルに従って、タスクを実行してください。
+
+${CONTEXT_BLOCK}
+--- エージェント定義 ---
+${AGENT_CONTENT}
+
+--- スキル ---
+${SKILL_CONTENT}
+
+実行結果を必ず以下のJSON形式で出力してください。JSON以外のテキストは出力しないでください。"
 else
   FULL_PROMPT="あなたは ${POKEMON_NAME} です。以下のエージェント定義とスキルに従って、タスクを実行してください。
 
@@ -153,6 +199,32 @@ sqlite3 "$DB_PATH" "
       output_summary = '${SUMMARY}'
   WHERE id = ${RUN_ID};
 "
+
+# agent_costs: トークン数・コストをJSONから抽出して記録
+COST_DATA=$(python3 -c "
+import json, sys
+try:
+    data = json.load(open('$OUTPUT_FILE'))
+    if isinstance(data, dict):
+        usage = data.get('usage', {})
+        print('{},{},{}'.format(
+            usage.get('input_tokens', 0),
+            usage.get('output_tokens', 0),
+            data.get('total_cost_usd', 0.0)
+        ))
+    else:
+        print('0,0,0.0')
+except:
+    print('0,0,0.0')
+" 2>/dev/null || echo "0,0,0.0")
+INPUT_TOKENS=$(echo "$COST_DATA" | cut -d',' -f1)
+OUTPUT_TOKENS=$(echo "$COST_DATA" | cut -d',' -f2)
+COST_USD=$(echo "$COST_DATA" | cut -d',' -f3)
+sqlite3 "$DB_PATH" "
+  INSERT INTO agent_costs (run_id, input_tokens, output_tokens, estimated_cost_usd)
+  VALUES (${RUN_ID}, ${INPUT_TOKENS:-0}, ${OUTPUT_TOKENS:-0}, ${COST_USD:-0.0});
+"
+echo "[run-agent] Costs: input=${INPUT_TOKENS} output=${OUTPUT_TOKENS} cost=\$${COST_USD}"
 
 if [ "$HOOK_STATUS" = "success" ]; then
   SHEETS_ID="${GOOGLE_SHEETS_ID:-}"
