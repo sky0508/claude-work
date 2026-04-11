@@ -55,6 +55,16 @@ confidence は必ず自分で調査して更新すること（デフォルト `l
 ### Step 2: 企業情報の収集
 各候補企業について以下を調査:
 
+#### Step 2a（任意・高精度）: agent-browser で LinkedIn を裏取り
+Web検索だけでは採用状況や表記が曖昧なとき、次の順で使う:
+
+1. `mcp__agent-browser__navigate` — 対象の LinkedIn URL（会社ページや求人にリンクが取れている場合）を開く
+2. `mcp__agent-browser__wait` — **1000〜3000ms**（ページ安定化・レート配慮）
+3. `mcp__agent-browser__snapshot` — アクセシビリティツリーから、企業名・業種・従業員規模・採用関連の文言を読み取る
+4. 必要なら `mcp__agent-browser__click` で「See more」等を開き、再度 `snapshot`
+
+`contact.linkedin` には引き続き **個人プロフィール（`/in/`）のみ**。会社ページのスクレイピングは根拠確認用。
+
 1. **企業HP** → 事業内容、チームサイズ、採用ページの有無
 2. **PR TIMES / TechCrunch Japan** → 資金調達ニュース、成長指標
 3. **LinkedIn 担当者検索（個人プロフィール必須）**
