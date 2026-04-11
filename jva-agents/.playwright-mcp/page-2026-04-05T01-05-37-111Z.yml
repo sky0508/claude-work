@@ -1,0 +1,253 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button [ref=e5] [cursor=pointer]:
+        - generic [ref=e7]: Skip to main content
+      - button [ref=e8] [cursor=pointer]
+    - generic [ref=e11]:
+      - banner [ref=e13]:
+        - generic [ref=e16]:
+          - button [ref=e17] [cursor=pointer]
+          - generic [ref=e20]:
+            - navigation [ref=e23]:
+              - list [ref=e24]:
+                - listitem [ref=e25]:
+                  - button "Home, 1 new notification" [ref=e26] [cursor=pointer]:
+                    - generic [ref=e30]: Home
+                - listitem [ref=e31]:
+                  - link "My Network, 0 new notifications" [ref=e32] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - generic [ref=e36]: My Network
+                - listitem [ref=e37]:
+                  - button "Jobs, 0 new notifications" [ref=e38] [cursor=pointer]:
+                    - generic [ref=e42]: Jobs
+                - listitem [ref=e43]:
+                  - link "Messaging, 0 new notifications" [ref=e44] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - generic [ref=e48]: Messaging
+                - listitem [ref=e49]:
+                  - link "Notifications, 4 new notifications" [ref=e50] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e54]: Notifications
+                - listitem [ref=e55]:
+                  - button "Me" [ref=e56] [cursor=pointer]:
+                    - figure [ref=e58]
+                    - generic [ref=e60]: Me
+            - navigation [ref=e64]:
+              - list [ref=e65]:
+                - listitem [ref=e66]:
+                  - button "For Business" [ref=e67] [cursor=pointer]:
+                    - generic [ref=e71]: For Business
+                - listitem [ref=e73]:
+                  - link "0 new notifications" [ref=e74] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/learning/?trk=nav_neptune_learning
+                    - generic [ref=e78]: Learning
+      - generic [ref=e79]:
+        - toolbar [ref=e80]
+        - main [ref=e94]:
+          - main [ref=e95]:
+            - generic [ref=e101]:
+              - paragraph [ref=e102]: 52 results
+              - list [ref=e104]:
+                - generic [ref=e105]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercari-inc-/
+                  - listitem "Mercari, Inc." [ref=e106]:
+                    - generic [ref=e107]:
+                      - figure [ref=e108]
+                      - generic [ref=e109]:
+                        - paragraph [ref=e110]:
+                          - link "Mercari, Inc." [ref=e111] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-inc-/
+                          - img "Verified organization" [ref=e112]
+                        - paragraph [ref=e115]: Software Development
+                        - paragraph [ref=e117]: Minatoku, Tokyo
+                    - generic [ref=e120]:
+                      - paragraph [ref=e122]:
+                        - strong [ref=e123]: Mercari
+                        - text: is a C2C marketplace app allowing anyone with a smartphone to easily sell items they no longer need, providing a new and unique user experience...
+                      - paragraph [ref=e127]: 109K followers
+                      - generic [ref=e128]:
+                        - figure [ref=e129]
+                        - paragraph [ref=e131]:
+                          - link "Kuei & 99 other connections follow this page" [ref=e132] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-inc-/?showInNetworkFollowers=true
+                - generic [ref=e133]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercarius/
+                  - listitem "Mercari US" [ref=e134]:
+                    - generic [ref=e135]:
+                      - figure [ref=e136]
+                      - generic [ref=e137]:
+                        - paragraph [ref=e138]:
+                          - link "Mercari US" [ref=e139] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercarius/
+                          - img "Verified organization" [ref=e140]
+                        - paragraph [ref=e143]: Software Development
+                        - paragraph [ref=e145]: Palo Alto, California
+                    - generic [ref=e148]:
+                      - paragraph [ref=e150]:
+                        - strong [ref=e151]: Mercari
+                        - text: launched in 2013 in
+                        - strong [ref=e152]: Japan
+                        - text: ", and has since become the largest mobile marketplace in the Japanese market. Now we’re on a global mission to change the way..."
+                      - paragraph [ref=e156]: 13K followers
+                      - generic [ref=e157]:
+                        - figure [ref=e158]
+                        - paragraph [ref=e160]:
+                          - link "1 person from your school was hired here" [ref=e161] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SCHOOL_HIRES_IN_COMPANY_CANNED_SEARCH&currentCompany=%5B%2225027787%22%5D&schoolFilter=%5B%2243238%22%5D
+                - generic [ref=e162]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercari-india/
+                  - listitem "Mercari India" [ref=e163]:
+                    - generic [ref=e164]:
+                      - figure [ref=e165]
+                      - generic [ref=e166]:
+                        - paragraph [ref=e167]:
+                          - link "Mercari India" [ref=e168] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-india/
+                        - paragraph [ref=e170]: Technology, Information and Internet
+                        - paragraph [ref=e172]: Bengaluru, Karnataka
+                    - generic [ref=e175]:
+                      - paragraph [ref=e177]:
+                        - text: Launched in 2013 and becoming the first Unicorn company in
+                        - strong [ref=e178]: Japan
+                        - text: ","
+                        - strong [ref=e179]: Mercari
+                        - text: Group is a
+                        - strong [ref=e180]: Japan
+                        - text: "-based corporate group operating in both"
+                        - strong [ref=e181]: Japan
+                        - text: and the US...
+                      - paragraph [ref=e185]: 28K followers
+                      - generic [ref=e186]:
+                        - figure [ref=e187]
+                        - paragraph [ref=e189]:
+                          - link "友子 & 2 other connections follow this page" [ref=e190] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-india/?showInNetworkFollowers=true
+                - generic [ref=e191]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercari-co/
+                  - listitem "Mercari.co" [ref=e192]:
+                    - generic [ref=e193]:
+                      - figure [ref=e194]
+                      - generic [ref=e195]:
+                        - paragraph [ref=e196]:
+                          - link "Mercari.co" [ref=e197] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-co/
+                          - img "Premium organization" [ref=e198]
+                        - paragraph [ref=e201]: Food and Beverage Services
+                        - paragraph [ref=e203]: Bogotá, Cundinamarca
+                    - generic [ref=e206]:
+                      - paragraph [ref=e208]:
+                        - strong [ref=e209]: Mercari
+                        - text: es una panadería y pastelería artesanal en Bogotá, reconocida por crear los brownies más melcochudos de la ciudad. Nuestra mesa está llena de tortas, hojaldres, panes y una amplia variedad de repostería artesanal, elaborada con recetas que combinan tradición e innovación. Llevamos la experiencia
+                        - strong [ref=e210]: Mercari
+                        - text: a tu...
+                      - paragraph [ref=e214]: 1K followers
+                      - button "Visit website" [ref=e215]:
+                        - link "Visit website" [ref=e216] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/safety/go/?url=http%3A%2F%2Fmercari%2Eco&urlhash=uZGY&isSdui=true
+                - generic [ref=e217]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercariagency/
+                  - listitem "Mercari Agency Limited" [ref=e218]:
+                    - generic [ref=e219]:
+                      - figure [ref=e220]
+                      - generic [ref=e221]:
+                        - paragraph [ref=e222]:
+                          - link "Mercari Agency Limited" [ref=e223] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercariagency/
+                        - paragraph [ref=e225]: Advertising Services
+                        - paragraph [ref=e227]: Toronto, Ontario
+                    - generic [ref=e230]:
+                      - paragraph [ref=e232]:
+                        - strong [ref=e233]: Mercari
+                        - text: Agency is a top-notch cannabis agency that helps companies navigate legalization.
+                      - paragraph [ref=e237]: 899 followers
+                - generic [ref=e238]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercari-asia/
+                  - listitem "Mercari Asia Limited" [ref=e239]:
+                    - generic [ref=e240]:
+                      - figure [ref=e241]
+                      - generic [ref=e242]:
+                        - paragraph [ref=e243]:
+                          - link "Mercari Asia Limited" [ref=e244] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-asia/
+                        - paragraph [ref=e246]: Advertising Services
+                        - paragraph [ref=e248]: Banani, Dhaka,
+                    - generic [ref=e251]:
+                      - paragraph [ref=e253]: We are a marketing agency launched in 2019 as an expansion project of E-commerce giant Daraz Bangladesh, after the acquisition of Daraz by global giant Alibaba Group in 2018. Since then, we are bringing our global knowledge base to our clients.
+                      - paragraph [ref=e257]: 238 followers
+                - generic [ref=e258]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercari-risk/
+                  - listitem "Mercari Risk" [ref=e259]:
+                    - generic [ref=e260]:
+                      - figure [ref=e261]
+                      - generic [ref=e262]:
+                        - paragraph [ref=e263]:
+                          - link "Mercari Risk" [ref=e264] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-risk/
+                        - paragraph [ref=e266]: Insurance
+                        - paragraph [ref=e268]: Global
+                    - generic [ref=e271]:
+                      - paragraph [ref=e273]:
+                        - strong [ref=e274]: Mercari
+                        - text: Risk specialist insurance
+                      - paragraph [ref=e278]: 203 followers
+                - generic [ref=e279]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercariptyltd/
+                  - listitem "Mercari Pty Ltd" [ref=e280]:
+                    - generic [ref=e281]:
+                      - figure [ref=e282]
+                      - generic [ref=e283]:
+                        - paragraph [ref=e284]:
+                          - link "Mercari Pty Ltd" [ref=e285] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercariptyltd/
+                        - paragraph [ref=e287]: Financial Services
+                        - paragraph [ref=e289]: Sydney, NSW
+                    - generic [ref=e292]:
+                      - paragraph [ref=e294]:
+                        - strong [ref=e295]: Mercari
+                        - text: Operates a Licensed Derivatives Exchange.
+                        - strong [ref=e296]: Mercari
+                        - text: "also holds an AFSL #229935"
+                      - paragraph [ref=e300]: 127 followers
+                - generic [ref=e301]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercari-international-ltd/
+                  - listitem "MERCARI INTERNATIONAL LTD" [ref=e302]:
+                    - generic [ref=e303]:
+                      - figure [ref=e304]
+                      - generic [ref=e305]:
+                        - paragraph [ref=e306]:
+                          - link "MERCARI INTERNATIONAL LTD" [ref=e307] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercari-international-ltd/
+                        - paragraph [ref=e309]: Outsourcing and Offshoring Consulting
+                        - paragraph [ref=e311]: LONDON
+                    - paragraph [ref=e318]: 50 followers
+                - generic [ref=e319]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/mercariad/
+                  - listitem "mercari_ad" [ref=e320]:
+                    - generic [ref=e321]:
+                      - figure [ref=e322]
+                      - generic [ref=e323]:
+                        - paragraph [ref=e324]:
+                          - link "mercari_ad" [ref=e325] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/mercariad/
+                        - paragraph [ref=e327]: Advertising Services
+                        - paragraph [ref=e329]: Shibuya-Ku, Tokyo
+                    - generic [ref=e332]:
+                      - paragraph [ref=e334]:
+                        - strong [ref=e335]: mercari
+                      - paragraph [ref=e339]: 8 followers
+              - generic [ref=e341]:
+                - list
+                - button "Next" [ref=e342] [cursor=pointer]:
+                  - generic [ref=e345]: Next

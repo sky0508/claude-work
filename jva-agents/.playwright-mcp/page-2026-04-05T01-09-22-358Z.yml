@@ -1,0 +1,155 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - region "Toast message":
+      - heading "0 notifications total" [level=2] [ref=e3]
+      - alert
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - button "Skip to search" [ref=e7] [cursor=pointer]:
+        - generic [ref=e8]: Skip to search
+      - button "Skip to main content" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Skip to main content
+      - button "Keyboard shortcuts" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: Keyboard shortcuts
+      - button "Close jump menu" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Close jump menu
+    - banner "Global Navigation" [ref=e17]:
+      - generic [ref=e18]:
+        - link "LinkedIn" [ref=e19] [cursor=pointer]:
+          - /url: https://www.linkedin.com/feed/?nis=true
+          - img "LinkedIn" [ref=e22]:
+            - img [ref=e23]
+        - generic [ref=e27]:
+          - combobox "Search" [ref=e28]
+          - generic:
+            - img
+        - navigation "Primary Navigation" [ref=e29]:
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - link "new feed updates notifications Home" [ref=e32] [cursor=pointer]:
+                - /url: https://www.linkedin.com/feed/?nis=true&
+                - generic [ref=e33]:
+                  - generic [ref=e36]: new feed updates notifications
+                  - img [ref=e40]
+                - generic "Home" [ref=e42]
+            - listitem [ref=e43]:
+              - link "My Network" [ref=e44] [cursor=pointer]:
+                - /url: https://www.linkedin.com/mynetwork/?
+                - img [ref=e48]
+                - generic "My Network" [ref=e50]
+            - listitem [ref=e51]:
+              - link "Jobs" [ref=e52] [cursor=pointer]:
+                - /url: https://www.linkedin.com/jobs/?
+                - img [ref=e56]
+                - generic "Jobs" [ref=e58]
+            - listitem [ref=e59]:
+              - link "Messaging" [ref=e60] [cursor=pointer]:
+                - /url: https://www.linkedin.com/messaging/?
+                - img [ref=e64]
+                - generic "Messaging" [ref=e66]
+            - listitem [ref=e67]:
+              - link "Notifications" [ref=e68] [cursor=pointer]:
+                - /url: https://www.linkedin.com/notifications/?
+                - img [ref=e72]
+                - generic "Notifications" [ref=e74]
+            - listitem [ref=e75]:
+              - button "Sora Sasaki Me" [ref=e77] [cursor=pointer]:
+                - img "Sora Sasaki" [ref=e78]
+                - generic [ref=e79]:
+                  - text: Me
+                  - img [ref=e80]
+            - listitem [ref=e82]:
+              - button "For Business" [ref=e84] [cursor=pointer]:
+                - img [ref=e88]
+                - generic "For Business" [ref=e90]:
+                  - text: For Business
+                  - img [ref=e91]
+            - listitem [ref=e93]:
+              - link "Post a job" [ref=e94] [cursor=pointer]:
+                - /url: https://www.linkedin.com/talent/job-posting-redirect?trk=nav_spotlight_post_job&
+                - img [ref=e98]
+                - generic "Post a job" [ref=e103]
+    - generic [ref=e108]:
+      - main "Organization page for SmartHR, Inc." [ref=e109]:
+        - generic [ref=e112]:
+          - button [ref=e115]
+          - generic [ref=e119]:
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - img "SmartHR, Inc. logo" [ref=e123]
+                - generic [ref=e125]:
+                  - heading "SmartHR, Inc." [level=1] [ref=e126]
+                  - link "Verified" [ref=e127] [cursor=pointer]:
+                    - /url: /company/smarthrjp/about/
+                    - img [ref=e128]
+                  - paragraph [ref=e130]: well-working 労働にまつわる社会課題をなくし、 誰もがその人らしく働ける社会をつくる。
+                  - generic [ref=e131]:
+                    - generic [ref=e132]: · IT Services and IT Consulting
+                    - generic [ref=e133]:
+                      - generic [ref=e134]: · 港区, 東京都
+                      - generic [ref=e135]: · 3K followers
+                      - link "· 1K-5K employees" [ref=e136] [cursor=pointer]:
+                        - /url: /search/results/people/?currentCompany=%5B%2213601886%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH
+                        - text: ·
+                        - generic [ref=e137]: 1K-5K employees
+              - link "浩司 三堂 浩司 & 5 other connections follow this page" [ref=e141] [cursor=pointer]:
+                - /url: http://www.linkedin.com/company/smarthrjp/?showInNetworkFollowers=true
+                - generic [ref=e145]: 浩司 三堂
+                - heading "浩司 & 5 other connections follow this page" [level=2] [ref=e146]
+              - generic [ref=e148]:
+                - region [ref=e150]:
+                  - button "Follow" [ref=e151] [cursor=pointer]:
+                    - img [ref=e152]
+                    - generic [ref=e154]: Follow
+                  - button "Message SmartHR, Inc." [ref=e155] [cursor=pointer]:
+                    - img [ref=e156]
+                    - generic [ref=e158]: Message
+                - button "Overflow Actions" [ref=e162] [cursor=pointer]:
+                  - img "Overflow Actions" [ref=e163]
+            - navigation "Organization’s page navigation" [ref=e166]:
+              - list [ref=e167]:
+                - listitem [ref=e168]:
+                  - link "Home" [ref=e169] [cursor=pointer]:
+                    - /url: /company/smarthrjp/
+                - listitem [ref=e170]:
+                  - link "About" [ref=e171] [cursor=pointer]:
+                    - /url: /company/smarthrjp/about/
+                - listitem [ref=e172]:
+                  - link "Posts" [ref=e173] [cursor=pointer]:
+                    - /url: /company/smarthrjp/posts/
+                - listitem [ref=e174]:
+                  - link "Jobs" [ref=e175] [cursor=pointer]:
+                    - /url: /company/smarthrjp/jobs/
+                - listitem [ref=e176]:
+                  - link "People" [ref=e177] [cursor=pointer]:
+                    - /url: /company/smarthrjp/people/
+      - complementary "Advertisement" [ref=e197]:
+        - generic "LinkedIn Footer Content" [ref=e200]:
+          - generic [ref=e201]:
+            - list
+            - generic [ref=e202]:
+              - img "LinkedIn" [ref=e203]:
+                - img [ref=e204]
+              - text: LinkedIn Corporation © 2026
+    - generic:
+      - generic:
+        - complementary:
+          - generic [ref=e207]:
+            - generic [ref=e209] [cursor=pointer]:
+              - img "Sora Sasaki" [ref=e211]
+              - button "You are on the messaging overlay. Press enter to open the list of conversations." [ref=e212]:
+                - generic [ref=e213]:
+                  - generic [ref=e214]: Messaging
+                  - generic [ref=e215]: You are on the messaging overlay. Press enter to open the list of conversations.
+            - generic [ref=e216]:
+              - button "Open messenger dropdown menu" [ref=e218] [cursor=pointer]:
+                - img "Open messenger dropdown menu" [ref=e219]
+              - button "Compose message" [ref=e222] [cursor=pointer]:
+                - img [ref=e223]
+                - generic [ref=e225]: Compose message
+              - button "You are on the messaging overlay. Press enter to open the list of conversations." [ref=e226] [cursor=pointer]:
+                - img [ref=e227]
+                - generic [ref=e229]: You are on the messaging overlay. Press enter to open the list of conversations.
+        - complementary "AI-powered assistant to get help with your career, jobs etc"
+  - region [ref=e230]

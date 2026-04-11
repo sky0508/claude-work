@@ -1,0 +1,433 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - region "Toast message":
+      - heading "0 notifications total" [level=2] [ref=e3]
+      - alert
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - button "Skip to search" [ref=e7] [cursor=pointer]:
+        - generic [ref=e8]: Skip to search
+      - button "Skip to main content" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Skip to main content
+      - button "Keyboard shortcuts" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: Keyboard shortcuts
+      - button "Close jump menu" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Close jump menu
+    - banner "Global Navigation" [ref=e17]:
+      - generic [ref=e18]:
+        - link "LinkedIn" [ref=e19] [cursor=pointer]:
+          - /url: https://www.linkedin.com/feed/?nis=true
+          - img "LinkedIn" [ref=e22]:
+            - img [ref=e23]
+        - generic [ref=e27]:
+          - combobox "Search" [ref=e28]
+          - generic:
+            - img
+        - navigation "Primary Navigation" [ref=e29]:
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - link "new feed updates notifications Home" [ref=e32] [cursor=pointer]:
+                - /url: https://www.linkedin.com/feed/?nis=true&
+                - generic [ref=e33]:
+                  - generic [ref=e36]: new feed updates notifications
+                  - img [ref=e40]
+                - generic "Home" [ref=e42]
+            - listitem [ref=e43]:
+              - link "My Network" [ref=e44] [cursor=pointer]:
+                - /url: https://www.linkedin.com/mynetwork/?
+                - img [ref=e48]
+                - generic "My Network" [ref=e50]
+            - listitem [ref=e51]:
+              - link "Jobs" [ref=e52] [cursor=pointer]:
+                - /url: https://www.linkedin.com/jobs/?
+                - img [ref=e56]
+                - generic "Jobs" [ref=e58]
+            - listitem [ref=e59]:
+              - link "Messaging" [ref=e60] [cursor=pointer]:
+                - /url: https://www.linkedin.com/messaging/?
+                - img [ref=e64]
+                - generic "Messaging" [ref=e66]
+            - listitem [ref=e67]:
+              - link "4 new notifications Notifications" [ref=e68] [cursor=pointer]:
+                - /url: https://www.linkedin.com/notifications/?
+                - generic [ref=e69]:
+                  - generic [ref=e70]:
+                    - generic [ref=e71]: "4"
+                    - generic [ref=e72]: 4 new notifications
+                  - img [ref=e76]
+                - generic "Notifications" [ref=e78]
+            - listitem [ref=e79]:
+              - button "Sora Sasaki Me" [ref=e81] [cursor=pointer]:
+                - img "Sora Sasaki" [ref=e82]
+                - generic [ref=e83]:
+                  - text: Me
+                  - img [ref=e84]
+            - listitem [ref=e86]:
+              - button "For Business" [ref=e88] [cursor=pointer]:
+                - img [ref=e92]
+                - generic "For Business" [ref=e94]:
+                  - text: For Business
+                  - img [ref=e95]
+            - listitem [ref=e97]:
+              - link "Post a job" [ref=e98] [cursor=pointer]:
+                - /url: https://www.linkedin.com/talent/job-posting-redirect?trk=nav_spotlight_post_job&
+                - img [ref=e102]
+                - generic "Post a job" [ref=e107]
+    - generic [ref=e112]:
+      - main "Organization page for Mercari, Inc." [ref=e113]:
+        - generic [ref=e116]:
+          - button [ref=e119]
+          - generic [ref=e122]:
+            - button "Subscribed to page notifications from people you may know. Click to manage." [ref=e124] [cursor=pointer]:
+              - img [ref=e125]
+              - generic [ref=e127]: Subscribed to page notifications from people you may know. Click to manage.
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - img "Mercari, Inc. logo" [ref=e131]
+                - generic [ref=e133]:
+                  - heading "Mercari, Inc." [level=1] [ref=e134]
+                  - link "Verified" [ref=e135] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/about/
+                    - img [ref=e136]
+                  - paragraph [ref=e138]: Circulate all forms of value to unleash the potential in all people
+                  - generic [ref=e139]:
+                    - generic [ref=e140]: · Software Development
+                    - generic [ref=e141]:
+                      - generic [ref=e142]: · Minatoku, Tokyo
+                      - generic [ref=e143]: · 109K followers
+                      - link "· 1K-5K employees" [ref=e144] [cursor=pointer]:
+                        - /url: /search/results/people/?currentCompany=%5B%223642458%22%2C%2281855921%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH
+                        - text: ·
+                        - generic [ref=e145]: 1K-5K employees
+              - link "Kuei Maesaka Kuei & 99 other connections follow this page" [ref=e149] [cursor=pointer]:
+                - /url: http://www.linkedin.com/company/mercari-inc-/?showInNetworkFollowers=true
+                - img "Kuei Maesaka" [ref=e152]
+                - heading "Kuei & 99 other connections follow this page" [level=2] [ref=e153]
+              - generic [ref=e155]:
+                - region [ref=e157]:
+                  - button "Following" [pressed] [ref=e158] [cursor=pointer]:
+                    - img [ref=e159]
+                    - generic [ref=e161]: Following
+                  - link "Learn more" [ref=e162] [cursor=pointer]:
+                    - /url: https://careers.mercari.com/
+                    - generic [ref=e163]:
+                      - text: Learn more
+                      - img [ref=e164]
+                - button "Overflow Actions" [ref=e169] [cursor=pointer]:
+                  - img "Overflow Actions" [ref=e170]
+            - navigation "Organization’s page navigation" [ref=e173]:
+              - list [ref=e174]:
+                - listitem [ref=e175]:
+                  - link "Home" [ref=e176] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/
+                - listitem [ref=e177]:
+                  - link "About" [ref=e178] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/about/
+                - listitem [ref=e179]:
+                  - link "Posts" [ref=e180] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/posts/
+                - listitem [ref=e181]:
+                  - link "Jobs" [ref=e182] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/jobs/
+                - listitem [ref=e183]:
+                  - link "Life" [ref=e184] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/life/
+                - listitem [ref=e185]:
+                  - link "People" [ref=e186] [cursor=pointer]:
+                    - /url: /company/mercari-inc-/people/
+      - complementary "Advertisement" [ref=e206]:
+        - iframe [ref=e208]:
+          - main "Work With Us Container" [ref=f46e3]:
+            - generic [ref=f46e4]:
+              - paragraph [ref=f46e5]: Promoted
+              - button "Ad Options" [ref=f46e6] [cursor=pointer]:
+                - img [ref=f46e7]
+                - generic [ref=f46e11]: Ad Options
+            - generic [ref=f46e12]:
+              - generic [ref=f46e13]:
+                - img "Sora" [ref=f46e14]
+                - paragraph [ref=f46e15]:
+                  - text: Sora, explore jobs at
+                  - generic [ref=f46e16]: Mercari, Inc.
+              - list [ref=f46e17]:
+                - listitem [ref=f46e18]:
+                  - link "Mercari, Inc. 【28卒対象】 Data Analyst / データアナリスト - Mercari Group (Internship) Minato, Tokyo, Japan" [ref=f46e19] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/li/tscp/sct?destinationUrl=http%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview%2F4389461593%2F%3FrefId%3D%25EF%25BF%25BDe%25EF%25BF%25BD%251Dru%255C%25EF%25BF%25BD%25EF%25BF%25BD%25EF%25BF%25BD%25CD%25A2%25EF%25BF%25BD%2517%25EF%25BF%25BD&trackingEvent=%5B%7B%22eventInfo%22%3A%7B%22appId%22%3A%22com.linkedin.ads.rendering.d_web%22%2C%22eventName%22%3A%22SponsoredRightRailContentActionEvent%22%2C%22topicName%22%3A%22SponsoredRightRailContentActionEvent%22%7D%2C%22eventBody%22%3A%7B%22sponsoredEventHeader%22%3A%7B%22encryptedTrackingData%22%3A%22CwEAAAGdWyy84jQnQJqWGlorX-m1ApqXUpxsw8AWYVFXQ-C_QJ17La_VRl-nmFXUmntNYr7d4RoMLREzzDWXZRk16eAKkbgYisvp5ngs3IP0sK2OhkiQNpfPzpn-rmTmKHLTY_DBdduTwFKNhPRvoMdGxV5KVzpjb2sHQ4GOXGhCkLMy6eC-VguSoYUlcAXdh9Fz7Guui-6F-mTwmmio9x5YZ-Z6BAinr3au6TouF28TaAzr63GvySjxUNChyG9HjN9hJyc2psPQBhULJWlGG8zFMho7vCmZF8ofCW0IbkVsO_wJF6vlqSLBhP_K-rman2ZW8Gt9mVskLho2NsucLN5-CXIzKUpb4oOeshio5vDpdg1dpl-mbIWtmA08FWu_iZucmG_tyfKLO3CY-Mg0GkB14I-3QE5p9r1k-gqdvmcg8KlD-WwVXDuyPH-ol1BxD3jkZIE1XlBQavCIi-uV89qgQOMVJfi9lr5RM3vC2Ege6YSl2985d3RlWDTHXpeNi9XZ4fxluzDDjv159FiBT-B3k7FwlgSfIvXzE4KJrsrwgGyevN6JG6NKtDDdH2pHtwqBtwHmwwUonbprMlKwRkgfa_JjcZ6fZj8UJwmfVX00aPP_vTaoP62qdnPfKAfAChn7rySgWkqLBTC5gV70ejfwmRVCJ9_3AQ1JqIjF73wSKIxSd7GJDJePyyQXJHglHBQIZhheLVy-mh7UsWLDqhE5zK8vUthg0OiHXwBm3Hwz2Vhq-TF8FEPo-U5-wxU8Oj3GKTtmPHS7bJAHf0DDPl27GXBm6ZSXOAaCCCmH0UdBdV3BnU8-cbdm777qvF2IPGfnGQUuEuxYegbPBfkJ-qTfsXnrKV63CnSQWxKeRgNBnHgFv3ap5g%22%7D%2C%22header%22%3A%7B%22pageInstance%22%3A%7B%22pageUrn%22%3A%22urn%3Ali%3Apage%3Ad_flagship3_company%22%2C%22trackingId%22%3A%221af2cd5a-6a82-412e-a5d5-a582cfca74e6%22%7D%2C%22time%22%3A1775351151693%2C%22version%22%3A%220.0.0%22%7D%2C%22requestHeader%22%3A%7B%22pageKey%22%3A%22d_flagship3_company%22%2C%22interfaceLocale%22%3A%22en-US%22%7D%7D%7D%5D&csrfToken=ajax%3A8883506678265889084
+                    - img "Mercari, Inc." [ref=f46e20]
+                    - generic [ref=f46e21]:
+                      - paragraph [ref=f46e22]: 【28卒対象】 Data Analyst / データアナリスト - Mercari Group (Internship)
+                      - paragraph [ref=f46e23]: Minato, Tokyo, Japan
+                - listitem [ref=f46e24]:
+                  - link "Mercari, Inc. Fintech PR Specialist - Mercari Minato, Tokyo, Japan" [ref=f46e25] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/li/tscp/sct?destinationUrl=http%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview%2F4365473776%2F%3FrefId%3DL%25EF%25BF%25BD%25EF%25BF%25BDc1t%25DA%259A%2514%253Ayh%251Fr%25EF%25BF%25BD%25EF%25BF%25BD&trackingEvent=%5B%7B%22eventInfo%22%3A%7B%22appId%22%3A%22com.linkedin.ads.rendering.d_web%22%2C%22eventName%22%3A%22SponsoredRightRailContentActionEvent%22%2C%22topicName%22%3A%22SponsoredRightRailContentActionEvent%22%7D%2C%22eventBody%22%3A%7B%22sponsoredEventHeader%22%3A%7B%22encryptedTrackingData%22%3A%22CwEAAAGdWyy84pFJ8r1Hmf9vyeh2XhN6VRaoCmfj9T1soCMxNnGWrAFDRbSjglbauH7w8NUxYwi3IrRnBpMG4KQ7Z1aeEU3uzcqN8E-BoQ7GsjTVrn6Vj7KW8oLv4EH8i4plIOHm5MO9pIa2dIIvYjNiFUp1oqGaMazp6Zucj4SX7f1Clcn_zBzQDnepGxg0FkLdupTDXy0MZmyVAEIeOGMbh1RW6muQzAHssvm2sqgYb5STWSVqobRh98Z8VK-Dv5avNf7mXfoxbsiq9fqbh1hl7YOKXvoC9pDDHkF7heJAFnLeNZWhXEwIB2cLYptibzYht0T8eKXDXhlU-PACjs8Szt3rlBqI62YaC9ReTf6BR6_hR66iAECJPb0f7UywreRkmuiTnOHf5HXVxRHN1GHmP_2bNkILuubkdoXqtzytYQeILzI08JY815KfJAFduBmuMcBbNMKdh3VyIpb0pspx9aVikUKZiZ3ZeBUWJpNpP0c_Na_-kLHuESm1MJ00IWddEEsduMFKpe-A-X1X7h0Dq-tBU9ayNtz7ddMM63CGyDqkPqfSJ_w02akrtZBwtYFc8STlue31Tp0ccg3lFFGgOn39VorVMjVzc0qfdfvseKz-04XTzS2CmY59rVydBUlTgHKZMYtrKA0oFXz2RuFPc1OgqtG2N4hGbYnSSHQOLpPfOhIe_3Wp3qHox4r_N-GcuZa3LNvq-OUFI-oABUnx4zBz9z014EDbpR64tRF4CJ5mv7tpIpBkD4dR7ReWKOvYUhMevSCMr_T0R_9B9zL2VEA2QMdbq2OOpkZkUY_rMZr2ToG_O6dwYsh1qzktEQf2lAn2bzN5IO5333b6n6HH6tZ1w_aMbErUWUCwNIy0mfWscoko6Q%22%7D%2C%22header%22%3A%7B%22pageInstance%22%3A%7B%22pageUrn%22%3A%22urn%3Ali%3Apage%3Ad_flagship3_company%22%2C%22trackingId%22%3A%221bafa237-aead-4d05-851e-f2a67087ba38%22%7D%2C%22time%22%3A1775351151693%2C%22version%22%3A%220.0.0%22%7D%2C%22requestHeader%22%3A%7B%22pageKey%22%3A%22d_flagship3_company%22%2C%22interfaceLocale%22%3A%22en-US%22%7D%7D%7D%5D&csrfToken=ajax%3A8883506678265889084
+                    - img "Mercari, Inc." [ref=f46e26]
+                    - generic [ref=f46e27]:
+                      - paragraph [ref=f46e28]: Fintech PR Specialist - Mercari
+                      - paragraph [ref=f46e29]: Minato, Tokyo, Japan
+                - listitem [ref=f46e30]:
+                  - link "Mercari, Inc. Product Designer - Merpay Minato, Tokyo, Japan" [ref=f46e31] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/li/tscp/sct?destinationUrl=http%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview%2F4320080040%2F%3FrefId%3D%25EF%25BF%25BD%2510%25EF%25BF%25BD%25EF%25BF%25BDD%25EF%25BF%25BD%2504%25EF%25BF%25BD%253A%25EF%25BF%25BD%25EF%25BF%25BDw%25EF%25BF%25BD%2528d%25EF%25BF%25BD&trackingEvent=%5B%7B%22eventInfo%22%3A%7B%22appId%22%3A%22com.linkedin.ads.rendering.d_web%22%2C%22eventName%22%3A%22SponsoredRightRailContentActionEvent%22%2C%22topicName%22%3A%22SponsoredRightRailContentActionEvent%22%7D%2C%22eventBody%22%3A%7B%22sponsoredEventHeader%22%3A%7B%22encryptedTrackingData%22%3A%22CwEAAAGdWyy847JqknACRCcakl_gEoQyOHELXwiOpqIExplA_NFPMsA3wtuWpgYMyKj3Ab4w2FkhbPuX_BcW6VEHAngKoJotY126XHZxKa7U0DkzxTmfAptSCv6lFPLEiZbIo0l4XTgHyiiBIDQypl0YgZpijG67iXySIX0zEY6m95XtzsoKex3jgOP0htCHhXDazICX1bqIXplr6AI1oEqcTPAMW_cyCaxDj4-XkN6hmuZElOr1uzwvjNisyKwl-_KpFbLpqNIc2L_F098AJrdJbCkLYsh1udjnssFEhHoJ70tmPTOR4V_ypYe_5aSl341W7CnXjULg0mpZv1zFchzlahswwf0a5Niw2jY0YW3Bk_CssdoYExIr_0CWrIqui3-8b4kd4p_QoGTUZYbUM4nJVBjGiLMQU51o8un8TJsIAc5RZVjmhDmkhi3LRN6yzTMu0LQYFR7kkc-OBorv9bWFDBLm8J8VH2cs7yeYriSkYwb5KJMnIMxs4KuiMHiSe-QiDmbcSVeuS2X5TfanGi9H4pso4LoX4-alSd9vD3cKJUjvhXAeuvSGVyxJleU-pThXRMbzyhSwvjpFEqyCe1uhCTTGimJv5-KQgWe5vaI-cQY-qr2KVzG6cTrKLwsoyu5ZY5jiA_RKhyVatlFBIu2ogF7sHPk56zM2S3ulCrl9I9HsKmPul1qjGUZ36TNAADWI3yNfG22lkoACnsm30rLR65WWNMBLuEVoHEDiuWPBKLI55ZTM-pIiErbafJj0BITEAu5A3W5Tv_kiNUFtbwjR6tYMawDNVJiVnkz07hV9AWl8DUmCbjDIunis92mXct171IbkcB3IaFHpKgBaiYLwFeUYckPiRY7bZIOnwVjNFzJcWEUhdw%22%7D%2C%22header%22%3A%7B%22pageInstance%22%3A%7B%22pageUrn%22%3A%22urn%3Ali%3Apage%3Ad_flagship3_company%22%2C%22trackingId%22%3A%225be17de3-ff92-4970-b627-568a1fc626bf%22%7D%2C%22time%22%3A1775351151693%2C%22version%22%3A%220.0.0%22%7D%2C%22requestHeader%22%3A%7B%22pageKey%22%3A%22d_flagship3_company%22%2C%22interfaceLocale%22%3A%22en-US%22%7D%7D%7D%5D&csrfToken=ajax%3A8883506678265889084
+                    - img "Mercari, Inc." [ref=f46e32]
+                    - generic [ref=f46e33]:
+                      - paragraph [ref=f46e34]: Product Designer - Merpay
+                      - paragraph [ref=f46e35]: Minato, Tokyo, Japan
+              - link "See More Jobs" [ref=f46e36] [cursor=pointer]:
+                - /url: https://www.linkedin.com/li/tscp/sct?destinationUrl=http%3A%2F%2Fwww.linkedin.com%2Fcompany%2F3642458%2Fjobs&trackingEvent=%5B%7B%22eventInfo%22%3A%7B%22appId%22%3A%22com.linkedin.ads.rendering.d_web%22%2C%22eventName%22%3A%22SponsoredRightRailContentActionEvent%22%2C%22topicName%22%3A%22SponsoredRightRailContentActionEvent%22%7D%2C%22eventBody%22%3A%7B%22sponsoredEventHeader%22%3A%7B%22encryptedTrackingData%22%3A%22CwEAAAGdWyy84g2IWwT8PwRR_CKWF51FAvuvRhoVzVhUEMABa1bVBtAPBXCXAlgHTrM0rvWu1UQJ2UKuFfQbD7lfe-Usyy_4dCnqCr8aBoVn84hAcNxrM-HPc9lf3DalidnRWvIEvdObNc1voVRGtWZY5kUKkFX4iVi1Ih_aRGu4Tm1fTQJ8y-EudwMyL-Kv9Bk2cbVIHUFXgqpUkcMerDXWDRF176Rs85_2f6EVlZ4BfXFIlBvLY5zGyCCMmjp8nbqfvJIsaYIy0c2EwYXqlfRb0HB7gCBFvrQcdOMVQWAoy43NT_e2XW07GTzM7fqFN0XELEfGHKowHFekuidfvrBH98TuOp3BmU304CNgNchJPtA-f-wT1LdPBuqj76MFkQ6loAPJdwq7muZCHamMZRqFSSs913t79uvtRzTghy3ypVyKPIPRK20uwrb99kwweUo2Xm84c4dfBiQFdpRIIOIFfH953azt_NNjPkhSCCvMzaMQaZXcKQR3s2lLNh6K0PAlKnqRD0CnbvIaDE-QUjbPh1zWJlGdoZTKaPI8x3_9G6XmIPKlIWpbOJu4Vj8O-dahkedNCPCBa-QKI66jxklSSKkt6dOCirchmVKIBTucrS5MboQtWX037PYIL2Oe-A4Sz07a5EVd6RVwm0kEK-Wq4o-xxNXPJpTm9ymvWndvv7LjtJ0geouJpCYlRohAFozm4VTQFtfokMVMDzAd7Rd4Nszluny-ZHwwu9gRqq4yJvbStC8yQ8P2DPEmEMzHACRdL9MQX83m49kvycAwKzuUPbid1iE-ypHEf58ygH8DZzNbrsXylpSGgnObfIig3OFWdMD9dXE0hDbijSM5xqtLbq56g7QUNBeJNsgO1aN8l7qDlYY6C92YIA%22%7D%2C%22header%22%3A%7B%22pageInstance%22%3A%7B%22pageUrn%22%3A%22urn%3Ali%3Apage%3Ad_flagship3_company%22%2C%22trackingId%22%3A%2267bdc372-9c24-4ef0-8e1b-05ba5d850d9b%22%7D%2C%22time%22%3A1775351151693%2C%22version%22%3A%220.0.0%22%7D%2C%22requestHeader%22%3A%7B%22pageKey%22%3A%22d_flagship3_company%22%2C%22interfaceLocale%22%3A%22en-US%22%7D%7D%7D%5D&csrfToken=ajax%3A8883506678265889084
+        - generic [ref=e211]:
+          - generic [ref=e216]:
+            - heading "Affiliated pages" [level=3] [ref=e218]
+            - list [ref=e220]:
+              - listitem [ref=e221]:
+                - generic [ref=e222]:
+                  - generic [ref=e223]:
+                    - link "Mercari India page logo" [ref=e225] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/company/mercari-india/
+                      - generic "Mercari India page logo" [ref=e227]:
+                        - img "Mercari India page logo" [ref=e229]
+                    - generic [ref=e230]:
+                      - link "Mercari India Technology, Information and Internet Subsidiary" [ref=e232] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/mercari-india/
+                        - generic [ref=e233]:
+                          - generic [ref=e235]: Mercari India
+                          - generic [ref=e237]: Technology, Information and Internet
+                          - generic [ref=e239]: Subsidiary
+                      - link "友子 池ノ平 友子 & 2 other connections follow this page" [ref=e241] [cursor=pointer]:
+                        - /url: http://www.linkedin.com/company/mercari-india/?showInNetworkFollowers=true
+                        - img "友子 池ノ平" [ref=e244]
+                        - generic [ref=e245]: 友子 & 2 other connections follow this page
+                  - button "Follow Mercari India" [ref=e247] [cursor=pointer]:
+                    - img [ref=e248]
+                    - generic [ref=e249]: Follow
+          - generic [ref=e253]:
+            - generic [ref=e254]:
+              - heading "Pages people also viewed" [level=3] [ref=e256]
+              - list [ref=e258]:
+                - listitem [ref=e259]:
+                  - generic [ref=e260]:
+                    - generic [ref=e261]:
+                      - link "Rakuten page logo" [ref=e263] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/rakuten/
+                        - generic "Rakuten page logo" [ref=e265]:
+                          - img "Rakuten page logo" [ref=e267]
+                      - generic [ref=e268]:
+                        - link "Rakuten Software Development 347,829 followers" [ref=e270] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/rakuten/
+                          - generic [ref=e271]:
+                            - generic [ref=e273]: Rakuten
+                            - generic [ref=e275]: Software Development
+                            - generic [ref=e277]: 347,829 followers
+                        - link "Saurabh Shrestha Saurabh works here" [ref=e279] [cursor=pointer]:
+                          - /url: http://www.linkedin.com/in/saurabh-shrestha-7b8570202
+                          - img "Saurabh Shrestha" [ref=e282]
+                          - generic [ref=e283]: Saurabh works here
+                    - button "Following Rakuten. Click to unfollow." [pressed] [ref=e285] [cursor=pointer]:
+                      - img [ref=e286]
+                      - generic [ref=e288]: Following
+                - listitem [ref=e289]:
+                  - generic [ref=e290]:
+                    - generic [ref=e291]:
+                      - link "PayPay Corporation page logo" [ref=e293] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/paypay-corp/
+                        - generic "PayPay Corporation page logo" [ref=e295]:
+                          - img "PayPay Corporation page logo" [ref=e297]
+                      - generic [ref=e298]:
+                        - link "PayPay Corporation Financial Services 109,286 followers" [ref=e300] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/paypay-corp/
+                          - generic [ref=e301]:
+                            - generic [ref=e303]: PayPay Corporation
+                            - generic [ref=e305]: Financial Services
+                            - generic [ref=e307]: 109,286 followers
+                        - link "Chih-yin Vivian Hsu Chih-yin Vivian & 39 other connections follow this page" [ref=e309] [cursor=pointer]:
+                          - /url: http://www.linkedin.com/company/paypay-corp/?showInNetworkFollowers=true
+                          - img "Chih-yin Vivian Hsu" [ref=e312]
+                          - generic [ref=e313]: Chih-yin Vivian & 39 other connections follow this page
+                    - button "Follow PayPay Corporation" [ref=e315] [cursor=pointer]:
+                      - img [ref=e316]
+                      - generic [ref=e317]: Follow
+                - listitem [ref=e318]:
+                  - generic [ref=e319]:
+                    - generic [ref=e320]:
+                      - link "Mercari India page logo" [ref=e322] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/mercari-india/
+                        - generic "Mercari India page logo" [ref=e324]:
+                          - img "Mercari India page logo" [ref=e326]
+                      - generic [ref=e327]:
+                        - link "Mercari India Technology, Information and Internet 27,773 followers" [ref=e329] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/mercari-india/
+                          - generic [ref=e330]:
+                            - generic [ref=e332]: Mercari India
+                            - generic [ref=e334]: Technology, Information and Internet
+                            - generic [ref=e336]: 27,773 followers
+                        - link "友子 池ノ平 友子 & 2 other connections follow this page" [ref=e338] [cursor=pointer]:
+                          - /url: http://www.linkedin.com/company/mercari-india/?showInNetworkFollowers=true
+                          - img "友子 池ノ平" [ref=e341]
+                          - generic [ref=e342]: 友子 & 2 other connections follow this page
+                    - button "Follow Mercari India" [ref=e344] [cursor=pointer]:
+                      - img [ref=e345]
+                      - generic [ref=e346]: Follow
+            - button "Show all similar pages" [ref=e348] [cursor=pointer]:
+              - img [ref=e349]
+              - generic [ref=e350]: Show all
+          - generic [ref=e356]:
+            - generic [ref=e357]:
+              - heading "People also follow" [level=3] [ref=e359]
+              - list [ref=e361]:
+                - listitem [ref=e362]:
+                  - generic [ref=e363]:
+                    - generic [ref=e364]:
+                      - link "J.P. Morgan page logo" [ref=e366] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/jpmorgan/
+                        - generic "J.P. Morgan page logo" [ref=e368]:
+                          - img "J.P. Morgan page logo" [ref=e370]
+                      - generic [ref=e371]:
+                        - link "J.P. Morgan Financial Services 5,818,218 followers" [ref=e373] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/jpmorgan/
+                          - generic [ref=e374]:
+                            - generic [ref=e376]: J.P. Morgan
+                            - generic [ref=e378]: Financial Services
+                            - generic [ref=e380]: 5,818,218 followers
+                        - link "Kuei Maesaka Kuei & 96 other connections follow this page" [ref=e382] [cursor=pointer]:
+                          - /url: http://www.linkedin.com/company/jpmorgan/?showInNetworkFollowers=true
+                          - img "Kuei Maesaka" [ref=e385]
+                          - generic [ref=e386]: Kuei & 96 other connections follow this page
+                    - button "Follow J.P. Morgan" [ref=e388] [cursor=pointer]:
+                      - img [ref=e389]
+                      - generic [ref=e390]: Follow
+                - listitem [ref=e391]:
+                  - generic [ref=e392]:
+                    - generic [ref=e393]:
+                      - link "PayPay Corporation page logo" [ref=e395] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/paypay-corp/
+                        - generic "PayPay Corporation page logo" [ref=e397]:
+                          - img "PayPay Corporation page logo" [ref=e399]
+                      - generic [ref=e400]:
+                        - link "PayPay Corporation Financial Services 109,286 followers" [ref=e402] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/paypay-corp/
+                          - generic [ref=e403]:
+                            - generic [ref=e405]: PayPay Corporation
+                            - generic [ref=e407]: Financial Services
+                            - generic [ref=e409]: 109,286 followers
+                        - link "Chih-yin Vivian Hsu Chih-yin Vivian & 39 other connections follow this page" [ref=e411] [cursor=pointer]:
+                          - /url: http://www.linkedin.com/company/paypay-corp/?showInNetworkFollowers=true
+                          - img "Chih-yin Vivian Hsu" [ref=e414]
+                          - generic [ref=e415]: Chih-yin Vivian & 39 other connections follow this page
+                    - button "Follow PayPay Corporation" [ref=e417] [cursor=pointer]:
+                      - img [ref=e418]
+                      - generic [ref=e419]: Follow
+                - listitem [ref=e420]:
+                  - generic [ref=e421]:
+                    - generic [ref=e422]:
+                      - link "U.S. Embassy in Tokyo Japan page logo" [ref=e424] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/u.s.-embassy-in-tokyo/
+                        - generic "U.S. Embassy in Tokyo Japan page logo" [ref=e426]:
+                          - img "U.S. Embassy in Tokyo Japan page logo" [ref=e428]
+                      - generic [ref=e429]:
+                        - link "U.S. Embassy in Tokyo Japan Government Administration 10,752 followers" [ref=e431] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/company/u.s.-embassy-in-tokyo/
+                          - generic [ref=e432]:
+                            - generic [ref=e434]: U.S. Embassy in Tokyo Japan
+                            - generic [ref=e436]: Government Administration
+                            - generic [ref=e438]: 10,752 followers
+                        - link "Yuka Suzuki Yuka works here" [ref=e440] [cursor=pointer]:
+                          - /url: http://www.linkedin.com/in/yuka-suzuki-48901827a
+                          - img "Yuka Suzuki" [ref=e443]
+                          - generic [ref=e444]: Yuka works here
+                    - button "Follow U.S. Embassy in Tokyo Japan" [ref=e446] [cursor=pointer]:
+                      - img [ref=e447]
+                      - generic [ref=e448]: Follow
+            - button "Show all recommended pages" [ref=e450] [cursor=pointer]:
+              - img [ref=e451]
+              - generic [ref=e452]: Show all
+        - generic [ref=e454]:
+          - iframe [ref=e456]:
+            - generic [ref=f47e3]:
+              - banner [ref=f47e4]:
+                - generic [ref=f47e5]:
+                  - link "Promoted" [ref=f47e6] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/ads/start?src=en-all-ad-li-ads_by_li&trk=ads_by_li&utm_medium=ad&utm_source=li&utm_campaign=ads_by_li
+                  - button [ref=f47e7] [cursor=pointer]:
+                    - img [ref=f47e8]
+              - generic [ref=f47e13]:
+                - link "Ad Image 1,378,439,936 GW 中に新規の顧客を獲得 ゴールデン ウィークの売上目標、マーケティング目標に沿った広告を作成。 Dr. Priya Dr. Priya & 6 other connections also follow Google Ads" [ref=f47e14] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/li/tscp/sct?destinationUrl=https%3A%2F%2Fad.doubleclick.net%2Fddm%2Ftrackclk%2FN5295.linkedin.com%2FB34685212.443129324%3Bdc_trk_aid%3D629056453%3Bdc_trk_cid%3D246337853%3Bdc_lat%3D%3Bdc_rdid%3D%3Btag_for_child_directed_treatment%3D%3Btfua%3D%3Bltd%3D%3Bdc_tdv%3D1%3Fli_fat_id%3D21545113-09d4-4cb0-b3ea-55a9d43f2e30&trackingEvent=%5B%7B%22eventInfo%22%3A%7B%22appId%22%3A%22com.linkedin.ads.rendering.d_web%22%2C%22eventName%22%3A%22SponsoredRightRailContentActionEvent%22%2C%22topicName%22%3A%22SponsoredRightRailContentActionEvent%22%7D%2C%22eventBody%22%3A%7B%22sponsoredEventHeader%22%3A%7B%22encryptedTrackingData%22%3A%22CwEAAAGdWyy8IKQCnlJqHWqiEqcIKyOGX-6X8VMEpxnaRC0UxBe73SRzGjt_Njv6-JKX8WOYYkdBDY4QPllqrDcly9x2GCktKkA-yERZcmwgIGMi9ETYvSaGpN6gfWGsnsaMTpbOx0l4WM3QAwX_BH2BtowAQ-coTWFWndjDtLlcfED8JUAz0MOooak63eK06vSHrZG4tweAbAoL9-4vxgcEzS4ft-HTjFrwFcvDII9GnLWgEFapzhzkwLJUjEXuHFEFehw3_e4BxHakh8PKpOnG80JEwiOmRlTbiKcEZfjtqglLddt4zZ2FT5WYruof-csVQdpVxUH6V4owPzRCinwhLlufckyD_v8Yw4j6Ww8cK0qsMMejMVj23djqMyPt-QXCfb-PRGvc8K7kg1kAI4Kr_5CYNvq3u8wD_fwxAxlMxFKuy9VPbAY4g0n58KCZO4Nt6blx0BJPhFUWQjBMOOmJORyUXfuwkF5XcM6U17vAG4wY_XszPO0G2WcR2biAeqmG-RvJHUZd04O0m8tlf0WvAJnexsKFeoZ1VO_lvN1R2vUIPOJy4XgcgDMmAKyqJzKHrlXNhUxqm2VgjJbd4xyFlU3nfj4fSL4yHKqn5p98e6OkZt5CUlgnm9BKrCHzuO4Df3NrerigkXc6oWZpdBMVuz9v6cmg2R771B3UuPHGVroLTosOLGktlfjx2KkIouXDYP3L42U7_NPlRTL6lzh3brBGjt8nE68y3-8059oD5XLELNgifUwI8afeG2ujXtOrKuS7vaT7sMUMw9bz8z5YwO1QQHuZ-ISwusXPH7L1nikwRu-kFiLVM_2CycyG4ZUcaLTmLs1FZnamiRb5_kSjTS6Xz2dxZasDnaeknCFy_JjJ7gQDAIWQbAYyKdoTF4nq5HitqKVEy64fxvwubDZnr0G_9L1rR_cMV-A69AkjDNRT1obW_7E1_9AWW2JsChUp1y_OlJp4kmb2Hjg0jvDJuP4ryCoXg5iiarGsaI3NKjl07UBrNnkkT_9_N94%22%7D%2C%22header%22%3A%7B%22pageInstance%22%3A%7B%22pageUrn%22%3A%22urn%3Ali%3Apage%3Ad_flagship3_company%22%2C%22trackingId%22%3A%22c4a49f39-9ec3-46d0-9039-2ef2394cfd47%22%7D%2C%22time%22%3A1775351151648%2C%22version%22%3A%220.0.0%22%7D%2C%22requestHeader%22%3A%7B%22pageKey%22%3A%22d_flagship3_company%22%2C%22interfaceLocale%22%3A%22en-US%22%7D%7D%7D%5D&csrfToken=ajax%3A8883506678265889084
+                  - img "Ad Image 1,378,439,936" [ref=f47e16]
+                  - generic [ref=f47e17]:
+                    - heading "GW 中に新規の顧客を獲得" [level=4] [ref=f47e18]
+                    - paragraph [ref=f47e19]: ゴールデン ウィークの売上目標、マーケティング目標に沿った広告を作成。
+                    - generic [ref=f47e20]:
+                      - img "Dr. Priya" [ref=f47e22]
+                      - paragraph [ref=f47e23]: Dr. Priya & 6 other connections also follow Google Ads
+                - link "Ad Image 1,176,842,323 Exclusive Special Offer Get access to Bloomberg's market moving news - just $180/first year. Robert Robert & 37 other connections also follow Bloomberg News" [ref=f47e24] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/li/tscp/sct?destinationUrl=https%3A%2F%2Fwww.bloomberg.com%2Fsubscriptions%2Fuspaid%3Futm_medium%3Dcpc_social%26utm_source%3Dlinkedin%26utm_campaign%3DBLOM_ACQ_OFFERXX_Y0629_LK_SO_WTCP_PROXXXXXXX_INTST_00XXXXCPA_2PLK_XXXX_ALLPERSONATXT_XXXXX_Y0629_XXXEN_LINKOA_FLX2_AT_EN_JP_LITXTAD%26li_fat_id%3D21545113-09d4-4cb0-b3ea-55a9d43f2e30&trackingEvent=%5B%7B%22eventInfo%22%3A%7B%22appId%22%3A%22com.linkedin.ads.rendering.d_web%22%2C%22eventName%22%3A%22SponsoredRightRailContentActionEvent%22%2C%22topicName%22%3A%22SponsoredRightRailContentActionEvent%22%7D%2C%22eventBody%22%3A%7B%22sponsoredEventHeader%22%3A%7B%22encryptedTrackingData%22%3A%22CwEAAAGdWyy8IIeXOuTnwyGNbGvhHsK2rtB4CdalLmOSbs5hv0vZwhTpTW_0bv7L2WS_1t8sf_qJn6dwkhU9sguFz6xRdFS-ufDE9tY6uZKEOSlhIp88mqu389QaCoazjVZ_7yvivRLMYaxicaMdvlnGhrId-RxEg5eiBbDEWfsz4zP-eNElHOCYXV9JAiu7Py7WH2LAKwLyoa9PwtNZxIklPlNIJHs0ebBZFW9KiWNc7MeWSZOGMcjfX7IQd6_d82BQ6xTMEpfGWxqW4xLXnqsx5qCb5q7GuQxC_94X1ow87zpU6MWo3vl6f8nZJqbTY6dO3JJn51D1HGVUMJAqcMCF2hRgX5bDpN5_br4HsDsHPSE7cUnfg1GctmPn8acH072vFGGSHaIKRgc0Z8mdBrvIO92OMxbvFzUy0o-mdl846RtVJ5UrCijKATNsQfUluIMLPH-8_g-D6PcK8bCF-HLGrG7uf_pUjLWhqJ2pkB6dZM-6fLG9KZLG-UCtckALZ4uBawQ8TXBFCOkIJZfic3Cr7R246BKSnoTn2LTyqWuEu3Uny-B6N48B1fEpxvMCeIF3KsO9B7kxboeF4503daLM_urP3slDAzSn4xYth-L9Yc6nzGb3QJ9wxpZYgHGYjaLMcF0FTff0awTp-02xOqiGZ5oyi21vmaitf_qfR_ZNNHojZcWRkm-QX3q3OFTDMY90AhEKzUFEV7eVyMek4GCxmAaKzhdHfiDsaFL6sZYPJEp4PzbDYXMHKyMDPi7ZG_53goCUq5fVLhYYyUtPSxBVxzz_TkOkRzEds1ZKlrI47eDV-Ow6iGcgje1KGf3h62X0hZ_Zd_VhYS70mmZckGmqqRbtbtFxoO79eaOSZYYR6_P8US4luWoFchuzCEJ4z3EUxlO87svfv0lZJHHukU_rbeWGqP7yuJE3n-sqcSfR-DeFdku2fJ3Pg7-7gZu5GD0trX-7gmON1I3HDPfNvFv0VZRwTo6JHPxeljJPCQ%22%7D%2C%22header%22%3A%7B%22pageInstance%22%3A%7B%22pageUrn%22%3A%22urn%3Ali%3Apage%3Ad_flagship3_company%22%2C%22trackingId%22%3A%22bc5834ee-730f-41e1-92b1-8b26897c618f%22%7D%2C%22time%22%3A1775351151648%2C%22version%22%3A%220.0.0%22%7D%2C%22requestHeader%22%3A%7B%22pageKey%22%3A%22d_flagship3_company%22%2C%22interfaceLocale%22%3A%22en-US%22%7D%7D%7D%5D&csrfToken=ajax%3A8883506678265889084
+                  - img "Ad Image 1,176,842,323" [ref=f47e26]
+                  - generic [ref=f47e27]:
+                    - heading "Exclusive Special Offer" [level=4] [ref=f47e28]
+                    - paragraph [ref=f47e29]: Get access to Bloomberg's market moving news - just $180/first year.
+                    - generic [ref=f47e30]:
+                      - img "Robert" [ref=f47e32]
+                      - paragraph [ref=f47e33]: Robert & 37 other connections also follow Bloomberg News
+          - generic "LinkedIn Footer Content" [ref=e457]:
+            - generic [ref=e458]:
+              - list [ref=e459]:
+                - listitem [ref=e460]:
+                  - link "About" [ref=e461] [cursor=pointer]:
+                    - /url: https://about.linkedin.com/
+                    - generic [ref=e462]: About
+                - listitem [ref=e463]:
+                  - link "Accessibility" [ref=e464] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/accessibility
+                    - generic [ref=e465]: Accessibility
+                - listitem [ref=e466]:
+                  - link "Help Center" [ref=e467] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/help/linkedin?trk=footer_d_flagship3_company
+                    - generic [ref=e468]: Help Center
+                - listitem [ref=e469]:
+                  - button "Privacy & Terms" [ref=e471] [cursor=pointer]:
+                    - generic [ref=e473]:
+                      - text: Privacy & Terms
+                      - img [ref=e474]
+                - listitem [ref=e476]:
+                  - link "Ad Choices" [ref=e477] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/help/linkedin/answer/62931
+                    - generic [ref=e478]: Ad Choices
+                - listitem [ref=e479]:
+                  - link "Advertising" [ref=e480] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/ad/start?trk=n_nav_ads_rr
+                    - generic [ref=e481]: Advertising
+                - listitem [ref=e482]:
+                  - button "Business Services" [ref=e484] [cursor=pointer]:
+                    - generic [ref=e486]:
+                      - text: Business Services
+                      - img [ref=e487]
+                - listitem [ref=e489]:
+                  - button "Get the LinkedIn app" [ref=e492] [cursor=pointer]
+                - listitem [ref=e493]:
+                  - button "More options" [ref=e494] [cursor=pointer]: More
+              - generic [ref=e495]:
+                - img "LinkedIn" [ref=e496]:
+                  - img [ref=e497]
+                - text: LinkedIn Corporation © 2026
+    - generic:
+      - generic:
+        - complementary:
+          - generic [ref=e500]:
+            - generic [ref=e502] [cursor=pointer]:
+              - generic [ref=e503]:
+                - img "Sora Sasaki" [ref=e504]
+                - generic [ref=e506]: Status is online
+              - button "You are on the messaging overlay. Press enter to open the list of conversations." [ref=e507]:
+                - generic [ref=e508]:
+                  - generic [ref=e509]: Messaging
+                  - generic [ref=e510]: You are on the messaging overlay. Press enter to open the list of conversations.
+            - generic [ref=e511]:
+              - button "Open messenger dropdown menu" [ref=e513] [cursor=pointer]:
+                - img "Open messenger dropdown menu" [ref=e514]
+              - button "Compose message" [ref=e517] [cursor=pointer]:
+                - img [ref=e518]
+                - generic [ref=e520]: Compose message
+              - button "You are on the messaging overlay. Press enter to open the list of conversations." [ref=e521] [cursor=pointer]:
+                - img [ref=e522]
+                - generic [ref=e524]: You are on the messaging overlay. Press enter to open the list of conversations.
+        - complementary "AI-powered assistant to get help with your career, jobs etc"
+  - region [ref=e525]

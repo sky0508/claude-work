@@ -1,0 +1,422 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button [ref=e5] [cursor=pointer]:
+        - generic [ref=e7]: Skip to main content
+      - button [ref=e8] [cursor=pointer]
+    - generic [ref=e11]:
+      - banner [ref=e13]:
+        - generic [ref=e16]:
+          - button [ref=e17] [cursor=pointer]
+          - generic [ref=e20]:
+            - navigation [ref=e23]:
+              - list [ref=e24]:
+                - listitem [ref=e25]:
+                  - button "Home, 1 new notification" [ref=e26] [cursor=pointer]:
+                    - generic [ref=e30]: Home
+                - listitem [ref=e31]:
+                  - link "My Network, 0 new notifications" [ref=e32] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - generic [ref=e36]: My Network
+                - listitem [ref=e37]:
+                  - button "Jobs, 0 new notifications" [ref=e38] [cursor=pointer]:
+                    - generic [ref=e42]: Jobs
+                - listitem [ref=e43]:
+                  - link "Messaging, 0 new notifications" [ref=e44] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - generic [ref=e48]: Messaging
+                - listitem [ref=e49]:
+                  - link "Notifications, 0 new notifications" [ref=e50] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e54]: Notifications
+                - listitem [ref=e55]:
+                  - button "Me" [ref=e56] [cursor=pointer]:
+                    - figure [ref=e58]
+                    - generic [ref=e60]: Me
+            - navigation [ref=e64]:
+              - list [ref=e65]:
+                - listitem [ref=e66]:
+                  - button "For Business" [ref=e67] [cursor=pointer]:
+                    - generic [ref=e71]: For Business
+                - listitem [ref=e73]:
+                  - link "0 new notifications" [ref=e74] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/learning/?trk=nav_neptune_learning
+                    - generic [ref=e78]: Learning
+      - generic [ref=e79]:
+        - toolbar [ref=e80]
+        - main [ref=e94]:
+          - main [ref=e95]:
+            - generic [ref=e101]:
+              - list [ref=e103]:
+                - listitem [ref=e104]:
+                  - generic [ref=e105]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/tsugumi-hiraki-9714ba176/
+                    - generic [ref=e106]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/tsugumi-hiraki-9714ba176/
+                      - generic [ref=e107]:
+                        - link [ref=e108] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/tsugumi-hiraki-9714ba176/
+                          - figure [ref=e109]
+                        - generic [ref=e110]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/tsugumi-hiraki-9714ba176/
+                          - paragraph [ref=e111]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/tsugumi-hiraki-9714ba176/
+                            - link "Tsugumi Hiraki Verified" [ref=e112] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/tsugumi-hiraki-9714ba176/
+                              - text: Tsugumi Hiraki
+                              - img "Verified" [ref=e113]
+                            - generic [ref=e115]: • 2nd
+                          - paragraph [ref=e117]: HR Business Partner
+                          - paragraph [ref=e119]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e121]:
+                        - text: "Current: Local"
+                        - strong [ref=e122]: People
+                        - text: Partner at Elekta
+                      - generic [ref=e123]:
+                        - figure [ref=e124]
+                        - figure [ref=e125]
+                        - paragraph [ref=e127]:
+                          - link "Diyana Nakai" [ref=e128] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/diyana-nakai/
+                            - strong [ref=e129]: Diyana Nakai
+                          - text: and
+                          - link "藤永悟志" [ref=e130] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/%E6%82%9F%E5%BF%97-%E8%97%A4%E6%B0%B8-22149128a/
+                            - strong [ref=e131]: 藤永悟志
+                          - text: are mutual connections
+                - listitem [ref=e132]:
+                  - generic [ref=e133]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/kana-tetsuhara-b87744230/
+                    - generic [ref=e134]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/kana-tetsuhara-b87744230/
+                      - generic [ref=e135]:
+                        - link [ref=e136] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/kana-tetsuhara-b87744230/
+                          - figure [ref=e137]
+                        - generic [ref=e138]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/kana-tetsuhara-b87744230/
+                          - paragraph [ref=e139]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/kana-tetsuhara-b87744230/
+                            - link "Kana Tetsuhara Verified" [ref=e140] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/kana-tetsuhara-b87744230/
+                              - text: Kana Tetsuhara
+                              - img "Verified" [ref=e141]
+                            - generic [ref=e143]: • 3rd+
+                          - paragraph [ref=e145]: Group Manager@Recruit/HR affairs,next generation talent management, Employment of people with disabilities
+                          - paragraph [ref=e147]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e149]:
+                        - text: "Current: Group Manager,"
+                        - strong [ref=e150]: Talent
+                        - text: Management Division at Recruit Co.,Ltd.
+                - generic [ref=e156]:
+                  - paragraph [ref=e158]: Easily find people who are actively hiring
+                  - paragraph [ref=e159]: Search more efficiently with advanced search filters
+                  - link "Reactivate Premium" [ref=e160] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=Y8HWrScxR6eGGAbYj%2FFsuw%3D%3D&isSS=false
+                    - generic [ref=e162]: Reactivate Premium
+                  - paragraph [ref=e163]: Cancel anytime. No hidden fees.
+                - listitem [ref=e164]:
+                  - generic [ref=e165]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/kaori-nishida-859190324/en/
+                    - generic [ref=e166]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/kaori-nishida-859190324/en/
+                      - generic [ref=e167]:
+                        - link [ref=e168] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/kaori-nishida-859190324/en/
+                          - figure [ref=e169]
+                        - generic [ref=e170]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/kaori-nishida-859190324/en/
+                          - paragraph [ref=e171]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/kaori-nishida-859190324/en/
+                            - link "Kaori Nishida Verified" [ref=e172] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/kaori-nishida-859190324/en/
+                              - text: Kaori Nishida
+                              - img "Verified" [ref=e173]
+                            - generic [ref=e175]: • 3rd+
+                          - paragraph [ref=e177]: I have been working in Human Resources roles that leverage over 7 years of experience in Learning and Development, HRBP, Talent Acquisition, Talent Management, Culture and EX (DE&I) and Global Mobility.
+                          - paragraph [ref=e179]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e181]:
+                        - text: "Current: HRBP/Strategic"
+                        - strong [ref=e182]: HR
+                        - text: Senior Business Partner Manager at Coca-Cola Bottlers Japan Inc.
+                - listitem [ref=e183]:
+                  - generic [ref=e184]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/norasar/
+                    - generic [ref=e185]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/norasar/
+                      - generic [ref=e186]:
+                        - link [ref=e187] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/norasar/
+                          - figure [ref=e188]
+                        - generic [ref=e189]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/norasar/
+                          - paragraph [ref=e190]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/norasar/
+                            - link "Nora Sar Verified" [ref=e191] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/norasar/
+                              - text: Nora Sar
+                              - img "Verified" [ref=e192]
+                            - generic [ref=e194]: • 2nd
+                          - paragraph [ref=e196]: Strategic HR Leader | Talent Development | HR Governance | People Analytics | HR Transformation
+                          - paragraph [ref=e198]: Japan
+                      - paragraph [ref=e200]:
+                        - text: "Past: Manager"
+                        - strong [ref=e201]: Talent
+                        - text: Acquisition & Employer Branding at Mitsubishi Fuso Truck and Bus Corporation
+                - listitem [ref=e202]:
+                  - generic [ref=e203]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/daniela-salasm/
+                    - generic [ref=e204]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/daniela-salasm/
+                      - generic [ref=e205]:
+                        - link [ref=e206] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/daniela-salasm/
+                          - figure [ref=e207]
+                        - generic [ref=e208]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/daniela-salasm/
+                          - paragraph [ref=e209]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/daniela-salasm/
+                            - link "Daniela Salas Márquez Verified" [ref=e210] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/daniela-salasm/
+                              - text: Daniela Salas Márquez
+                              - img "Verified" [ref=e211]
+                            - generic [ref=e213]: • 2nd
+                          - paragraph [ref=e215]: HR @ Ryanair 🛫
+                          - paragraph [ref=e217]: Dublin, County Dublin, Ireland
+                      - paragraph [ref=e219]:
+                        - text: "Current:"
+                        - strong [ref=e220]: HR
+                        - text: Management -
+                        - strong [ref=e221]: People
+                        - text: Graduate at Ryanair - Europe's Favourite Airline
+                      - generic [ref=e222]:
+                        - figure [ref=e223]
+                        - paragraph [ref=e225]:
+                          - link "Chase Masters" [ref=e226] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/chase-masters-248146304/en/
+                            - strong [ref=e227]: Chase Masters
+                          - text: is a mutual connection
+                - listitem [ref=e228]:
+                  - generic [ref=e229]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/beatrizreganassi/
+                    - generic [ref=e230]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/beatrizreganassi/
+                      - generic [ref=e231]:
+                        - link [ref=e232] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/beatrizreganassi/
+                          - figure [ref=e233]
+                        - generic [ref=e234]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/beatrizreganassi/
+                          - paragraph [ref=e235]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/beatrizreganassi/
+                            - link "Beatriz Reganassi Okumura Premium" [ref=e236] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/beatrizreganassi/
+                              - text: Beatriz Reganassi Okumura
+                              - img "Premium" [ref=e237]
+                            - generic [ref=e239]: • 2nd
+                          - paragraph [ref=e241]: People & Culture Manager | HRBP | Talent Acquisition
+                          - paragraph [ref=e243]: Tokyo, Japan
+                      - paragraph [ref=e245]:
+                        - text: "Current:"
+                        - strong [ref=e246]: People
+                        - text: and Culture Manager at One Coin English
+                      - generic [ref=e247]:
+                        - figure [ref=e248]
+                        - figure [ref=e249]
+                        - paragraph [ref=e251]:
+                          - link "Divisha Shetty" [ref=e252] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/divisha-shetty/
+                            - strong [ref=e253]: Divisha Shetty
+                          - text: and
+                          - link "Aviyan Giri" [ref=e254] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/aviyan-giri-15b78420a/
+                            - strong [ref=e255]: Aviyan Giri
+                          - text: are mutual connections
+                - listitem [ref=e256]:
+                  - generic [ref=e257]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/minako-muraoka-5578889/
+                    - generic [ref=e258]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/minako-muraoka-5578889/
+                      - generic [ref=e259]:
+                        - link [ref=e260] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/minako-muraoka-5578889/
+                          - figure [ref=e261]
+                        - generic [ref=e262]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/minako-muraoka-5578889/
+                          - paragraph [ref=e263]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/minako-muraoka-5578889/
+                            - link "Minako Muraoka Verified" [ref=e264] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/minako-muraoka-5578889/
+                              - text: Minako Muraoka
+                              - img "Verified" [ref=e265]
+                            - generic [ref=e267]: • 2nd
+                          - paragraph [ref=e269]: Resonac - People Manager, Organization and Talent Development
+                          - paragraph [ref=e271]: Greater Tokyo Area
+                      - paragraph [ref=e273]:
+                        - text: "Current:"
+                        - strong [ref=e274]: People
+                        - text: Manager, Organization and
+                        - strong [ref=e275]: Talent
+                        - text: Development at Resonac
+                      - paragraph [ref=e279]:
+                        - link "599 followers" [ref=e280] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAAG7MRMBV0C1NpB3IpPMHVeDLTQO3mhRz-A%22%5D
+                      - generic [ref=e281]:
+                        - figure [ref=e282]
+                        - figure [ref=e283]
+                        - paragraph [ref=e285]:
+                          - link "Shuhei Ikeda" [ref=e286] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/shuhei-ikeda/
+                            - strong [ref=e287]: Shuhei Ikeda
+                          - text: and
+                          - link "藤永悟志" [ref=e288] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/%E6%82%9F%E5%BF%97-%E8%97%A4%E6%B0%B8-22149128a/
+                            - strong [ref=e289]: 藤永悟志
+                          - text: are mutual connections
+                - listitem [ref=e290]:
+                  - generic [ref=e291]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/thitiya-c-4698b0275/
+                    - generic [ref=e292]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/thitiya-c-4698b0275/
+                      - generic [ref=e293]:
+                        - link [ref=e294] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/thitiya-c-4698b0275/
+                          - figure [ref=e295]
+                        - generic [ref=e296]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/thitiya-c-4698b0275/
+                          - paragraph [ref=e297]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/thitiya-c-4698b0275/
+                            - link "Thitiya C. Premium" [ref=e298] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/thitiya-c-4698b0275/
+                              - text: Thitiya C.
+                              - img "Premium" [ref=e299]
+                            - generic [ref=e301]: • 2nd
+                          - paragraph [ref=e303]: Talent Acquisition | HR Recruiter | HR Admin
+                          - paragraph [ref=e305]: Thailand
+                      - paragraph [ref=e307]:
+                        - text: "Current:"
+                        - strong [ref=e308]: HR
+                        - text: Recruiter at MY
+                        - strong [ref=e309]: PEOPLE
+                        - text: RECRUITMENT CO., LTD.
+                      - generic [ref=e310]:
+                        - figure [ref=e311]
+                        - figure [ref=e312]
+                        - paragraph [ref=e314]:
+                          - link "Tushar Negi ネギ トゥシャール" [ref=e315] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/tushar-negi%E3%83%8D%E3%82%AE%E3%83%88%E3%82%A5%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%AB/
+                            - strong [ref=e316]: Tushar Negi ネギ トゥシャール
+                          - text: and
+                          - link "Chase Masters" [ref=e317] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/chase-masters-248146304/en/
+                            - strong [ref=e318]: Chase Masters
+                          - text: are mutual connections
+                - listitem [ref=e319]:
+                  - generic [ref=e320]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/maachi-watanabe/en/
+                    - generic [ref=e321]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/maachi-watanabe/en/
+                      - generic [ref=e322]:
+                        - link [ref=e323] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/maachi-watanabe/en/
+                          - figure [ref=e324]
+                        - generic [ref=e325]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/maachi-watanabe/en/
+                          - paragraph [ref=e326]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/maachi-watanabe/en/
+                            - link "Maachi Watanabe Premium" [ref=e327] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/maachi-watanabe/en/
+                              - text: Maachi Watanabe
+                              - img "Premium" [ref=e328]
+                            - generic [ref=e330]: • 2nd
+                          - paragraph [ref=e332]: Driving People & Organizational Growth through HR, DEIB, and Talent Development | NewsPicks Pro Picker | Gallup-Certified Strengths Coach
+                          - paragraph [ref=e334]: Japan
+                      - paragraph [ref=e336]:
+                        - text: "Past:"
+                        - strong [ref=e337]: HR
+                        - text: Business Partner at 東芝デジタルソリューションズ（株）
+                      - generic [ref=e338]:
+                        - figure [ref=e339]
+                        - figure [ref=e340]
+                        - figure [ref=e341]
+                        - paragraph [ref=e343]:
+                          - link "Ryosuke Endo" [ref=e344] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/ryosukeendo/en/
+                            - strong [ref=e345]: Ryosuke Endo
+                          - text: ","
+                          - link "Laxmi Biswakarma" [ref=e346] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/laxmi-biswakarma-72a267ab/
+                            - strong [ref=e347]: Laxmi Biswakarma
+                          - text: and
+                          - link "10 other mutual connections" [ref=e348] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAADZ6OUEBLEBPcc3-Ab--Vwuqf7U3sAVD4GQ%22%5D
+                            - strong [ref=e349]: 10 other mutual connections
+                - listitem [ref=e350]:
+                  - generic [ref=e351]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/yomnashok999/
+                    - generic [ref=e352]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/yomnashok999/
+                      - generic [ref=e353]:
+                        - link [ref=e354] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/yomnashok999/
+                          - figure [ref=e355]
+                        - generic [ref=e356]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/yomnashok999/
+                          - paragraph [ref=e357]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/yomnashok999/
+                            - link "Yomna Magdy Verified" [ref=e358] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/yomnashok999/
+                              - text: Yomna Magdy
+                              - img "Verified" [ref=e359]
+                            - generic [ref=e361]: • 2nd
+                          - paragraph [ref=e363]: HR Business Partner | Talent, People and Culture
+                          - paragraph [ref=e365]: Cairo, Egypt
+                      - paragraph [ref=e367]:
+                        - text: "Current:"
+                        - strong [ref=e368]: HR
+                        - text: Business Partner at WideBot
+              - generic [ref=e370]:
+                - list
+                - button "Next" [ref=e371] [cursor=pointer]:
+                  - generic [ref=e374]: Next

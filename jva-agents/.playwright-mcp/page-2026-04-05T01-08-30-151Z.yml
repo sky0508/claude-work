@@ -1,0 +1,476 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button [ref=e5] [cursor=pointer]:
+        - generic [ref=e7]: Skip to main content
+      - button [ref=e8] [cursor=pointer]
+    - generic [ref=e11]:
+      - banner [ref=e13]:
+        - generic [ref=e16]:
+          - button [ref=e17] [cursor=pointer]
+          - generic [ref=e20]:
+            - navigation [ref=e23]:
+              - list [ref=e24]:
+                - listitem [ref=e25]:
+                  - button "Home, 1 new notification" [ref=e26] [cursor=pointer]:
+                    - generic [ref=e30]: Home
+                - listitem [ref=e31]:
+                  - link "My Network, 0 new notifications" [ref=e32] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - generic [ref=e36]: My Network
+                - listitem [ref=e37]:
+                  - button "Jobs, 0 new notifications" [ref=e38] [cursor=pointer]:
+                    - generic [ref=e42]: Jobs
+                - listitem [ref=e43]:
+                  - link "Messaging, 0 new notifications" [ref=e44] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - generic [ref=e48]: Messaging
+                - listitem [ref=e49]:
+                  - link "Notifications, 0 new notifications" [ref=e50] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e54]: Notifications
+                - listitem [ref=e55]:
+                  - button "Me" [ref=e56] [cursor=pointer]:
+                    - figure [ref=e58]
+                    - generic [ref=e60]: Me
+            - navigation [ref=e64]:
+              - list [ref=e65]:
+                - listitem [ref=e66]:
+                  - button "For Business" [ref=e67] [cursor=pointer]:
+                    - generic [ref=e71]: For Business
+                - listitem [ref=e73]:
+                  - link "0 new notifications" [ref=e74] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/learning/?trk=nav_neptune_learning
+                    - generic [ref=e78]: Learning
+      - generic [ref=e79]:
+        - toolbar [ref=e80]
+        - main [ref=e94]:
+          - main [ref=e95]:
+            - generic [ref=e101]:
+              - list [ref=e103]:
+                - listitem [ref=e104]:
+                  - generic [ref=e105]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/tomohiroueno/
+                    - generic [ref=e106]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/tomohiroueno/
+                      - generic [ref=e107]:
+                        - link [ref=e108] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/tomohiroueno/
+                          - figure [ref=e109]
+                        - generic [ref=e110]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/tomohiroueno/
+                          - paragraph [ref=e111]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/tomohiroueno/
+                            - link "Tomohiro Ueno Verified" [ref=e112] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/tomohiroueno/
+                              - text: Tomohiro Ueno
+                              - img "Verified" [ref=e113]
+                            - generic [ref=e115]: • 2nd
+                          - paragraph [ref=e117]: HR Analysis / Talent Development / Coaching / Recruiting / Career Couseling
+                          - paragraph [ref=e119]: Tokyo, Japan
+                      - paragraph [ref=e121]:
+                        - text: "Current: 人事企画 at 日立グローバルライフソリューションズ株式会社 - As an"
+                        - strong [ref=e122]: HR
+                        - text: Planner at Hitachi Global Life Solutions, I lead cross-functional initiatives in
+                        - strong [ref=e123]: talent
+                        - text: ...
+                      - generic [ref=e124]:
+                        - figure [ref=e125]
+                        - figure [ref=e126]
+                        - figure [ref=e127]
+                        - paragraph [ref=e129]:
+                          - link "Beau Becker" [ref=e130] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/beaubecker/
+                            - strong [ref=e131]: Beau Becker
+                          - text: ","
+                          - link "Ghassen Hassine" [ref=e132] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/ghassen-hassine-aa17a693/
+                            - strong [ref=e133]: Ghassen Hassine
+                          - text: and
+                          - link "3 other mutual connections" [ref=e134] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAAAScpJsBIUNu8XElyCAGEiWsUs4ClWnqDQE%22%5D
+                            - strong [ref=e135]: 3 other mutual connections
+                - listitem [ref=e136]:
+                  - generic [ref=e137]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/ga-young-lee/
+                    - generic [ref=e138]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/ga-young-lee/
+                      - generic [ref=e139]:
+                        - link [ref=e140] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/ga-young-lee/
+                          - figure [ref=e141]
+                        - generic [ref=e142]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/ga-young-lee/
+                          - paragraph [ref=e143]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/ga-young-lee/
+                            - link "Ga Young Lee Verified" [ref=e144] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/ga-young-lee/
+                              - text: Ga Young Lee
+                              - img "Verified" [ref=e145]
+                            - generic [ref=e147]: • 2nd
+                          - paragraph [ref=e149]: Talent Acquisition/HR Operations Specialist at SWAROVSKI
+                          - paragraph [ref=e151]: Greater Tokyo Area
+                      - paragraph [ref=e153]:
+                        - text: "Current:"
+                        - strong [ref=e154]: Talent
+                        - text: Acquisition Specialist (
+                        - strong [ref=e155]: HR
+                        - text: Operations Specialist) at SWAROVSKI
+                      - generic [ref=e156]:
+                        - figure [ref=e157]
+                        - figure [ref=e158]
+                        - figure [ref=e159]
+                        - paragraph [ref=e161]:
+                          - link "Tay Ling" [ref=e162] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/tayling/
+                            - strong [ref=e163]: Tay Ling
+                          - text: ","
+                          - link "Azeezur Rahaman" [ref=e164] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/azeezur-rahaman-4794b426/
+                            - strong [ref=e165]: Azeezur Rahaman
+                          - text: and
+                          - link "36 other mutual connections" [ref=e166] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAAAoQjYkBpVLrRtjwT6-YN6JkDkbLYxwKaSA%22%5D
+                            - strong [ref=e167]: 36 other mutual connections
+                - generic [ref=e173]:
+                  - paragraph [ref=e175]: Easily find people who are actively hiring
+                  - paragraph [ref=e176]: Search more efficiently with advanced search filters
+                  - link "Reactivate Premium" [ref=e177] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=8Q7GD3FLQ3uvFkWDaFyPag%3D%3D&isSS=false
+                    - generic [ref=e179]: Reactivate Premium
+                  - paragraph [ref=e180]: Cancel anytime. No hidden fees.
+                - listitem [ref=e181]:
+                  - generic [ref=e182]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/yosuke-i-a7a12b216/
+                    - generic [ref=e183]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/yosuke-i-a7a12b216/
+                      - generic [ref=e184]:
+                        - link [ref=e185] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/yosuke-i-a7a12b216/
+                          - figure [ref=e186]
+                        - generic [ref=e187]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/yosuke-i-a7a12b216/
+                          - paragraph [ref=e188]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/yosuke-i-a7a12b216/
+                            - link "Yosuke I." [ref=e189] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/yosuke-i-a7a12b216/
+                            - generic [ref=e190]: • 2nd
+                          - paragraph [ref=e192]: 人事統括部 人財戦略部 人財採用課（Human Resources Division HR Strategy Department Talent Acquisition Section）新卒採用チームリーダー
+                          - paragraph [ref=e194]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e196]:
+                        - text: "Past: Assistant Manager of"
+                        - strong [ref=e197]: HR
+                        - text: Sect. at Koki Holdings (former Hitachi Koki)
+                      - generic [ref=e198]:
+                        - figure [ref=e199]
+                        - figure [ref=e200]
+                        - figure [ref=e201]
+                        - paragraph [ref=e203]:
+                          - link "Ryosuke Endo" [ref=e204] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/ryosukeendo/en/
+                            - strong [ref=e205]: Ryosuke Endo
+                          - text: ","
+                          - link "Satoshi Kanzaki" [ref=e206] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/%E5%93%B2-%E7%A5%9E%EF%A8%91-930933220/en/
+                            - strong [ref=e207]: Satoshi Kanzaki
+                          - text: and
+                          - link "10 other mutual connections" [ref=e208] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAADZ63j4BahzkBVONw_C9CCre6r23CWmEbl4%22%5D
+                            - strong [ref=e209]: 10 other mutual connections
+                - listitem [ref=e210]:
+                  - generic [ref=e211]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/ayako-hoshino-b66b11335/
+                    - generic [ref=e212]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/ayako-hoshino-b66b11335/
+                      - generic [ref=e213]:
+                        - link [ref=e214] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/ayako-hoshino-b66b11335/
+                          - figure [ref=e215]
+                        - generic [ref=e216]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/ayako-hoshino-b66b11335/
+                          - paragraph [ref=e217]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/ayako-hoshino-b66b11335/
+                            - link "Ayako Hoshino Verified" [ref=e218] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/ayako-hoshino-b66b11335/
+                              - text: Ayako Hoshino
+                              - img "Verified" [ref=e219]
+                            - generic [ref=e221]: • 2nd
+                          - paragraph [ref=e223]: Infineon Technologies - Talent Acquisition/HR
+                          - paragraph [ref=e225]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e227]:
+                        - text: "Current:"
+                        - strong [ref=e228]: Talent
+                        - text: Acquisition/
+                        - strong [ref=e229]: HR
+                        - text: at Infineon Technologies
+                      - generic [ref=e230]:
+                        - figure [ref=e231]
+                        - figure [ref=e232]
+                        - figure [ref=e233]
+                        - paragraph [ref=e235]:
+                          - link "Daouda Kamara" [ref=e236] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/daouda-kamara-03314931/
+                            - strong [ref=e237]: Daouda Kamara
+                          - text: ","
+                          - link "Michelle Aldema" [ref=e238] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/michellealdema/
+                            - strong [ref=e239]: Michelle Aldema
+                          - text: and
+                          - link "3 other mutual connections" [ref=e240] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAAFRZMj4BGpxVWegiI9ku59E_S5CEzd8ffgk%22%5D
+                            - strong [ref=e241]: 3 other mutual connections
+                - listitem [ref=e242]:
+                  - generic [ref=e243]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/ayako-ifuji-811393151/
+                    - generic [ref=e244]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/ayako-ifuji-811393151/
+                      - generic [ref=e245]:
+                        - link [ref=e246] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/ayako-ifuji-811393151/
+                          - figure [ref=e247]
+                        - generic [ref=e248]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/ayako-ifuji-811393151/
+                          - paragraph [ref=e249]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/ayako-ifuji-811393151/
+                            - link "Ayako Ifuji Premium" [ref=e250] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/ayako-ifuji-811393151/
+                              - text: Ayako Ifuji
+                              - img "Premium" [ref=e251]
+                            - generic [ref=e253]: • 2nd
+                          - paragraph [ref=e255]: AstraZeneca - Recruitment Specialist, HR Talent Acquisition
+                          - paragraph [ref=e257]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e259]:
+                        - text: "Current: AstraZeneca - Recruitment Specialist,"
+                        - strong [ref=e260]: HR
+                        - strong [ref=e261]: Talent
+                        - text: Acquisition at AstraZeneca
+                      - generic [ref=e262]:
+                        - figure [ref=e263]
+                        - figure [ref=e264]
+                        - figure [ref=e265]
+                        - paragraph [ref=e267]:
+                          - link "Tay Ling" [ref=e268] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/tayling/
+                            - strong [ref=e269]: Tay Ling
+                          - text: ","
+                          - link "YOSHINORI KURIKI" [ref=e270] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/yoshinorikuriki/en/
+                            - strong [ref=e271]: YOSHINORI KURIKI
+                          - text: and
+                          - link "2 other mutual connections" [ref=e272] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAACSKpc0BBCmPsxEXvo5Ea87NYlS75x9lQY0%22%5D
+                            - strong [ref=e273]: 2 other mutual connections
+                - listitem [ref=e274]:
+                  - generic [ref=e275]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/laixi-kitchen2000/en/
+                    - generic [ref=e276]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/laixi-kitchen2000/en/
+                      - generic [ref=e277]:
+                        - link [ref=e278] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/laixi-kitchen2000/en/
+                          - figure [ref=e279]
+                        - generic [ref=e280]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/laixi-kitchen2000/en/
+                          - paragraph [ref=e281]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/laixi-kitchen2000/en/
+                            - link "Laixi Kitchen Verified" [ref=e282] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/laixi-kitchen2000/en/
+                              - text: Laixi Kitchen
+                              - img "Verified" [ref=e283]
+                            - generic [ref=e285]: • 2nd
+                          - paragraph [ref=e287]: Talent Acquisition
+                          - paragraph [ref=e289]: Tokyo, Japan
+                      - paragraph [ref=e291]:
+                        - text: "Summary: 4 Years of experience in"
+                        - strong [ref=e292]: HR
+                        - text: and Sales...
+                      - generic [ref=e293]:
+                        - figure [ref=e294]
+                        - figure [ref=e295]
+                        - figure [ref=e296]
+                        - paragraph [ref=e298]:
+                          - link "Azeezur Rahaman" [ref=e299] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/azeezur-rahaman-4794b426/
+                            - strong [ref=e300]: Azeezur Rahaman
+                          - text: ","
+                          - link "Igor Prusa, Ph.D. et Ph.D." [ref=e301] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/igor-prusa-ph-d-et-ph-d-8751a17b/
+                            - strong [ref=e302]: Igor Prusa, Ph.D. et Ph.D.
+                          - text: and
+                          - link "12 other mutual connections" [ref=e303] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_CONNECTIONS_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAADk1_LUBpKqMWFkhpJAfWb1OEx6Jz5ImBrg%22%5D
+                            - strong [ref=e304]: 12 other mutual connections
+                - listitem [ref=e305]:
+                  - generic [ref=e306]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/yoichiro-matoba-76ba2880/
+                    - generic [ref=e307]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/yoichiro-matoba-76ba2880/
+                      - generic [ref=e308]:
+                        - link [ref=e309] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/yoichiro-matoba-76ba2880/
+                          - figure [ref=e310]
+                        - generic [ref=e311]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/yoichiro-matoba-76ba2880/
+                          - paragraph [ref=e312]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/yoichiro-matoba-76ba2880/
+                            - link "Yoichiro Matoba Verified" [ref=e313] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/yoichiro-matoba-76ba2880/
+                              - text: Yoichiro Matoba
+                              - img "Verified" [ref=e314]
+                            - generic [ref=e316]: • 2nd
+                          - paragraph [ref=e318]: Head of HR at JAS Forwarding (Japan)
+                          - paragraph [ref=e320]: Tokyo, Japan
+                      - paragraph [ref=e322]:
+                        - text: "Past: Assistant Manager at Renesas Technology - -"
+                        - strong [ref=e323]: HR
+                        - text: specalist -
+                        - strong [ref=e324]: Talent
+                        - text: Acquisition
+                - listitem [ref=e325]:
+                  - generic [ref=e326]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/takuya-m-72bb22197/
+                    - generic [ref=e327]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/takuya-m-72bb22197/
+                      - generic [ref=e328]:
+                        - link [ref=e329] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/takuya-m-72bb22197/
+                          - figure [ref=e330]
+                        - generic [ref=e331]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/takuya-m-72bb22197/
+                          - paragraph [ref=e332]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/takuya-m-72bb22197/
+                            - link "Takuya M. Verified" [ref=e333] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/takuya-m-72bb22197/
+                              - text: Takuya M.
+                              - img "Verified" [ref=e334]
+                            - generic [ref=e336]: • 2nd
+                          - paragraph [ref=e338]: Sony - HR
+                          - paragraph [ref=e340]: Minato, Tokyo, Japan
+                      - paragraph [ref=e342]:
+                        - text: "Current:"
+                        - strong [ref=e343]: HR
+                        - text: at Sony
+                      - generic [ref=e344]:
+                        - figure [ref=e345]
+                        - paragraph [ref=e347]:
+                          - link "牧野芽依" [ref=e348] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/%E8%8A%BD%E4%BE%9D-%E7%89%A7%E9%87%8E-23025a367/
+                            - strong [ref=e349]: 牧野芽依
+                          - text: is a mutual connection
+                - listitem [ref=e350]:
+                  - generic [ref=e351]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/katie-hirayama-86272746/
+                    - generic [ref=e352]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/katie-hirayama-86272746/
+                      - generic [ref=e353]:
+                        - link [ref=e354] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/katie-hirayama-86272746/
+                          - figure [ref=e355]
+                        - generic [ref=e356]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/katie-hirayama-86272746/
+                          - paragraph [ref=e357]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/katie-hirayama-86272746/
+                            - link "Katie Hirayama Premium" [ref=e358] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/katie-hirayama-86272746/
+                              - text: Katie Hirayama
+                              - img "Premium" [ref=e359]
+                            - generic [ref=e361]: • 2nd
+                          - paragraph [ref=e363]: Talent Acquisition @ Netflix | Recruiting, Talent Acquisition
+                          - paragraph [ref=e365]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e367]:
+                        - text: "Current:"
+                        - strong [ref=e368]: Talent
+                        - text: Acquisition at Netflix
+                      - generic [ref=e369]:
+                        - figure [ref=e370]
+                        - figure [ref=e371]
+                        - paragraph [ref=e373]:
+                          - link "Robert Purss ⚡️" [ref=e374] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/robert-purss-%E2%9A%A1%EF%B8%8F-11b7456/
+                            - strong [ref=e375]: Robert Purss ⚡️
+                          - text: and
+                          - link "Yuki Mine" [ref=e376] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/yuki-mine-73b458149/
+                            - strong [ref=e377]: Yuki Mine
+                          - text: are mutual connections
+                - listitem [ref=e378]:
+                  - generic [ref=e379]:
+                    - link:
+                      - /url: https://www.linkedin.com/in/kei-karasawa-997b3a64/
+                    - generic [ref=e380]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/kei-karasawa-997b3a64/
+                      - generic [ref=e381]:
+                        - link [ref=e382] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/in/kei-karasawa-997b3a64/
+                          - figure [ref=e383]
+                        - generic [ref=e384]:
+                          - link:
+                            - /url: https://www.linkedin.com/in/kei-karasawa-997b3a64/
+                          - paragraph [ref=e385]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/kei-karasawa-997b3a64/
+                            - link "Kei Karasawa Verified" [ref=e386] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/kei-karasawa-997b3a64/
+                              - text: Kei Karasawa
+                              - img "Verified" [ref=e387]
+                            - generic [ref=e389]: • 2nd
+                          - paragraph [ref=e391]: Organization and Talent Development Lead - Mercari, Inc.
+                          - paragraph [ref=e393]: Tokyo, Tokyo, Japan
+                      - paragraph [ref=e395]:
+                        - text: "Past: Organization and"
+                        - strong [ref=e396]: Talent
+                        - text: Development Lead at Mercari, Inc.
+                      - generic [ref=e397]:
+                        - figure [ref=e398]
+                        - figure [ref=e399]
+                        - paragraph [ref=e401]:
+                          - link "Tushar Negi ネギ トゥシャール" [ref=e402] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/tushar-negi%E3%83%8D%E3%82%AE%E3%83%88%E3%82%A5%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%AB/
+                            - strong [ref=e403]: Tushar Negi ネギ トゥシャール
+                          - text: and
+                          - link "YOSHINORI KURIKI" [ref=e404] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/yoshinorikuriki/en/
+                            - strong [ref=e405]: YOSHINORI KURIKI
+                          - text: are mutual connections
+              - generic [ref=e407]:
+                - list
+                - button "Next" [ref=e408] [cursor=pointer]:
+                  - generic [ref=e411]: Next

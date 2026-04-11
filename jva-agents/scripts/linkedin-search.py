@@ -13,11 +13,9 @@ import json
 import argparse
 import os
 import re
-import urllib.request
-import urllib.parse
-import urllib.error
 from pathlib import Path
 from datetime import date
+import requests
 
 TOKEN_FILE = Path.home() / ".config" / "linkedin-mcp" / "token.json"
 
@@ -35,16 +33,15 @@ def load_token():
 def linkedin_api_get(path, token, params=None):
     """LinkedIn API v2 に GET リクエストを送る"""
     url = f"https://api.linkedin.com/v2/{path}"
-    if params:
-        url += "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url)
-    req.add_header("Authorization", f"Bearer {token['access_token']}")
-    req.add_header("X-Restli-Protocol-Version", "2.0.0")
+    headers = {
+        "Authorization": f"Bearer {token['access_token']}",
+        "X-Restli-Protocol-Version": "2.0.0",
+    }
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return json.loads(resp.read())
-    except urllib.error.HTTPError as e:
-        return {"error": str(e), "status": e.code}
+        resp = requests.get(url, headers=headers, params=params, timeout=10)
+        return resp.json()
+    except Exception as e:
+        return {"error": str(e)}
 
 
 def get_my_profile(token):
@@ -75,11 +72,11 @@ def web_search_fallback(keywords, limit):
     Marketing Developer Platform 承認前の代替手段
     """
     query = f"site:linkedin.com/company {keywords}"
-    url = "https://api.duckduckgo.com/?q=" + urllib.parse.quote(query) + "&format=json&no_redirect=1"
+    url = "https://api.duckduckgo.com/"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "JVA-LeadSearch/1.0"})
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read())
+        resp = requests.get(url, params={"q": query, "format": "json", "no_redirect": "1"},
+                            headers={"User-Agent": "JVA-LeadSearch/1.0"}, timeout=10)
+        data = resp.json()
         results = data.get("RelatedTopics", [])[:limit]
         companies = []
         for r in results:

@@ -1,0 +1,242 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button [ref=e5] [cursor=pointer]:
+        - generic [ref=e7]: Skip to main content
+      - button [ref=e8] [cursor=pointer]
+    - generic [ref=e11]:
+      - banner [ref=e13]:
+        - generic [ref=e16]:
+          - button [ref=e17] [cursor=pointer]
+          - generic [ref=e20]:
+            - navigation [ref=e23]:
+              - list [ref=e24]:
+                - listitem [ref=e25]:
+                  - button "Home, 1 new notification" [ref=e26] [cursor=pointer]:
+                    - generic [ref=e30]: Home
+                - listitem [ref=e31]:
+                  - link "My Network, 0 new notifications" [ref=e32] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - generic [ref=e36]: My Network
+                - listitem [ref=e37]:
+                  - button "Jobs, 0 new notifications" [ref=e38] [cursor=pointer]:
+                    - generic [ref=e42]: Jobs
+                - listitem [ref=e43]:
+                  - link "Messaging, 0 new notifications" [ref=e44] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - generic [ref=e48]: Messaging
+                - listitem [ref=e49]:
+                  - link "Notifications, 0 new notifications" [ref=e50] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e54]: Notifications
+                - listitem [ref=e55]:
+                  - button "Me" [ref=e56] [cursor=pointer]:
+                    - figure [ref=e58]
+                    - generic [ref=e60]: Me
+            - navigation [ref=e64]:
+              - list [ref=e65]:
+                - listitem [ref=e66]:
+                  - button "For Business" [ref=e67] [cursor=pointer]:
+                    - generic [ref=e71]: For Business
+                - listitem [ref=e73]:
+                  - link "0 new notifications" [ref=e74] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/learning/?trk=nav_neptune_learning
+                    - generic [ref=e78]: Learning
+      - generic [ref=e79]:
+        - toolbar [ref=e80]
+        - main [ref=e94]:
+          - main [ref=e95]:
+            - generic [ref=e101]:
+              - paragraph [ref=e102]: 21 results
+              - list [ref=e104]:
+                - generic [ref=e105]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthrco/
+                  - listitem "SmartHR" [ref=e106]:
+                    - generic [ref=e107]:
+                      - figure [ref=e108]
+                      - generic [ref=e109]:
+                        - paragraph [ref=e110]:
+                          - link "SmartHR" [ref=e111] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrco/
+                        - paragraph [ref=e113]: Human Resources Services
+                        - paragraph [ref=e115]: San Francisco, California
+                    - generic [ref=e118]:
+                      - paragraph [ref=e120]:
+                        - text: Let us help you scale "Smart"
+                        - strong [ref=e121]: SmartHR
+                        - text: Inc is dedicated to helping fast-growing startups accelerate their growth by implementing scalable HR and Talent...
+                      - paragraph [ref=e125]: 2K followers
+                - generic [ref=e126]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthrturkey/
+                  - listitem "SmartHR Logistics Recruitment Agency" [ref=e127]:
+                    - generic [ref=e128]:
+                      - figure [ref=e129]
+                      - generic [ref=e130]:
+                        - paragraph [ref=e131]:
+                          - link "SmartHR Logistics Recruitment Agency" [ref=e132] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrturkey/
+                        - paragraph [ref=e134]: Staffing and Recruiting
+                        - paragraph [ref=e136]: Izmir
+                    - generic [ref=e139]:
+                      - paragraph [ref=e141]: We help Logistics, Transportation, Shipping, and Supply Chain companies to find the right talent for their teams. 📢Send your resume 👉📧 bilgi@smarthr.com.tr
+                      - paragraph [ref=e145]: 7K followers
+                - generic [ref=e146]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthr-latvija/
+                  - listitem "SmartHR/Latvija" [ref=e147]:
+                    - generic [ref=e148]:
+                      - figure [ref=e149]
+                      - generic [ref=e150]:
+                        - paragraph [ref=e151]:
+                          - link "SmartHR/Latvija" [ref=e152] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthr-latvija/
+                        - paragraph [ref=e154]: Human Resources
+                        - paragraph [ref=e156]: Riga
+                    - generic [ref=e159]:
+                      - paragraph [ref=e161]:
+                        - text: ...organizēšanu, kas arī līdz šim ir
+                        - strong [ref=e162]: SmartHR
+                        - text: vizītkarte. No pirmsākumiem sākām veidot
+                        - strong [ref=e163]: SmartHR
+                        - text: blogu jeb lasītavu, kurā šobrīd ir pieejami 200+ raksti par personāla...
+                      - paragraph [ref=e167]: 6K followers
+                      - generic [ref=e168]:
+                        - figure [ref=e169]
+                        - generic [ref=e170]:
+                          - paragraph [ref=e171]:
+                            - 'link "Seminārs No HR uz Biznesa partneri: CEO un HR sadarbība" [ref=e172] [cursor=pointer]':
+                              - /url: https://www.linkedin.com/company/smarthr-latvija/events/
+                          - paragraph [ref=e173]:
+                            - link "Tue, Apr 28, 6:30 AM (your local time) • Rīga, Riga" [ref=e174] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/company/smarthr-latvija/events/
+                - generic [ref=e175]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthrlatam/
+                  - listitem "SmartHR Latam" [ref=e176]:
+                    - generic [ref=e177]:
+                      - figure [ref=e178]
+                      - generic [ref=e179]:
+                        - paragraph [ref=e180]:
+                          - link "SmartHR Latam" [ref=e181] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrlatam/
+                        - paragraph [ref=e183]: Human Resources Services
+                        - paragraph [ref=e185]: Lima, Lima
+                    - generic [ref=e188]:
+                      - paragraph [ref=e190]:
+                        - text: En
+                        - strong [ref=e191]: SmartHR
+                        - text: Latam | Todo RR.HH. en una sola plataforma. Digitalizamos con +13 módulos todo el ciclo de vida del colaborador. ¿Qué nos hace diferentes? No solo te damos la herramienta, también te acompañamos paso a paso. Sabemos que implementar un sistema de RRHH no es tarea fácil, por eso estamos cerca en todo momento...
+                      - paragraph [ref=e195]: 5K followers
+                - generic [ref=e196]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthrjp/
+                  - listitem "SmartHR, Inc." [ref=e197]:
+                    - generic [ref=e198]:
+                      - figure [ref=e199]
+                      - generic [ref=e200]:
+                        - paragraph [ref=e201]:
+                          - link "SmartHR, Inc." [ref=e202] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrjp/
+                          - img "Verified organization" [ref=e203]
+                        - paragraph [ref=e206]: IT Services and IT Consulting
+                        - paragraph [ref=e208]: 港区, 東京都
+                    - generic [ref=e211]:
+                      - paragraph [ref=e213]:
+                        - text: 【
+                        - strong [ref=e214]: SmartHR
+                        - text: コーポレートミッション】 well-working 労働にまつわる社会課題をなくし、 誰もがその人らしく働ける社会をつくる。 働くこと。 それは人生の多くの時間を使い、自分や他者に大きな影響を与える、生きていく上でとても大切なものだと考えます。 だからこそ、誰もがその人らしく働ける社会であってほしい。 だからこそ、私たちは、労働にまつわる複雑な社会課題を解決していきたい。 私たちは、誰もが心地よく、健康に、そして幸せに働ける社会を目指し、テクノロジーと創意工夫で、日本の労働を一歩ずつアップデートしていきます。 【プロダクト】
+                        - strong [ref=e215]: SmartHR
+                        - text: は、人事・労務の業務効率化と、働くすべての人の生産性向上を支える...
+                      - paragraph [ref=e219]: 3K followers
+                      - generic [ref=e220]:
+                        - figure [ref=e221]
+                        - paragraph [ref=e223]:
+                          - link "浩司 & 5 other connections follow this page" [ref=e224] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrjp/?showInNetworkFollowers=true
+                - generic [ref=e225]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthr-partners-lietuva/
+                  - listitem "SmartHR Partners / Lietuva" [ref=e226]:
+                    - generic [ref=e227]:
+                      - figure [ref=e228]
+                      - generic [ref=e229]:
+                        - paragraph [ref=e230]:
+                          - link "SmartHR Partners / Lietuva" [ref=e231] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthr-partners-lietuva/
+                        - paragraph [ref=e233]: Human Resources Services
+                        - paragraph [ref=e235]: Vilnius
+                    - generic [ref=e238]:
+                      - paragraph [ref=e240]: Komanda, orientuota į inovacijas, žmogiškųjų išteklių, personalo valdymo srityse, technologijų plėtrą ir augimą.
+                      - paragraph [ref=e244]: 2K followers
+                - generic [ref=e245]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthrsolutionszimbabwe/
+                  - listitem "Smarthr Solutions Zimbabwe" [ref=e246]:
+                    - generic [ref=e247]:
+                      - figure [ref=e248]
+                      - generic [ref=e249]:
+                        - paragraph [ref=e250]:
+                          - link "Smarthr Solutions Zimbabwe" [ref=e251] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrsolutionszimbabwe/
+                        - paragraph [ref=e253]: Human Resources Services
+                        - paragraph [ref=e255]: Harare, Harare Province
+                    - generic [ref=e258]:
+                      - paragraph [ref=e260]:
+                        - strong [ref=e261]: SmartHR
+                        - text: is a human capital and business advisory firm that relentlessly strives to deliver operational excellence by linking strategy, people, processes, ICT’s and practices to achieve competitive advantage through HR & Payroll outsourcing services. Our Consultants are highly specialized & have HR depth...
+                      - paragraph [ref=e265]: 2K followers
+                - generic [ref=e266]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthr-llc/
+                  - listitem "SmartHR" [ref=e267]:
+                    - generic [ref=e268]:
+                      - figure [ref=e269]
+                      - generic [ref=e270]:
+                        - paragraph [ref=e271]:
+                          - link "SmartHR" [ref=e272] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthr-llc/
+                          - img "Premium organization" [ref=e273]
+                        - paragraph [ref=e276]: Human Resources Services
+                        - paragraph [ref=e278]: Dallas, Texas
+                    - generic [ref=e281]:
+                      - paragraph [ref=e283]:
+                        - strong [ref=e284]: SmartHR
+                        - text: helps organizations elevate their people strategy with the same rigor, heart, and operational excellence used to build high‑performing internal teams...
+                      - paragraph [ref=e288]: 79 followers
+                - generic [ref=e289]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthr-agencja-po%C5%9Brednictwa-pracy-i-doradztwo-zawodowe/
+                  - listitem "SmartHR agencja doradcza" [ref=e290]:
+                    - generic [ref=e291]:
+                      - figure [ref=e292]
+                      - generic [ref=e293]:
+                        - paragraph [ref=e294]:
+                          - link "SmartHR agencja doradcza" [ref=e295] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthr-agencja-po%C5%9Brednictwa-pracy-i-doradztwo-zawodowe/
+                        - paragraph [ref=e297]: Human Resources Services
+                        - paragraph [ref=e299]: Poznań, wielkopolskie
+                    - generic [ref=e302]:
+                      - paragraph [ref=e304]: Jesteśmy agencją pracy i doradztwa personalnego, zarejestrowaną w KRAZ pod numerem 23064 Prowadzimy procesy rekrutacji na stanowiska specjalistyczne i managerskie dla różnych branż w Polsce. Zajmujemy się również doradztwem zawodowym. Nasi konsultanci pomogą napisać dobre CV, nauczą jak odbyć dobrą rozmowę rekrutacyjną, która poprowadzi do zwycięskiego stanowiska pracy.
+                      - paragraph [ref=e308]: 757 followers
+                - generic [ref=e309]:
+                  - link:
+                    - /url: https://www.linkedin.com/company/smarthrdreams/
+                  - listitem "SmartHR - End to End HR Platform" [ref=e310]:
+                    - generic [ref=e311]:
+                      - figure [ref=e312]
+                      - generic [ref=e313]:
+                        - paragraph [ref=e314]:
+                          - link "SmartHR - End to End HR Platform" [ref=e315] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/company/smarthrdreams/
+                        - paragraph [ref=e317]: Software Development
+                        - paragraph [ref=e319]: Coimbatore, Tamil Nadu
+                    - generic [ref=e322]:
+                      - paragraph [ref=e324]: A complete packaged solution for all your needs developed elegantly all the required modules for HR management, employee management and client management. It's focused on HR management, but still, employees can take complete advantage of the text/voice/video chat functions, its a complete solution for your small office business.
+                      - paragraph [ref=e328]: 576 followers
+              - generic [ref=e330]:
+                - list
+                - button "Next" [ref=e331] [cursor=pointer]:
+                  - generic [ref=e334]: Next
