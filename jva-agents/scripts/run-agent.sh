@@ -132,12 +132,29 @@ fi
 
 CLAUDE_EXIT=0
 env -u CLAUDECODE claude -p "$FULL_PROMPT" \
-  --max-turns 20 \
+  --max-turns 30 \
   --output-format json \
   --dangerously-skip-permissions \
   > "$OUTPUT_FILE" 2> "$ERROR_FILE" || CLAUDE_EXIT=$?
 
 FINISHED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+# 正常終了でも error_max_turns の場合は failed として扱う
+if [ $CLAUDE_EXIT -eq 0 ] && [ -f "$OUTPUT_FILE" ]; then
+  SUBTYPE=$(python3 -c "
+import json, sys
+try:
+    d = json.load(open('$OUTPUT_FILE'))
+    print(d.get('subtype',''))
+except:
+    print('')
+" 2>/dev/null || echo "")
+  if [ "$SUBTYPE" = "error_max_turns" ]; then
+    CLAUDE_EXIT=2
+    echo "error_max_turns: エージェントがターン上限に達しました（max-turns=30を超えた）" > "$ERROR_FILE"
+    echo "[run-agent] WARNING: error_max_turns detected, treating as failed" >&2
+  fi
+fi
 
 if [ $CLAUDE_EXIT -ne 0 ]; then
   ERROR_MSG=$(cat "$ERROR_FILE" 2>/dev/null | head -c 500)
