@@ -57,7 +57,7 @@ Web検索・APIだけでは不足する場合、**agent-browser** MCP で Linked
       "contact": {
         "name": "担当者名（分かれば）",
         "title": "役職（HR担当者優先、なければCEO/Founder）",
-        "linkedin": "個人プロフィール（linkedin.com/in/...）優先。なければ会社ページ（linkedin.com/company/...）でも可。不明なら空文字",
+        "linkedin": "会社ページ（linkedin.com/company/...）を優先して記載。個人プロフィール（linkedin.com/in/...）でも可。不明なら空文字",
         "email": "メールアドレス（分かれば）"
       },
       "source": "情報のソースURL",
@@ -68,8 +68,8 @@ Web検索・APIだけでは不足する場合、**agent-browser** MCP で Linked
 ```
 
 ## contactフィールドの制約
-- `contact.linkedin` は必ず `https://www.linkedin.com/in/...` 形式（個人プロフィール）
-- `linkedin.com/company/...` は**絶対に入れない**
+- `contact.linkedin` は **会社LinkedIn URL（`linkedin.com/company/...`）を優先**して記載する
+- 個人プロフィール（`linkedin.com/in/...`）でも可（会社URLが取得できない場合）
 - 見つからない場合は `""` のまま（空文字）
 
 ## トーン・スタイル

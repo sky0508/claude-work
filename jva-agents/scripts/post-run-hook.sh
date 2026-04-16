@@ -186,6 +186,10 @@ case "$AGENT_NAME" in
   outreach)
     validate_outreach
     ;;
+  arceus)
+    echo "HOOK PASS: arceus analysis (passthrough)"
+    exit 0
+    ;;
   *)
     echo "HOOK PASS: No specific validation for agent '$AGENT_NAME' (passthrough)"
     exit 0

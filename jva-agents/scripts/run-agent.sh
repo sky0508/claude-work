@@ -335,6 +335,30 @@ except Exception as e:
       DISCORD_TITLE="🔥 ${POKEMON_NAME}が熱いメッセージを書いたよ！(Run #${RUN_ID})"
       DISCORD_BODY="しっぽの炎に全力こめて書いたよ🔥✨\n\n${OUTREACH_DETAIL}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
       ;;
+    arceus)
+      ARCEUS_HEALTH=$(python3 -c "
+import json, sys, re
+raw = open('$OUTPUT_FILE').read()
+try:
+    data = json.loads(raw)
+    result = data.get('result', '') if isinstance(data, dict) else raw
+    match = re.search(r'\{[\s\S]*\}', result)
+    if match:
+        report = json.loads(match.group())
+        health = report.get('overall_health', '?')
+        agents = report.get('agents', [])
+        agent_count = len(agents)
+        recs = report.get('top_recommendations', [])
+        rec_text = recs[0] if recs else '特になし'
+        print(f'health={health} | {agent_count}エージェント分析 | 最重要提案: {rec_text}')
+    else:
+        print('レポート解析失敗')
+except Exception as e:
+    print(f'解析エラー: {e}')
+" 2>/dev/null || echo "解析失敗")
+      DISCORD_TITLE="🌟 ${POKEMON_NAME} 監査レポート (Run #${RUN_ID})"
+      DISCORD_BODY="全ポケモンの健康診断完了！\n\n${ARCEUS_HEALTH}\n\nSheetsで確認してね👀"
+      ;;
     *)
       DISCORD_TITLE="✅ ${POKEMON_NAME} タスク完了"
       DISCORD_BODY="タスク完了！\nRun #${RUN_ID}"
