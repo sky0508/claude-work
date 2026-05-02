@@ -40,10 +40,6 @@
         "/Users/sorasasaki/jva-crm/mcp-server/index.js"
       ]
     },
-    "chrome-devtools": {
-      "command": "/Users/sorasasaki/.npm-global/bin/chrome-devtools-mcp",
-      "args": []
-    }
   },
   "feedbackSurveyState": {
     "lastShownTime": 1754087472616
