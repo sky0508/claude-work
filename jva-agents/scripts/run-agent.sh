@@ -254,6 +254,11 @@ if [ "$HOOK_STATUS" = "success" ]; then
         export DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_OUTREACH"
       fi
       ;;
+    arceus)
+      if [ -n "${DISCORD_WEBHOOK_ARCEUS:-}" ]; then
+        export DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_ARCEUS"
+      fi
+      ;;
   esac
 
   # エージェント別: Sheets書き込みスクリプト
@@ -336,28 +341,51 @@ except Exception as e:
       DISCORD_BODY="しっぽの炎に全力こめて書いたよ🔥✨\n\n${OUTREACH_DETAIL}\n\nSheetsで確認してね👀\n${SHEETS_RESULT}"
       ;;
     arceus)
-      ARCEUS_HEALTH=$(python3 -c "
+      DISCORD_BODY=$(python3 -c "
 import json, sys, re
+
+HEALTH_EMOJI = {'green': '🟢', 'yellow': '🟡', 'red': '🔴'}
+HEALTH_JP    = {'green': 'green', 'yellow': 'yellow', 'red': 'red'}
+
 raw = open('$OUTPUT_FILE').read()
+lines = []
 try:
     data = json.loads(raw)
     result = data.get('result', '') if isinstance(data, dict) else raw
     match = re.search(r'\{[\s\S]*\}', result)
-    if match:
-        report = json.loads(match.group())
-        health = report.get('overall_health', '?')
-        agents = report.get('agents', [])
-        agent_count = len(agents)
-        recs = report.get('top_recommendations', [])
-        rec_text = recs[0] if recs else '特になし'
-        print(f'health={health} | {agent_count}エージェント分析 | 最重要提案: {rec_text}')
-    else:
+    if not match:
         print('レポート解析失敗')
+        sys.exit(0)
+    report = json.loads(match.group())
+    overall = report.get('overall_health', '?')
+    emoji = HEALTH_EMOJI.get(overall, '⚪')
+    lines.append(f'全体ステータス: {emoji} {overall}')
+    lines.append('')
+    for agent in report.get('agents', []):
+        name = agent.get('pokemon_name', '?')
+        aname = agent.get('agent_name', '?')
+        h = agent.get('health', '?')
+        he = HEALTH_EMOJI.get(h, '⚪')
+        success_rate = agent.get('success_rate', 0)
+        rejected_rate = agent.get('hook_rejected_rate', 0)
+        avg_cost = agent.get('avg_cost_usd')
+        cost_str = f'\${avg_cost:.2f}/回' if avg_cost else 'コスト記録なし'
+        lines.append(f'{he} {name}（{aname}）')
+        lines.append(f'　成功率 {int(success_rate*100)}% | rejected {int(rejected_rate*100)}% | {cost_str}')
+        for issue in agent.get('issues', [])[:2]:
+            lines.append(f'　⚠️ {issue[:60]}')
+        lines.append('')
+    recs = report.get('top_recommendations', [])
+    if recs:
+        lines.append('📌 最重要提案:')
+        for rec in recs[:3]:
+            lines.append(f'　• {rec[:80]}')
 except Exception as e:
-    print(f'解析エラー: {e}')
+    lines.append(f'解析エラー: {e}')
+
+print('\n'.join(lines))
 " 2>/dev/null || echo "解析失敗")
       DISCORD_TITLE="🌟 ${POKEMON_NAME} 監査レポート (Run #${RUN_ID})"
-      DISCORD_BODY="全ポケモンの健康診断完了！\n\n${ARCEUS_HEALTH}\n\nSheetsで確認してね👀"
       ;;
     *)
       DISCORD_TITLE="✅ ${POKEMON_NAME} タスク完了"

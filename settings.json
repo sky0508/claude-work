@@ -39,6 +39,10 @@
       "args": [
         "/Users/sorasasaki/jva-crm/mcp-server/index.js"
       ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
     }
   },
   "feedbackSurveyState": {

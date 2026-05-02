@@ -1,0 +1,639 @@
+{
+  "mhwpznuav": {
+    "name": "吉田クリニック",
+    "city": "横浜市保土ケ谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mbmatfksj": {
+    "name": "天王町レディースクリニック",
+    "city": "横浜市保土ケ谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mj7dl8ost": {
+    "name": "磯レディースクリニック",
+    "city": "横浜市保土ケ谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mdx3czi0o": {
+    "name": "Ａｙａ女性のためのクリニック",
+    "city": "横浜市保土ケ谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mpojmky4q": {
+    "name": "みつばちこども漢方クリニック",
+    "city": "横浜市磯子区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mk2rup5do": {
+    "name": "あい皮ふ科アレルギー科",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mmx1n9grp": {
+    "name": "いとうファミリークリニック",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mkrlqn3ep": {
+    "name": "吉村内科医院",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m8r0x9lvs": {
+    "name": "和田耳鼻咽喉科",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mp6ufk5n2": {
+    "name": "松瀬医院",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mx5u8nwmy": {
+    "name": "森クリニック",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mi6bfxmpq": {
+    "name": "草川クリニック内科・循環器内科",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mg3bx8liu": {
+    "name": "金沢さくら医院",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mhqjdol6s": {
+    "name": "鳥居泌尿器科・内科",
+    "city": "横浜市金沢区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mpcx2rvbo": {
+    "name": "きくな湯田眼科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mp3jezc1a": {
+    "name": "ここクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mwcdg75yk": {
+    "name": "たかみざわ医院",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m9sdlpfzo": {
+    "name": "ながしまメンタルクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mpcwlgs5e": {
+    "name": "アイレディースクリニック新横浜",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m0oemb95a": {
+    "name": "リンクス大倉山クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mjucz734m": {
+    "name": "一般社団法人再健会シン・整形外科綱島",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "musnkqtgw": {
+    "name": "中野こどもクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m0khc7fov": {
+    "name": "医療法人社団なかよし会日吉メディカルクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mkomzx47v": {
+    "name": "医療法人社団やまびこ新横浜整形外科リウマチ科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mjkg3b8mr": {
+    "name": "医療法人社団善方会よしかた産婦人科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mcr0yj7qt": {
+    "name": "医療法人財団新羽駅前耳鼻咽喉科クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m3lheq5s9": {
+    "name": "大倉山はるかぜクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mx54ylptq": {
+    "name": "大倉山耳鼻咽喉科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m8jloi1n9": {
+    "name": "新横浜国際クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mgdi9hec4": {
+    "name": "新横浜形成クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m5ml74bqd": {
+    "name": "新羽駅前松野医院内視鏡・内科・皮膚科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mypq5r6ud": {
+    "name": "日吉の森内科クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m6xtvuz80": {
+    "name": "日吉本町えがわ耳鼻咽喉科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mz8hb5y72": {
+    "name": "横浜綱島フォレスト内科・呼吸器クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "my7ao9gnr": {
+    "name": "横浜綱島フォレスト内科・循環器クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "ma05emxlc": {
+    "name": "横浜綱島フォレスト消化器内科・内視鏡クリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mkdczmle6": {
+    "name": "洋和メンタルクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mc0dufko8": {
+    "name": "港北高田駅前すみれ皮膚科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mrzx0gqy9": {
+    "name": "石井内科医院",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mejdz69c4": {
+    "name": "神奈川リウマチクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mmoda9x5p": {
+    "name": "綱島あお整形外科・皮膚科",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "meuin4rpf": {
+    "name": "綱島こころクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m3lqxifar": {
+    "name": "ＲＥＳＭ新横浜睡眠・呼吸メディカルケアクリニック",
+    "city": "横浜市港北区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mt4c3lazs": {
+    "name": "ながのクリニック",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m2bguahr6": {
+    "name": "アリスクリニック",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m2u7m5ev0": {
+    "name": "メディカルパーク戸塚",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m7s4rblkt": {
+    "name": "医療法人はまゆう会浜之上クリニック",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "meki4wzno": {
+    "name": "医療法人東戸塚駅前なかやまクリニック",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mq5ivwf6z": {
+    "name": "戸塚ファミリークリニック",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m02qbmg3y": {
+    "name": "東戸塚わたなべクリニック内科・消化器",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m2r6w0duf": {
+    "name": "横浜きくち内科・糖尿病クリニック東戸塚院",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "micdwzfq4": {
+    "name": "秋葉町ゆいクリニック",
+    "city": "横浜市戸塚区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mb1uzyjax": {
+    "name": "うるうクリニック港南台",
+    "city": "横浜市港南区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mv24kojni": {
+    "name": "かわぐち消化器内科",
+    "city": "横浜市港南区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m1fcndrj3": {
+    "name": "上大岡糖尿病・代謝内科クリニック",
+    "city": "横浜市港南区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m10jiotfw": {
+    "name": "上永谷ほほえみクリニック",
+    "city": "横浜市港南区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m786s9kd4": {
+    "name": "医療法人社団健徳会吉田医院",
+    "city": "横浜市港南区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mgox8tmvh": {
+    "name": "苅部医院",
+    "city": "横浜市港南区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mdgf57x3q": {
+    "name": "つばきメンタルクリニック",
+    "city": "横浜市旭区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mu75ijqdz": {
+    "name": "医療法人社団邦生会簡野クリニック",
+    "city": "横浜市旭区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mm906h5i1": {
+    "name": "希望ヶ丘しまや内科",
+    "city": "横浜市旭区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mc74xjt2i": {
+    "name": "あいこ内科クリニック",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m546o2sm7": {
+    "name": "かもい脳神経クリニック",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m5vezoul8": {
+    "name": "しらはた胃腸肛門クリニック横浜",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m42lqzum6": {
+    "name": "みなみレディースクリニック",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mra8g124e": {
+    "name": "長津田ファミリークリニック",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m9wizajdv": {
+    "name": "長津田レディースクリニック",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mx1msz78d": {
+    "name": "鴨居メンタルクリニック",
+    "city": "横浜市緑区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m4qcrgynw": {
+    "name": "えはらクリニック",
+    "city": "横浜市瀬谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mhqyzd02p": {
+    "name": "さくらレディースクリニック",
+    "city": "横浜市瀬谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mpoen7a9g": {
+    "name": "瀬谷いろどりハート内科クリニック",
+    "city": "横浜市瀬谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mlzy3esr0": {
+    "name": "瀬谷メンタルクリニック",
+    "city": "横浜市瀬谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mumgesi6t": {
+    "name": "田川クリニック",
+    "city": "横浜市瀬谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mi94sgm7p": {
+    "name": "高畑耳鼻咽喉科医院",
+    "city": "横浜市瀬谷区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mpy124cgq": {
+    "name": "こじま眼科",
+    "city": "横浜市泉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m9l4gope2": {
+    "name": "こまくさ女性クリニック",
+    "city": "横浜市泉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mhbw0ne85": {
+    "name": "ゆめが丘みかみ耳鼻咽喉科",
+    "city": "横浜市泉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m8svzu1rq": {
+    "name": "ゆめが丘内科・糖尿病甲状腺クリニック",
+    "city": "横浜市泉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mepszyhnj": {
+    "name": "丸本眼科",
+    "city": "横浜市泉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m92zigjh6": {
+    "name": "湘南ゆめが丘めのうクリニック眼科・脳神経外科",
+    "city": "横浜市泉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mfg6ezcjl": {
+    "name": "あおばの森内科クリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m7pkqvr39": {
+    "name": "いわい整形外科・ペインクリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mav9jq6yx": {
+    "name": "こうクリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mcgy0o6ja": {
+    "name": "たまプラーザあかりクリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mf5z31tr4": {
+    "name": "たまプラーザ駅前皮ふ科",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mmqijtu4l": {
+    "name": "ひらやま内科・内視鏡クリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "my9zn1ae8": {
+    "name": "スマイル眼科クリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mcuywtsmj": {
+    "name": "ファミリークリニックあざみ野",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "m8xw9yfc7": {
+    "name": "フジ皮フ科クリニック",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mcau49p6w": {
+    "name": "メディカルクリニックあざみ野",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  },
+  "mqesvl5kf": {
+    "name": "レディースクリニック市ヶ尾",
+    "city": "横浜市青葉区",
+    "director": "未取得",
+    "source": "",
+    "confidence": "none"
+  }
+}

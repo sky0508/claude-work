@@ -1,0 +1,277 @@
+- generic [ref=e2]:
+  - link:
+    - /url: "#"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - heading "医療情報ネット（ナビイ）" [level=1] [ref=e6]:
+        - link "医療情報ネット（ナビイ）" [ref=e7] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2300/initialize
+      - button "メニューを開く" [ref=e9] [cursor=pointer]
+  - main [ref=e10]:
+    - navigation "現在位置" [ref=e11]:
+      - generic:
+        - list
+    - generic [ref=e12]:
+      - text: 
+      - generic [ref=e13]:
+        - heading "システムエラー" [level=1] [ref=e14]
+        - generic [ref=e15]:
+          - paragraph [ref=e18]: システムエラーが発生しました。(E-0047)
+          - link "トップページへ" [ref=e21] [cursor=pointer]:
+            - /url: /znk-web/juminkanja/S2300/initialize
+  - generic [ref=e24]:
+    - heading "医療機関を探す" [level=3] [ref=e25]
+    - list [ref=e26]:
+      - listitem [ref=e27]:
+        - link "キーワード検索" [ref=e28] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e29]:
+        - link "現在診療中の医療機関" [ref=e30] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e31]:
+        - link "休日夜間対応医療機関" [ref=e32] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e33]:
+      - listitem [ref=e34]: <基本項目>
+      - listitem [ref=e35]:
+        - link "診療科目" [ref=e36] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e37]:
+        - link "場所" [ref=e38] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e39]:
+        - link "外国語" [ref=e40] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e41]:
+      - listitem [ref=e42]: <利用者属性>
+      - listitem [ref=e43]:
+        - link "高齢者" [ref=e44] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2341/initialize
+      - listitem [ref=e45]:
+        - link "小児" [ref=e46] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2342/initialize
+      - listitem [ref=e47]:
+        - link "障害児・者、医療的ケア児" [ref=e48] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2343/initialize
+      - listitem [ref=e49]:
+        - link "女性" [ref=e50] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2344/initialize
+      - listitem [ref=e51]
+      - listitem [ref=e52]:
+        - link "難病" [ref=e53] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2345/initialize
+    - list [ref=e54]:
+      - listitem [ref=e55]: <かかりつけ医機能>
+      - listitem [ref=e56]:
+        - link "かかりつけ医機能" [ref=e57] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e58]:
+      - listitem [ref=e59]: <その他>
+      - listitem [ref=e60]:
+        - link "他の項目" [ref=e61] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e62]:
+      - listitem [ref=e63]:
+        - link "お気に入り病院等" [ref=e64] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2900/initialize?tab=1
+    - heading "都道府県固有の機能から探す" [level=3] [ref=e65]
+    - paragraph [ref=e66]: 全国共通の検索項目に加えて各都道府県独自の検索項目でも検索ができます。
+    - list [ref=e67]:
+      - listitem [ref=e68]: 北海道
+      - listitem [ref=e69]:
+        - link "北海道" [ref=e70] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e71]:
+      - listitem [ref=e72]: 東北
+      - listitem [ref=e73]:
+        - link "青森県" [ref=e74] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e75]:
+        - link "岩手県" [ref=e76] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e77]:
+        - link "宮城県" [ref=e78] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e79]:
+        - link "秋田県" [ref=e80] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e81]:
+        - link "山形県" [ref=e82] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e83]:
+        - link "福島県" [ref=e84] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e85]:
+      - listitem [ref=e86]: 関東
+      - listitem [ref=e87]:
+        - link "茨城県" [ref=e88] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e89]:
+        - link "栃木県" [ref=e90] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e91]:
+        - link "群馬県" [ref=e92] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e93]:
+        - link "埼玉県" [ref=e94] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e95]:
+        - link "千葉県" [ref=e96] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e97]:
+        - link "東京都" [ref=e98] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e99]
+      - listitem [ref=e100]:
+        - link "神奈川県" [ref=e101] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e102]:
+      - listitem [ref=e103]: 中部
+      - listitem [ref=e104]:
+        - link "新潟県" [ref=e105] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e106]:
+        - link "富山県" [ref=e107] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e108]:
+        - link "石川県" [ref=e109] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e110]:
+        - link "福井県" [ref=e111] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e112]:
+        - link "山梨県" [ref=e113] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e114]:
+        - link "長野県" [ref=e115] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e116]
+      - listitem [ref=e117]:
+        - link "岐阜県" [ref=e118] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e119]:
+        - link "静岡県" [ref=e120] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e121]:
+        - link "愛知県" [ref=e122] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e123]:
+      - listitem [ref=e124]: 近畿
+      - listitem [ref=e125]:
+        - link "三重県" [ref=e126] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e127]:
+        - link "滋賀県" [ref=e128] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e129]:
+        - link "京都府" [ref=e130] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e131]:
+        - link "大阪府" [ref=e132] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e133]:
+        - link "兵庫県" [ref=e134] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e135]:
+        - link "奈良県" [ref=e136] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e137]
+      - listitem [ref=e138]:
+        - link "和歌山県" [ref=e139] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e140]:
+      - listitem [ref=e141]: 中国・四国
+      - listitem [ref=e142]:
+        - link "鳥取県" [ref=e143] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e144]:
+        - link "島根県" [ref=e145] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e146]:
+        - link "岡山県" [ref=e147] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e148]:
+        - link "広島県" [ref=e149] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e150]:
+        - link "山口県" [ref=e151] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e152]:
+      - listitem [ref=e153]
+      - listitem [ref=e154]:
+        - link "徳島県" [ref=e155] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e156]:
+        - link "香川県" [ref=e157] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e158]:
+        - link "愛媛県" [ref=e159] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e160]:
+        - link "高知県" [ref=e161] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e162]:
+      - listitem [ref=e163]: 九州
+      - listitem [ref=e164]:
+        - link "福岡県" [ref=e165] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e166]:
+        - link "佐賀県" [ref=e167] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e168]:
+        - link "長崎県" [ref=e169] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e170]:
+        - link "熊本県" [ref=e171] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e172]:
+        - link "大分県" [ref=e173] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e174]:
+        - link "宮崎県" [ref=e175] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e176]
+      - listitem [ref=e177]:
+        - link "鹿児島県" [ref=e178] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e179]:
+      - listitem [ref=e180]
+      - listitem [ref=e181]:
+        - link "沖縄県" [ref=e182] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - heading "薬局を探す" [level=3] [ref=e183]
+    - list [ref=e184]:
+      - listitem [ref=e185]:
+        - link "キーワード検索" [ref=e186] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e187]:
+        - link "急いで探す" [ref=e188] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e189]:
+        - link "外国語" [ref=e190] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - listitem [ref=e191]:
+        - link "色々な条件" [ref=e192] [cursor=pointer]:
+          - /url: javascript:void(0);
+    - list [ref=e193]:
+      - listitem [ref=e194]:
+        - link "お気に入り薬剤師・薬局" [ref=e195] [cursor=pointer]:
+          - /url: /znk-web/juminkanja/S2900/initialize?tab=2
+  - contentinfo [ref=e196]:
+    - generic [ref=e197]:
+      - list [ref=e199]:
+        - listitem [ref=e200]:
+          - link "利用規約・リンク・著作権等" [ref=e201] [cursor=pointer]:
+            - /url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/index_00004.html
+        - listitem [ref=e202]:
+          - link "所在地案内" [ref=e203] [cursor=pointer]:
+            - /url: https://www.mhlw.go.jp/kouseiroudoushou/shozaiannai/index.html
+        - listitem [ref=e204]:
+          - link "アクセシビリティについて" [ref=e205] [cursor=pointer]:
+            - /url: https://www.mhlw.go.jp/accessibility/index.html
+      - generic [ref=e206]:
+        - img [ref=e208]
+        - generic [ref=e209]:
+          - paragraph [ref=e210]: 法人番号6000012070001
+          - generic [ref=e211]: 〒100-8916 東京都千代田区霞が関１丁目２－２
+    - generic [ref=e212]: Copyright © Ministry of Health, Labour and Welfare, All Rights reserved.
