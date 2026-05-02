@@ -41,8 +41,8 @@
       ]
     },
     "chrome-devtools": {
-      "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"]
+      "command": "/Users/sorasasaki/.npm-global/bin/chrome-devtools-mcp",
+      "args": []
     }
   },
   "feedbackSurveyState": {
